@@ -1,9 +1,15 @@
+#include <cmath>
+
 #include "ros/ros.h"
 #include "tf/tfMessage.h"
 #include "ardrone_autonomy/Navdata.h"
 #include "geometry_msgs/Twist.h"
-#include <functional>
 
+#define limit(value, min, max) (value < min) ? min : (value > max) ? max : value
+#define handle_angle(angle) (angle >= 0) ? angle * M_PI / 180.0 : M_PI * (2 - angle / 180.0) 
+#define sign(a) (a > 0) - (a < 0)
+
+const float K_P = 0.5;
 
 void tf_callback(const boost::shared_ptr<tf::tfMessage const>& msg, double* linear_coords)
 {
@@ -19,12 +25,29 @@ void navdata_callback(const boost::shared_ptr<ardrone_autonomy::Navdata const>& 
     angular_coords[2] = msg->rotZ;
 }
 
-void PID(geometry_msgs::Twist& twist, double* necessary_coords, double* linear_coords)
+void PID(geometry_msgs::Twist& twist, double* necessary_coords, double* linear_coords, double* angular_coords)
 {
-    float K_P = 0.01;
-    twist.linear.x = K_P * (necessary_coords[0] - linear_coords[0]);
-    twist.linear.y = K_P * (necessary_coords[1] - linear_coords[1]);
-    twist.linear.z = 2 * K_P * (necessary_coords[2] - linear_coords[2]);
+    float* e = new float[3];
+    float* rot = new float[3];
+    for (size_t i = 0; i < 3; i++)
+    { 
+        e[i] = necessary_coords[i] - linear_coords[i];
+        rot[i] = handle_angle(angular_coords[i]);
+    }
+    float* orient = new float[3] { atan(e[1] / e[2]) - rot[1],
+                                   atan(e[0] / e[2]) - rot[2],
+                                   atan(e[1] / e[0]) - rot[0]};
+    float* d_1 = new float[2] {sqrt(pow(e[0], 2) + pow(e[1], 2)) * cos(orient[2]),
+                               sqrt(pow(e[0], 2) + pow(e[1], 2)) * sin(orient[2])};
+    float* d = new float[3] {sign(e[0]) * sqrt(pow(d_1[0], 2) + pow(e[2], 2)) * sin(orient[0]),
+                             sign(e[1]) * sqrt(pow(d_1[1], 2) + pow(e[2], 2)) * sin(orient[1]),
+                             (float)sign(e[2]) * sqrt( (pow(d_1[0], 2) + pow(e[2], 2)) * pow(cos(orient[0]), 2) + (pow(d_1[1], 2) + pow(e[2], 2)) * pow(cos(orient[1]), 2) )};
+    ROS_INFO("d: %f, %f, %f", d[0], d[1], d[2]);
+    ROS_INFO("e: %f, %f, %f", e[0], e[1], e[2]);
+    twist.linear.x = limit(K_P * d[0], -1, 1);
+    twist.linear.y = limit(K_P * d[1], -1, 1);
+    twist.linear.z = limit(K_P * d[2], -1, 1);
+    delete e, rot, orient, d_1, d;
 }
 
 
@@ -48,10 +71,8 @@ int main(int argc, char** argv)
     system("rostopic pub -1 /ardrone/takeoff std_msgs/Empty");
     while (ros::ok())
     {
-        PID(twist, necessary_coords, linear_coords);
+        PID(twist, necessary_coords, linear_coords, angular_coords);
         _pub_twist.publish(twist);
-        ROS_INFO("%f, %f, %f", necessary_coords[0], necessary_coords[1], necessary_coords[2]);
-        ROS_INFO("twist: %f, %f, %f", linear_coords[0], linear_coords[1], linear_coords[2]);
         ros::spinOnce();
     }
 }

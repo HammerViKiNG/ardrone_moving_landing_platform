@@ -637,6 +637,9 @@ ardrone_autonomy_DIR:PATH=/home/hammerviking/robotic_software/ardrone_moving_lan
 //Value Computed by CMake
 ardrone_autonomy_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_autonomy
 
+//Dependencies for target
+ardrone_pid_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 ardrone_teleop_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop
 

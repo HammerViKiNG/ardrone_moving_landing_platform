@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/coords_teleop.cpp
+cmath
+-
 ros/ros.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ros/ros.h
 tf/tfMessage.h
@@ -15,8 +17,6 @@ ardrone_autonomy/Navdata.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_autonomy/Navdata.h
 geometry_msgs/Twist.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/geometry_msgs/Twist.h
-functional
--
 
 /opt/ros/kinetic/include/ardrone_autonomy/Navdata.h
 string
