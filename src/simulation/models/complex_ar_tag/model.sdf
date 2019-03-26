@@ -6,14 +6,14 @@
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>model://ar_alvar_tag0/meshes/artag.dae</uri>
+            <uri>model://complex_ar_tag/meshes/artag.dae</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://ar_alvar_tag0/meshes/artag.dae</uri>
+            <uri>model://complex_ar_tag/meshes/artag.dae</uri>
           </mesh>
         </geometry>
       </visual>

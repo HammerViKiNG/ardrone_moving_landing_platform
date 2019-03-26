@@ -387,6 +387,56 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory camera
+
+# Convenience name for "all" pass in the directory.
+camera/all:
+
+.PHONY : camera/all
+
+# Convenience name for "clean" pass in the directory.
+camera/clean: camera/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : camera/clean
+
+# Convenience name for "preinstall" pass in the directory.
+camera/preinstall:
+
+.PHONY : camera/preinstall
+
+#=============================================================================
+# Target rules for target camera/CMakeFiles/_catkin_empty_exported_target.dir
+
+# All Build rule for target.
+camera/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f camera/CMakeFiles/_catkin_empty_exported_target.dir/build.make camera/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f camera/CMakeFiles/_catkin_empty_exported_target.dir/build.make camera/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : camera/CMakeFiles/_catkin_empty_exported_target.dir/all
+
+# Build rule for subdir invocation for target.
+camera/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 camera/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+.PHONY : camera/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+# Convenience name for target.
+_catkin_empty_exported_target: camera/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+.PHONY : _catkin_empty_exported_target
+
+# clean rule for target.
+camera/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f camera/CMakeFiles/_catkin_empty_exported_target.dir/build.make camera/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : camera/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+# clean rule for target.
+clean: camera/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory drone/AR.Drone-ROS/cvg_sim_msgs
 
 # Convenience name for "all" pass in the directory.
@@ -1950,7 +2000,7 @@ drone/AR.Drone-ROS/tum_simulator/all:
 .PHONY : drone/AR.Drone-ROS/tum_simulator/all
 
 # Convenience name for "clean" pass in the directory.
-drone/AR.Drone-ROS/tum_simulator/clean: drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/clean
+drone/AR.Drone-ROS/tum_simulator/clean:
 
 .PHONY : drone/AR.Drone-ROS/tum_simulator/clean
 
@@ -1958,38 +2008,6 @@ drone/AR.Drone-ROS/tum_simulator/clean: drone/AR.Drone-ROS/tum_simulator/CMakeFi
 drone/AR.Drone-ROS/tum_simulator/preinstall:
 
 .PHONY : drone/AR.Drone-ROS/tum_simulator/preinstall
-
-#=============================================================================
-# Target rules for target drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir
-
-# All Build rule for target.
-drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/build.make drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/build.make drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/all
-
-# Build rule for subdir invocation for target.
-drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# clean rule for target.
-drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/build.make drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-# clean rule for target.
-clean: drone/AR.Drone-ROS/tum_simulator/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory drone/ardrone_teleop

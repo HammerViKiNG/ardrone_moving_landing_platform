@@ -11,21 +11,21 @@
     <up_axis>Z_UP</up_axis>
   </asset>
   <library_images>
-    <image id="MarkerData_0_png" name="MarkerData_0_png">
-      <init_from>MarkerData_0.png</init_from>
+    <image id="complex_ar_tag_png" name="complex_ar_tag_png">
+      <init_from>complex_ar_tag.png</init_from>
     </image>
   </library_images>
   <library_effects>
     <effect id="Material_002-effect">
       <profile_COMMON>
-        <newparam sid="MarkerData_0_png-surface">
+        <newparam sid="complex_ar_tag_png-surface">
           <surface type="2D">
-            <init_from>MarkerData_0_png</init_from>
+            <init_from>complex_ar_tag_png</init_from>
           </surface>
         </newparam>
-        <newparam sid="MarkerData_0_png-sampler">
+        <newparam sid="complex_ar_tag_png-sampler">
           <sampler2D>
-            <source>MarkerData_0_png-surface</source>
+            <source>complex_ar_tag_png-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -37,7 +37,7 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <texture texture="MarkerData_0_png-sampler" texcoord="Cube-mesh-map-0"/>
+              <texture texture="complex_ar_tag_png-sampler" texcoord="Cube-mesh-map-0"/>
             </diffuse>
             <specular>
               <color sid="specular">0.25 0.25 0.25 1</color>

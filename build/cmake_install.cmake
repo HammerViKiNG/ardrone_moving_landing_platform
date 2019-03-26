@@ -117,6 +117,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/gtest/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/AR.Drone-ROS/cvg_sim_msgs/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/AR.Drone-ROS/tum_simulator/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/cmake_install.cmake")

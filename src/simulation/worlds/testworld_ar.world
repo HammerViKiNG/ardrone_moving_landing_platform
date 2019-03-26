@@ -137,7 +137,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>model://ar_alvar_tag0/meshes/artag.dae</uri>
+              <uri>model://complex_ar_tag/meshes/artag.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -156,7 +156,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/hammerviking/.gazebo/models/ar_alvar_tag0/meshes/artag.dae</uri>
+              <uri>model://complex_ar_tag/meshes/artag.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>

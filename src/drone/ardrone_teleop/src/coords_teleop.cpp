@@ -15,14 +15,14 @@ void tf_callback(const boost::shared_ptr<tf::tfMessage const>& msg, double* line
 {
     linear_coords[0] = msg->transforms[0].transform.translation.x;
     linear_coords[1] = msg->transforms[0].transform.translation.y; 
-    linear_coords[2] = msg->transforms[1].transform.translation.z;
 }
 
-void navdata_callback(const boost::shared_ptr<ardrone_autonomy::Navdata const>& msg, double* angular_coords)
+void navdata_callback(const boost::shared_ptr<ardrone_autonomy::Navdata const>& msg, double* angular_coords, double* linear_coords)
 {
     angular_coords[0] = msg->rotX;
     angular_coords[1] = msg->rotY;
     angular_coords[2] = msg->rotZ;
+    linear_coords[2] = msg->altd / 1000.0;
 }
 
 void PID(geometry_msgs::Twist& twist, double* necessary_coords, double* linear_coords, double* angular_coords)
@@ -42,8 +42,8 @@ void PID(geometry_msgs::Twist& twist, double* necessary_coords, double* linear_c
     float* d = new float[3] {sign(e[0]) * sqrt(pow(d_1[0], 2) + pow(e[2], 2)) * sin(orient[0]),
                              sign(e[1]) * sqrt(pow(d_1[1], 2) + pow(e[2], 2)) * sin(orient[1]),
                              (float)sign(e[2]) * sqrt( (pow(d_1[0], 2) + pow(e[2], 2)) * pow(cos(orient[0]), 2) + (pow(d_1[1], 2) + pow(e[2], 2)) * pow(cos(orient[1]), 2) )};
-    ROS_INFO("d: %f, %f, %f", d[0], d[1], d[2]);
-    ROS_INFO("e: %f, %f, %f", e[0], e[1], e[2]);
+    ROS_INFO("necessary: %f, %f, %f", necessary_coords[0], necessary_coords[1], necessary_coords[2]);
+    ROS_INFO("real: %f, %f, %f", linear_coords[0], linear_coords[1], linear_coords[2]);
     twist.linear.x = limit(K_P * d[0], -1, 1);
     twist.linear.y = limit(K_P * d[1], -1, 1);
     twist.linear.z = limit(K_P * d[2], -1, 1);
@@ -59,7 +59,7 @@ int main(int argc, char** argv)
     ros::Subscriber _sub_tf = _nh.subscribe<tf::tfMessage>("/tf", 1, 
         boost::bind(tf_callback, _1, linear_coords));
     ros::Subscriber _sub_navdata = _nh.subscribe<ardrone_autonomy::Navdata>("/ardrone/navdata", 1, 
-        boost::bind(navdata_callback, _1, angular_coords));
+        boost::bind(navdata_callback, _1, angular_coords, linear_coords));
     ros::Publisher _pub_twist = _nh.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
     if (argc == 4)
         for (size_t i = 0; i < 3; i++)
