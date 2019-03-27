@@ -81,14 +81,40 @@ drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/coords_teleop.cpp.o.provid
 drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/coords_teleop.cpp.o.provides.build: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/coords_teleop.cpp.o
 
 
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/flags.make
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o"
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.cpp
+
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.i"
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.cpp > CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.i
+
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.s"
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.cpp -o CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.s
+
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.requires:
+
+.PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.requires
+
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.provides: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.requires
+	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.provides.build
+.PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.provides
+
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.provides.build: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o
+
+
 # Object files for target coords_teleop
 coords_teleop_OBJECTS = \
-"CMakeFiles/coords_teleop.dir/src/coords_teleop.cpp.o"
+"CMakeFiles/coords_teleop.dir/src/coords_teleop.cpp.o" \
+"CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o"
 
 # External object files for target coords_teleop
 coords_teleop_EXTERNAL_OBJECTS =
 
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/coords_teleop.cpp.o
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: /opt/ros/kinetic/lib/libtf.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: /opt/ros/kinetic/lib/libtf2_ros.so
@@ -115,7 +141,7 @@ coords_teleop_EXTERNAL_OBJECTS =
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_teleop/coords_teleop"
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/coords_teleop.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +150,7 @@ drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build: /home/hammerviking/robo
 .PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
 
 drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/requires: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/coords_teleop.cpp.o.requires
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/requires: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/src/ardrone_pid.cpp.o.requires
 
 .PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/requires
 

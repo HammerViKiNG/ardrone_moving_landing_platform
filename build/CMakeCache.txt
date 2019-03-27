@@ -632,6 +632,12 @@ ar_track_alvar_msgs_DIR:PATH=/home/hammerviking/robotic_software/ardrone_moving_
 ar_track_alvar_msgs_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_track_alvar/ar_track_alvar_msgs
 
 //Value Computed by CMake
+ardrone_ar_tag_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag
+
+//Value Computed by CMake
+ardrone_ar_tag_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag
+
+//Value Computed by CMake
 ardrone_autonomy_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_autonomy
 
 //The directory containing a CMake configuration file for ardrone_autonomy.
@@ -1145,7 +1151,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

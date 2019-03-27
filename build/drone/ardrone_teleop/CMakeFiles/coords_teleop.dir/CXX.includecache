@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/coords_teleop.cpp
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.cpp
+ardrone_pid.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.h
+
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.h
 cmath
 -
 ros/ros.h
@@ -17,6 +21,12 @@ ardrone_autonomy/Navdata.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_autonomy/Navdata.h
 geometry_msgs/Twist.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/geometry_msgs/Twist.h
+
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/coords_teleop.cpp
+ros/ros.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ros/ros.h
+ardrone_pid.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/src/ardrone_pid.h
 
 /opt/ros/kinetic/include/ardrone_autonomy/Navdata.h
 string
