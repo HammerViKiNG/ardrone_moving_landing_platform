@@ -2,6 +2,7 @@
 
 #include "ros/ros.h"
 #include "tf/tfMessage.h"
+#include "ar_track_alvar_msgs/AlvarMarkers.h"
 #include "ardrone_autonomy/Navdata.h"
 #include "geometry_msgs/Twist.h"
 

@@ -138,7 +138,7 @@
           <geometry>
             <mesh>
               <uri>model://complex_ar_tag/meshes/artag.dae</uri>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
             </mesh>
           </geometry>
           <pose frame=''>0 0 0 0 -0 0</pose>
