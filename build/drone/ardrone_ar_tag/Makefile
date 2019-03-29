@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule
+.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule
+
+# Convenience name for target.
+ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule
+
+.PHONY : ar_tag_handler
+
+# fast build rule for target.
+ar_tag_handler/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build
+.PHONY : ar_tag_handler/fast
+
+# Convenience name for target.
 drone/ardrone_ar_tag/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_ar_tag/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : drone/ardrone_ar_tag/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -315,6 +330,33 @@ rosgraph_msgs_generate_messages_py/fast:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make drone/ardrone_ar_tag/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
+src/ardrone_ar_tag_control.o: src/ardrone_ar_tag_control.cpp.o
+
+.PHONY : src/ardrone_ar_tag_control.o
+
+# target to build an object file
+src/ardrone_ar_tag_control.cpp.o:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o
+.PHONY : src/ardrone_ar_tag_control.cpp.o
+
+src/ardrone_ar_tag_control.i: src/ardrone_ar_tag_control.cpp.i
+
+.PHONY : src/ardrone_ar_tag_control.i
+
+# target to preprocess a source file
+src/ardrone_ar_tag_control.cpp.i:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.i
+.PHONY : src/ardrone_ar_tag_control.cpp.i
+
+src/ardrone_ar_tag_control.s: src/ardrone_ar_tag_control.cpp.s
+
+.PHONY : src/ardrone_ar_tag_control.s
+
+# target to generate assembly for a file
+src/ardrone_ar_tag_control.cpp.s:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.s
+.PHONY : src/ardrone_ar_tag_control.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -325,6 +367,7 @@ help:
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... ar_tag_handler"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... test"
 	@echo "... roscpp_generate_messages_nodejs"
@@ -338,6 +381,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... src/ardrone_ar_tag_control.o"
+	@echo "... src/ardrone_ar_tag_control.i"
+	@echo "... src/ardrone_ar_tag_control.s"
 .PHONY : help
 
 

@@ -855,6 +855,19 @@ cvg_sim_msgs_geneus/fast:
 .PHONY : cvg_sim_msgs_geneus/fast
 
 #=============================================================================
+# Target rules for targets named ar_tag_handler
+
+# Build rule for target.
+ar_tag_handler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_handler
+.PHONY : ar_tag_handler
+
+# fast build rule for target.
+ar_tag_handler/fast:
+	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build
+.PHONY : ar_tag_handler/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_lisp
 
 # Build rule for target.
@@ -2246,6 +2259,7 @@ help:
 	@echo "... cvg_sim_msgs_gencpp"
 	@echo "... cvg_sim_msgs_generate_messages_eus"
 	@echo "... cvg_sim_msgs_geneus"
+	@echo "... ar_tag_handler"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
