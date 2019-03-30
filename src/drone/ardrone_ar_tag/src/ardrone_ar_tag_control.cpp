@@ -1,60 +1,84 @@
-#include <cmath>
-
-#include "ros/ros.h"
-#include "tf/tfMessage.h"
-#include "ardrone_autonomy/Navdata.h"
-#include "ar_track_alvar_msgs/AlvarMarkers.h"
-
-#define limit(value, min, max) (value < min) ? min : (value > max) ? max : value
-#define handle_angle(angle) (angle >= 0) ? angle * M_PI / 180.0 : M_PI * (2 - angle / 180.0) 
-#define sign(a) (a > 0) - (a < 0)
+#include "ardrone_ar_tag_control.h"
 
 
-void tf_callback(const boost::shared_ptr<tf::tfMessage const>& msg, double* linear_coords)
+ArdroneARTag::ArdroneARTag(std::string tf_topic, std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, double hz)
 {
-    linear_coords[0] = msg->transforms[0].transform.translation.x;
-    linear_coords[1] = msg->transforms[0].transform.translation.y; 
-    linear_coords[2] = msg->transforms[1].transform.translation.z;
+    sub_tf = nh.subscribe(tf_topic, 1, &ArdroneARTag::tf_callback, this);
+    sub_navdata = nh.subscribe(navdata_topic, 1, &ArdroneARTag::navdata_callback, this);
+    sub_ar_tag_bottom = nh.subscribe(ar_tag_bottom_topic, 1, &ArdroneARTag::ar_tag_bottom_callback, this);
+    pub_twist = nh.advertise<geometry_msgs::Twist>(cmd_topic, 1);
+    dt = 1 / hz;
+    is_spotted_bottom = false;
+    controller = new ArdronePID(hz);
 }
 
 
-void navdata_callback(const boost::shared_ptr<ardrone_autonomy::Navdata const>& msg, double* angular_coords)
+void ArdroneARTag::tf_callback(const tf::tfMessage& msg)
 {
-    angular_coords[0] = msg->rotX * M_PI / 180.0;
-    angular_coords[1] = msg->rotY * M_PI / 180.0;
-    angular_coords[2] = msg->rotZ * M_PI / 180.0;
+    linear_coords[0] = msg.transforms[0].transform.translation.x;
+    linear_coords[1] = msg.transforms[0].transform.translation.y; 
+    //linear_coords[2] = msg.transforms[1].transform.translation.z;
+    //ROS_INFO_STREAM(linear_coords[2]);
 }
 
 
-void ar_tag_callback(const boost::shared_ptr<ar_track_alvar_msgs::AlvarMarkers const>& msg, double* ar_tag_coords, double* angular_coords, double* real_ar_tag_coords, double* linear_coords)
+void ArdroneARTag::navdata_callback(const ardrone_autonomy::Navdata& msg)
 {
-    if (msg->markers.size())
+    angular_coords[0] = msg.rotX * M_PI / 180.0;
+    angular_coords[1] = msg.rotY * M_PI / 180.0;
+    angular_coords[2] = msg.rotZ * M_PI / 180.0;
+    linear_coords[2] = msg.altd / 1000.0;
+    state = msg.state;
+}
+
+
+void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
+{
+    if (msg.markers.size() && msg.markers[0].id == 4)
     {
-        ar_tag_coords[0] = msg->markers[0].pose.pose.position.x;
-        ar_tag_coords[1] = msg->markers[0].pose.pose.position.y;
-        ar_tag_coords[2] = msg->markers[0].pose.pose.position.z;
-        real_ar_tag_coords[0] = linear_coords[2] * tan(atan(ar_tag_coords[0] / ar_tag_coords[2]) - angular_coords[0]);
-        real_ar_tag_coords[1] = linear_coords[2] * tan(-atan(ar_tag_coords[1] / ar_tag_coords[2]) - angular_coords[0]);
-        ROS_INFO_STREAM(linear_coords[2]);
+        double* temp_ar_tag_coords = new double[3] {
+            msg.markers[0].pose.pose.position.x,
+            msg.markers[0].pose.pose.position.y,
+            msg.markers[0].pose.pose.position.z,
+        };
+        double* local_ar_tag_coords = new double[2]
+        {
+            linear_coords[2] * tan(atan(temp_ar_tag_coords[0] / temp_ar_tag_coords[2]) - angular_coords[0]),
+            linear_coords[2] * tan(-atan(temp_ar_tag_coords[1] / temp_ar_tag_coords[2]) - angular_coords[1]),
+        };
+        ar_tag_coords[0] = linear_coords[0] + 0.15 * cos(angular_coords[2]) + local_ar_tag_coords[1] * cos(angular_coords[2]) + local_ar_tag_coords[0] * sin(angular_coords[2]);
+        ar_tag_coords[1] = linear_coords[1] + 0.15 * sin(angular_coords[2]) - local_ar_tag_coords[1] * sin(angular_coords[2]) + local_ar_tag_coords[0] * cos(angular_coords[2]);
+        //ROS_INFO("%f, %f, %f", local_ar_tag_coords[1] - 0.15 * sin(angular_coords[2]), local_ar_tag_coords[0] - 0.15 * cos(angular_coords[2]), linear_coords[2]);
+        geometry_msgs::PoseStamped pose;
+        listener.transformPose("base_link", ros::Time::now(), msg.markers[0].pose, "bottom_link", pose);
+        ROS_INFO("x: %f, y: %f, z: %f", pose.pose.position.x, pose.pose.position.y, pose.pose.position.z);
+        is_spotted_bottom = true;
+        delete temp_ar_tag_coords, local_ar_tag_coords;
     }
 }
 
 
-int main(int argc, char** argv)
+void ArdroneARTag::control(void)
 {
-    double linear_coords[3] = {0, 0, 0}, angular_coords[3] = {0, 0, 0}, ar_tag_coords[3] = {0, 0, 0}, real_ar_tag_coords[2] = {0.0, 0.0};
-    double x, y;
-    ros::init(argc, argv, "ar_tag_handler");
-    ros::NodeHandle _nh;
-    ros::Subscriber _sub_tf = _nh.subscribe<tf::tfMessage>("/tf", 1, 
-        boost::bind(tf_callback, _1, linear_coords));
-    ros::Subscriber _sub_navdata = _nh.subscribe<ardrone_autonomy::Navdata>("/ardrone/navdata", 1, 
-        boost::bind(navdata_callback, _1, angular_coords));
-    ros::Subscriber _sub_ar_tag = _nh.subscribe<ar_track_alvar_msgs::AlvarMarkers>("/ardrone/ar_tag_bottom", 1, 
-        boost::bind(ar_tag_callback, _1, ar_tag_coords, angular_coords, real_ar_tag_coords, linear_coords));
-    while (ros::ok())
+    if (state == 2)
     {
-        //ROS_INFO("tag a: %f, b: %f \n drone a: %f, b: %f \n real x: %f, y: %f", atan(ar_tag_coords[0] / ar_tag_coords[2]), atan(-ar_tag_coords[1] / ar_tag_coords[2]), angular_coords[0], angular_coords[1], real_ar_tag_coords[0], real_ar_tag_coords[1]);
-        ros::spinOnce();
+        //system("rostopic pub -1 /ardrone/takeoff std_msgs/Empty");
+    }
+    else if (is_spotted_bottom)
+    {
+        necessary_coords[0] = ar_tag_coords[0];
+        necessary_coords[1] = ar_tag_coords[1];
+        necessary_coords[2] = limit(linear_coords[2] - 10 * dt, 0, linear_coords[2]);
+        //ROS_INFO("n: %f, %f, %f", necessary_coords[0], necessary_coords[1], necessary_coords[2]);
+        //ROS_INFO("r: %f, %f, %f", angular_coords[0], angular_coords[1], angular_coords[2]);
+        twist = controller->pid(linear_coords, angular_coords, necessary_coords);
+        //pub_twist.publish(twist);
+        //if (state != 8)
+            //system("rostopic pub -1 /ardrone/land std_msgs/Empty");
+    }
+    else 
+    {
     }
 }
+
+

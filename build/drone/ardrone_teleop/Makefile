@@ -56,6 +56,29 @@ CMAKE_BINARY_DIR = /home/hammerviking/robotic_software/ardrone_moving_landing_pl
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -78,38 +101,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -121,17 +112,26 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,34 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_gennodejs: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
+ardrone_teleop_genpy: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
 
-.PHONY : ardrone_teleop_gennodejs
+.PHONY : ardrone_teleop_genpy
 
 # fast build rule for target.
-ardrone_teleop_gennodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build
-.PHONY : ardrone_teleop_gennodejs/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_geneus: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
-
-.PHONY : ardrone_teleop_geneus
-
-# fast build rule for target.
-ardrone_teleop_geneus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build
-.PHONY : ardrone_teleop_geneus/fast
+ardrone_teleop_genpy/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build
+.PHONY : ardrone_teleop_genpy/fast
 
 # Convenience name for target.
 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule:
@@ -211,424 +196,19 @@ ardrone_teleop_generate_messages_eus/fast:
 .PHONY : ardrone_teleop_generate_messages_eus/fast
 
 # Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_py: drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+ardrone_teleop_geneus: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
 
-.PHONY : sensor_msgs_generate_messages_py
+.PHONY : ardrone_teleop_geneus
 
 # fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_py: drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-.PHONY : actionlib_generate_messages_py
-
-# fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
-
-.PHONY : ardrone_teleop_generate_messages_nodejs
-
-# fast build rule for target.
-ardrone_teleop_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build
-.PHONY : ardrone_teleop_generate_messages_nodejs/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_genpy: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
-
-.PHONY : ardrone_teleop_genpy
-
-# fast build rule for target.
-ardrone_teleop_genpy/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build
-.PHONY : ardrone_teleop_genpy/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_genlisp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
-
-.PHONY : ardrone_teleop_genlisp
-
-# fast build rule for target.
-ardrone_teleop_genlisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build
-.PHONY : ardrone_teleop_genlisp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_eus: drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_cpp: drone/ardrone_teleop/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-.PHONY : tf_generate_messages_cpp
-
-# fast build rule for target.
-tf_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf_generate_messages_eus.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_eus: drone/ardrone_teleop/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-.PHONY : tf_generate_messages_eus
-
-# fast build rule for target.
-tf_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/tf_generate_messages_eus.dir/build
-.PHONY : tf_generate_messages_eus/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-.PHONY : actionlib_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_gencpp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
-
-.PHONY : ardrone_teleop_gencpp
-
-# fast build rule for target.
-ardrone_teleop_gencpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build
-.PHONY : ardrone_teleop_gencpp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_py: drone/ardrone_teleop/CMakeFiles/tf_generate_messages_py.dir/rule
-
-.PHONY : tf_generate_messages_py
-
-# fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_generate_messages_py: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
-
-.PHONY : ardrone_teleop_generate_messages_py
-
-# fast build rule for target.
-ardrone_teleop_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build
-.PHONY : ardrone_teleop_generate_messages_py/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_generate_messages: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
-
-.PHONY : ardrone_teleop_generate_messages
-
-# fast build rule for target.
-ardrone_teleop_generate_messages/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build
-.PHONY : ardrone_teleop_generate_messages/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-.PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
-
-# Convenience name for target.
-coords_teleop: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
-
-.PHONY : coords_teleop
-
-# fast build rule for target.
-coords_teleop/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
-.PHONY : coords_teleop/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-.PHONY : tf2_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-.PHONY : tf_generate_messages_lisp
-
-# fast build rule for target.
-tf_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/tf_generate_messages_lisp.dir/build
-.PHONY : tf_generate_messages_lisp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-ardrone_teleop_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
-
-.PHONY : ardrone_teleop_generate_messages_lisp
-
-# fast build rule for target.
-ardrone_teleop_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build
-.PHONY : ardrone_teleop_generate_messages_lisp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_lisp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-.PHONY : tf2_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-.PHONY : tf_generate_messages_nodejs
-
-# fast build rule for target.
-tf_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/tf_generate_messages_nodejs.dir/build
-.PHONY : tf_generate_messages_nodejs/fast
-
-# Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_eus: drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_eus
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-.PHONY : actionlib_msgs_generate_messages_eus/fast
+ardrone_teleop_geneus/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build
+.PHONY : ardrone_teleop_geneus/fast
 
 # Convenience name for target.
 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/rule:
@@ -646,79 +226,124 @@ ardrone_teleop_generate_messages_cpp/fast:
 .PHONY : ardrone_teleop_generate_messages_cpp/fast
 
 # Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
 
 # Convenience name for target.
-actionlib_generate_messages_cpp: drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+ardrone_teleop_gencpp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
 
-.PHONY : actionlib_generate_messages_cpp
+.PHONY : ardrone_teleop_gencpp
 
 # fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
+ardrone_teleop_gencpp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build
+.PHONY : ardrone_teleop_gencpp/fast
 
 # Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
 
 # Convenience name for target.
-actionlib_msgs_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+ardrone_teleop_generate_messages: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
 
-.PHONY : actionlib_msgs_generate_messages_nodejs
+.PHONY : ardrone_teleop_generate_messages
 
 # fast build rule for target.
-actionlib_msgs_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
-.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+ardrone_teleop_generate_messages/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build
+.PHONY : ardrone_teleop_generate_messages/fast
 
 # Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-actionlib_msgs_generate_messages_py: drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+ardrone_teleop_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
 
-.PHONY : actionlib_msgs_generate_messages_py
+.PHONY : ardrone_teleop_generate_messages_lisp
 
 # fast build rule for target.
-actionlib_msgs_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-.PHONY : actionlib_msgs_generate_messages_py/fast
+ardrone_teleop_generate_messages_lisp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build
+.PHONY : ardrone_teleop_generate_messages_lisp/fast
 
 # Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-tf2_msgs_generate_messages_py: drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+ardrone_teleop_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
 
-.PHONY : tf2_msgs_generate_messages_py
+.PHONY : ardrone_teleop_generate_messages_nodejs
 
 # fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
+ardrone_teleop_generate_messages_nodejs/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build
+.PHONY : ardrone_teleop_generate_messages_nodejs/fast
 
 # Convenience name for target.
-drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-.PHONY : drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
 
 # Convenience name for target.
-tf2_msgs_generate_messages_eus: drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+ardrone_teleop_genlisp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
 
-.PHONY : tf2_msgs_generate_messages_eus
+.PHONY : ardrone_teleop_genlisp
 
 # fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
+ardrone_teleop_genlisp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build
+.PHONY : ardrone_teleop_genlisp/fast
+
+# Convenience name for target.
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
+
+# Convenience name for target.
+ardrone_teleop_gennodejs: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
+
+.PHONY : ardrone_teleop_gennodejs
+
+# fast build rule for target.
+ardrone_teleop_gennodejs/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build
+.PHONY : ardrone_teleop_gennodejs/fast
+
+# Convenience name for target.
+drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
+
+# Convenience name for target.
+coords_teleop: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
+
+.PHONY : coords_teleop
+
+# fast build rule for target.
+coords_teleop/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
+.PHONY : coords_teleop/fast
+
+# Convenience name for target.
+drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
+.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
+
+# Convenience name for target.
+ardrone_teleop_generate_messages_py: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
+
+.PHONY : ardrone_teleop_generate_messages_py
+
+# fast build rule for target.
+ardrone_teleop_generate_messages_py/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build
+.PHONY : ardrone_teleop_generate_messages_py/fast
 
 src/ardrone_pid.o: src/ardrone_pid.cpp.o
 
@@ -780,50 +405,25 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install"
+	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... ardrone_teleop_gennodejs"
-	@echo "... ardrone_teleop_geneus"
-	@echo "... ardrone_teleop_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... actionlib_generate_messages_py"
-	@echo "... list_install_components"
-	@echo "... ardrone_teleop_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... ardrone_teleop_genpy"
-	@echo "... ardrone_teleop_genlisp"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... tf_generate_messages_eus"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... ardrone_teleop_gencpp"
-	@echo "... tf_generate_messages_py"
-	@echo "... rebuild_cache"
-	@echo "... ardrone_teleop_generate_messages_py"
-	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... ardrone_teleop_generate_messages"
-	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... edit_cache"
-	@echo "... coords_teleop"
-	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... ardrone_teleop_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... tf_generate_messages_nodejs"
-	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... ardrone_teleop_generate_messages_eus"
+	@echo "... ardrone_teleop_geneus"
 	@echo "... ardrone_teleop_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_nodejs"
-	@echo "... actionlib_msgs_generate_messages_py"
-	@echo "... install"
-	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... ardrone_teleop_gencpp"
+	@echo "... ardrone_teleop_generate_messages"
+	@echo "... edit_cache"
+	@echo "... ardrone_teleop_generate_messages_lisp"
+	@echo "... list_install_components"
+	@echo "... install/strip"
+	@echo "... ardrone_teleop_generate_messages_nodejs"
+	@echo "... ardrone_teleop_genlisp"
+	@echo "... ardrone_teleop_gennodejs"
+	@echo "... coords_teleop"
+	@echo "... ardrone_teleop_generate_messages_py"
 	@echo "... src/ardrone_pid.o"
 	@echo "... src/ardrone_pid.i"
 	@echo "... src/ardrone_pid.s"
