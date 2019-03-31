@@ -3,6 +3,11 @@
 
 ArdronePID::ArdronePID(double hz)
 {
+    for (size_t i = 0; i < 3; i++)
+    {
+        prev_e[i] = 0;
+        int_e[i] = 0;
+    }
     dt = 1 / hz;
 }
 
@@ -37,6 +42,22 @@ geometry_msgs::Twist ArdronePID::pid(double* linear_coords,
     for (size_t i = 0; i < 3; i++)
         prev_e[i] = e[i];
     delete rot, orient, d_1, d;
+    return twist;
+}
+
+
+geometry_msgs::Twist ArdronePID::pid(double* e)
+{
+    for (size_t i = 0; i < 3; i++)
+    {
+        div_e[i] = div(e[i], prev_e[i], dt);
+        integr(int_e[i], e[i], dt);
+    }
+    twist.linear.x = limit(K_P * e[0] + K_D * div_e[0] + K_I * int_e[0], -1, 1);
+    twist.linear.y = limit(K_P * e[1] + K_D * div_e[1] + K_I * int_e[1], -1, 1);
+    twist.linear.z = limit(K_P * e[2] + K_D * div_e[2] + K_I * int_e[2], -1, 1);
+    for (size_t i = 0; i < 3; i++)
+        prev_e[i] = e[i];
     return twist;
 }
 

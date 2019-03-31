@@ -34,26 +34,24 @@ void ArdroneARTag::navdata_callback(const ardrone_autonomy::Navdata& msg)
 
 void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
 {
-    if (msg.markers.size() && msg.markers[0].id == 4)
+    size_t index = 0;
+    if (!msg.markers.empty())
     {
-        double* temp_ar_tag_coords = new double[3] {
-            msg.markers[0].pose.pose.position.x,
-            msg.markers[0].pose.pose.position.y,
-            msg.markers[0].pose.pose.position.z,
-        };
-        double* local_ar_tag_coords = new double[2]
+        if (msg.markers.size() == 2 && msg.markers[1].id == 4)
+            index = 1;
+        if (msg.markers[index].id == 8)
         {
-            linear_coords[2] * tan(atan(temp_ar_tag_coords[0] / temp_ar_tag_coords[2]) - angular_coords[0]),
-            linear_coords[2] * tan(-atan(temp_ar_tag_coords[1] / temp_ar_tag_coords[2]) - angular_coords[1]),
-        };
-        ar_tag_coords[0] = linear_coords[0] + 0.15 * cos(angular_coords[2]) + local_ar_tag_coords[1] * cos(angular_coords[2]) + local_ar_tag_coords[0] * sin(angular_coords[2]);
-        ar_tag_coords[1] = linear_coords[1] + 0.15 * sin(angular_coords[2]) - local_ar_tag_coords[1] * sin(angular_coords[2]) + local_ar_tag_coords[0] * cos(angular_coords[2]);
-        //ROS_INFO("%f, %f, %f", local_ar_tag_coords[1] - 0.15 * sin(angular_coords[2]), local_ar_tag_coords[0] - 0.15 * cos(angular_coords[2]), linear_coords[2]);
-        geometry_msgs::PoseStamped pose;
-        listener.transformPose("base_link", ros::Time::now(), msg.markers[0].pose, "bottom_link", pose);
-        ROS_INFO("x: %f, y: %f, z: %f", pose.pose.position.x, pose.pose.position.y, pose.pose.position.z);
+	        necessary_coords[0] = msg.markers[index].pose.pose.position.x / 9.0;
+            necessary_coords[1] = msg.markers[index].pose.pose.position.y / 9.0;
+            necessary_coords[2] = msg.markers[index].pose.pose.position.z / 9.0;
+        }
+        else
+        {
+            necessary_coords[0] = msg.markers[index].pose.pose.position.x;
+            necessary_coords[1] = msg.markers[index].pose.pose.position.y;
+            necessary_coords[2] = msg.markers[index].pose.pose.position.z;
+        }
         is_spotted_bottom = true;
-        delete temp_ar_tag_coords, local_ar_tag_coords;
     }
 }
 
@@ -66,13 +64,11 @@ void ArdroneARTag::control(void)
     }
     else if (is_spotted_bottom)
     {
-        necessary_coords[0] = ar_tag_coords[0];
-        necessary_coords[1] = ar_tag_coords[1];
-        necessary_coords[2] = limit(linear_coords[2] - 10 * dt, 0, linear_coords[2]);
-        //ROS_INFO("n: %f, %f, %f", necessary_coords[0], necessary_coords[1], necessary_coords[2]);
+        ROS_INFO("n: %f, %f, %f", necessary_coords[0], necessary_coords[1], necessary_coords[2]);
         //ROS_INFO("r: %f, %f, %f", angular_coords[0], angular_coords[1], angular_coords[2]);
-        twist = controller->pid(linear_coords, angular_coords, necessary_coords);
-        //pub_twist.publish(twist);
+        twist = controller->pid(necessary_coords);
+        ROS_INFO("twist x: %f, y: %f, z: %f", twist.linear.x, twist.linear.y, twist.linear.z);
+        pub_twist.publish(twist);
         //if (state != 8)
             //system("rostopic pub -1 /ardrone/land std_msgs/Empty");
     }
