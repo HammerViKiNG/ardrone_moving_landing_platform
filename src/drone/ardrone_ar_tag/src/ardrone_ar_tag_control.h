@@ -6,7 +6,6 @@
 #include "ros/ros.h"
 #include "tf/tfMessage.h"
 #include "tf/transform_datatypes.h"
-#include "tf/transform_listener.h"
 #include "geometry_msgs/PoseStamped.h"
 #include "ardrone_autonomy/Navdata.h"
 #include "ar_track_alvar_msgs/AlvarMarkers.h"
@@ -27,7 +26,9 @@ class ArdroneARTag
 	    void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
         int8_t state;
-        double necessary_coords[3], linear_coords[3], angular_coords[3], ar_tag_coords[2];
+        double linear_coords[3], angular_coords[3];
+        double necessary_pose[6];
+
         double dt;  
 
         bool is_spotted_bottom; 
@@ -36,8 +37,9 @@ class ArdroneARTag
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom;
         ros::Publisher pub_twist;
 
+        tf::Quaternion quat;
         geometry_msgs::Twist twist;
-        tf::TransformListener listener;
+
 
         ArdronePID* controller;
 };

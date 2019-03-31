@@ -27,7 +27,7 @@ void ArdroneARTag::navdata_callback(const ardrone_autonomy::Navdata& msg)
     angular_coords[0] = msg.rotX * M_PI / 180.0;
     angular_coords[1] = msg.rotY * M_PI / 180.0;
     angular_coords[2] = msg.rotZ * M_PI / 180.0;
-    linear_coords[2] = msg.altd / 1000.0;
+    linear_coords[2] = msg.altd / 1000;
     state = msg.state;
 }
 
@@ -39,17 +39,23 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
     {
         if (msg.markers.size() == 2 && msg.markers[1].id == 4)
             index = 1;
+        tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
+        tf::Matrix3x3(quat).getRPY(necessary_pose[3], necessary_pose[4], necessary_pose[5]);
+       
+        //necessary_pose[3] = 0;
+        //necessary_pose[4] = 0;
+        necessary_pose[5] = (necessary_pose[5] < -M_PI / 2.0) ? 1.5 * M_PI + necessary_pose[5] : necessary_pose[5] - M_PI / 2.0;
         if (msg.markers[index].id == 8)
         {
-	        necessary_coords[0] = msg.markers[index].pose.pose.position.x / 9.0;
-            necessary_coords[1] = msg.markers[index].pose.pose.position.y / 9.0;
-            necessary_coords[2] = msg.markers[index].pose.pose.position.z / 9.0;
+	    necessary_pose[0] = msg.markers[index].pose.pose.position.x / 9.0;
+            necessary_pose[1] = msg.markers[index].pose.pose.position.y / 9.0;
+            necessary_pose[2] = msg.markers[index].pose.pose.position.z / 9.0;
         }
         else
         {
-            necessary_coords[0] = msg.markers[index].pose.pose.position.x;
-            necessary_coords[1] = msg.markers[index].pose.pose.position.y;
-            necessary_coords[2] = msg.markers[index].pose.pose.position.z;
+            necessary_pose[0] = msg.markers[index].pose.pose.position.x;
+            necessary_pose[1] = msg.markers[index].pose.pose.position.y;
+            necessary_pose[2] = msg.markers[index].pose.pose.position.z;
         }
         is_spotted_bottom = true;
     }
@@ -64,13 +70,13 @@ void ArdroneARTag::control(void)
     }
     else if (is_spotted_bottom)
     {
-        ROS_INFO("n: %f, %f, %f", necessary_coords[0], necessary_coords[1], necessary_coords[2]);
+        ROS_INFO("%f, %f, %f", necessary_pose[2], necessary_pose[4], necessary_pose[5]);
         //ROS_INFO("r: %f, %f, %f", angular_coords[0], angular_coords[1], angular_coords[2]);
-        twist = controller->pid(necessary_coords);
-        ROS_INFO("twist x: %f, y: %f, z: %f", twist.linear.x, twist.linear.y, twist.linear.z);
+        twist = controller->pid(necessary_pose);
+        //ROS_INFO("twist x: %f, y: %f, z: %f", twist.linear.x, twist.linear.y, twist.linear.z);
         pub_twist.publish(twist);
-        //if (state != 8)
-            //system("rostopic pub -1 /ardrone/land std_msgs/Empty");
+        if (state != 8 && necessary_pose[2] >= -0.2)
+            system("rostopic pub -1 /ardrone/land std_msgs/Empty");
     }
     else 
     {

@@ -3,10 +3,11 @@
 
 ArdronePID::ArdronePID(double hz)
 {
-    for (size_t i = 0; i < 3; i++)
+    for (size_t i = 0; i < 6; i++)
     {
         prev_e[i] = 0;
         int_e[i] = 0;
+
     }
     dt = 1 / hz;
 }
@@ -48,7 +49,7 @@ geometry_msgs::Twist ArdronePID::pid(double* linear_coords,
 
 geometry_msgs::Twist ArdronePID::pid(double* e)
 {
-    for (size_t i = 0; i < 3; i++)
+    for (size_t i = 0; i < 6; i++)
     {
         div_e[i] = div(e[i], prev_e[i], dt);
         integr(int_e[i], e[i], dt);
@@ -56,7 +57,10 @@ geometry_msgs::Twist ArdronePID::pid(double* e)
     twist.linear.x = limit(K_P * e[0] + K_D * div_e[0] + K_I * int_e[0], -1, 1);
     twist.linear.y = limit(K_P * e[1] + K_D * div_e[1] + K_I * int_e[1], -1, 1);
     twist.linear.z = limit(K_P * e[2] + K_D * div_e[2] + K_I * int_e[2], -1, 1);
-    for (size_t i = 0; i < 3; i++)
+    twist.angular.x = limit(K_P * e[3] + K_D * div_e[3] + K_I * int_e[3], -1, 1);
+    twist.angular.y = limit(K_P * e[4] + K_D * div_e[4] + K_I * int_e[4], -1, 1);
+    twist.angular.z = limit(K_P * e[5] + K_D * div_e[5] + K_I * int_e[5], -1, 1);
+    for (size_t i = 0; i < 6; i++)
         prev_e[i] = e[i];
     return twist;
 }

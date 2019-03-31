@@ -23,10 +23,10 @@ class ArdronePID
         double div(double e, double prev_e, double dt);
         void integr(double& int_e, double e, double dt);
 
-        const double K_P = 0.5f, K_D = 0.1f, K_I = 0.05f;
+        const double K_P = 1.5f, K_D = 0.25f, K_I = 0.1f;
 
         double dt;
-        double e[3], prev_e[3], int_e[3], div_e[3];      
+        double e[6], prev_e[6], int_e[6], div_e[6];      
 
         geometry_msgs::Twist twist;
 };
