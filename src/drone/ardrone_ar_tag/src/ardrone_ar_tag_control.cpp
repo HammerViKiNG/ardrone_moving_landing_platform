@@ -9,7 +9,12 @@ ArdroneARTag::ArdroneARTag(std::string tf_topic, std::string navdata_topic, std:
     pub_twist = nh.advertise<geometry_msgs::Twist>(cmd_topic, 1);
     dt = 1 / hz;
     is_spotted_bottom = false;
-    controller = new ArdronePID(hz);
+    double* k_p = new double[6] {0.7, 0.7, 0.4, 0.1, 0.1, 1};
+    double* k_d = new double[6] {0.15, 0.15, 0.1, 0.05, 0.05, 0.2};
+    double* k_i = new double[6] {0.02, 0.02, 0, 0.01, 0.01, 0.03};
+    double* crit = new double[6] {3, 3, 1, 1, 1, 1};
+    controller = new ArdronePID(hz, k_p, k_d, k_i, crit);
+    delete k_p, k_d, k_i, crit;
 }
 
 
@@ -27,7 +32,7 @@ void ArdroneARTag::navdata_callback(const ardrone_autonomy::Navdata& msg)
     angular_coords[0] = msg.rotX * M_PI / 180.0;
     angular_coords[1] = msg.rotY * M_PI / 180.0;
     angular_coords[2] = msg.rotZ * M_PI / 180.0;
-    linear_coords[2] = msg.altd / 1000;
+    linear_coords[2] = msg.altd / 1000.0;
     state = msg.state;
 }
 
@@ -44,6 +49,7 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
        
         //necessary_pose[3] = 0;
         //necessary_pose[4] = 0;
+        necessary_pose[2] *= 0.2;
         necessary_pose[5] = (necessary_pose[5] < -M_PI / 2.0) ? 1.5 * M_PI + necessary_pose[5] : necessary_pose[5] - M_PI / 2.0;
         if (msg.markers[index].id == 8)
         {
@@ -70,12 +76,12 @@ void ArdroneARTag::control(void)
     }
     else if (is_spotted_bottom)
     {
-        ROS_INFO("%f, %f, %f", necessary_pose[2], necessary_pose[4], necessary_pose[5]);
+        ROS_INFO("r: %f, %f, %f", necessary_pose[0], necessary_pose[1], necessary_pose[2]);
         //ROS_INFO("r: %f, %f, %f", angular_coords[0], angular_coords[1], angular_coords[2]);
         twist = controller->pid(necessary_pose);
         //ROS_INFO("twist x: %f, y: %f, z: %f", twist.linear.x, twist.linear.y, twist.linear.z);
         pub_twist.publish(twist);
-        if (state != 8 && necessary_pose[2] >= -0.2)
+        if (state != 8 && linear_coords[2] <= 0.2)
             system("rostopic pub -1 /ardrone/land std_msgs/Empty");
     }
     else 

@@ -12,10 +12,10 @@ from pynput.keyboard import Key, KeyCode, Listener
 
 # Dictionary with changes to attriburtes of Twist Parameter
 keys_attrs = {
-    KeyCode.from_char("w"): ("linear", "x", 6),
-    KeyCode.from_char("s"): ("linear", "x", -6),
-    KeyCode.from_char("a"): ("linear", "y", 6),
-    KeyCode.from_char("d"): ("linear", "y", -6),
+    KeyCode.from_char("w"): ("linear", "x", 3),
+    KeyCode.from_char("s"): ("linear", "x", -3),
+    KeyCode.from_char("a"): ("linear", "y", 3),
+    KeyCode.from_char("d"): ("linear", "y", -3),
     Key.up: ("linear", "z", 1),
     Key.down: ("linear", "z", -1),
     Key.left: ("angular", "z", 1),

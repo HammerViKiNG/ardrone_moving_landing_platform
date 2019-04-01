@@ -13,17 +13,15 @@
 class ArdronePID
 {
     public:
-        ArdronePID(double hz);
-        geometry_msgs::Twist pid(double* linear_coords, 
-                                 double* angular_coords, 
-                                 double* necessary_coords);
+        ArdronePID(double hz, double* k_p, double* k_d, double* k_i, double* crit);
+
         geometry_msgs::Twist pid(double* e);
     
     private:
         double div(double e, double prev_e, double dt);
         void integr(double& int_e, double e, double dt);
 
-        const double K_P = 1.5f, K_D = 0.25f, K_I = 0.1f;
+        double K_P[6], K_D[6], K_I[6], CRIT[6];
 
         double dt;
         double e[6], prev_e[6], int_e[6], div_e[6];      
