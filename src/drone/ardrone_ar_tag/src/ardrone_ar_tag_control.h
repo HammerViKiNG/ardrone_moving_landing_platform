@@ -23,17 +23,18 @@ class ArdroneARTag
     private:
         void navdata_callback(const ardrone_autonomy::Navdata& msg);
 	    void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
+        void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
         int8_t state;
         double z, angular_coords[3];
         double dt;  
 
-        bool is_spotted_bottom; 
+        bool is_spotted_bottom, is_spotted_front; 
 
 	    PoseRPY necessary_pose;
         
         ros::NodeHandle nh;
-        ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom;
+        ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom, sub_ar_tag_front;
         ros::Publisher pub_twist;
 
         tf::Quaternion quat; 
