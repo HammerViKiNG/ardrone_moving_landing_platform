@@ -5,6 +5,7 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ar_tag_handler.cpp
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag_control.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.h
+ /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h
  /opt/ros/kinetic/include/ar_track_alvar_msgs/AlvarMarker.h
  /opt/ros/kinetic/include/ar_track_alvar_msgs/AlvarMarkers.h
  /opt/ros/kinetic/include/ardrone_autonomy/Navdata.h
@@ -83,7 +84,6 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o
  /opt/ros/kinetic/include/tf/LinearMath/Scalar.h
  /opt/ros/kinetic/include/tf/LinearMath/Transform.h
  /opt/ros/kinetic/include/tf/LinearMath/Vector3.h
- /opt/ros/kinetic/include/tf/tfMessage.h
  /opt/ros/kinetic/include/tf/transform_datatypes.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
@@ -91,6 +91,7 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cp
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag_control.cpp
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag_control.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.h
+ /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h
  /opt/ros/kinetic/include/ar_track_alvar_msgs/AlvarMarker.h
  /opt/ros/kinetic/include/ar_track_alvar_msgs/AlvarMarkers.h
  /opt/ros/kinetic/include/ardrone_autonomy/Navdata.h
@@ -169,13 +170,16 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cp
  /opt/ros/kinetic/include/tf/LinearMath/Scalar.h
  /opt/ros/kinetic/include/tf/LinearMath/Transform.h
  /opt/ros/kinetic/include/tf/LinearMath/Vector3.h
- /opt/ros/kinetic/include/tf/tfMessage.h
  /opt/ros/kinetic/include/tf/transform_datatypes.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.cpp
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.h
+ /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h
+ /opt/ros/kinetic/include/geometry_msgs/Point.h
+ /opt/ros/kinetic/include/geometry_msgs/Pose.h
+ /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
  /opt/ros/kinetic/include/geometry_msgs/Twist.h
  /opt/ros/kinetic/include/geometry_msgs/Vector3.h
  /opt/ros/kinetic/include/ros/advertise_options.h
@@ -236,3 +240,6 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o
  /opt/ros/kinetic/include/rosconsole/macros_generated.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
+drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o
+ /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.cpp
+ /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h

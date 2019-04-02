@@ -4,9 +4,9 @@
 #include <cmath>
 
 #include "ros/ros.h"
-#include "tf/tfMessage.h"
-#include "tf/transform_datatypes.h"
+#include "geometry_msgs/Pose.h"
 #include "geometry_msgs/PoseStamped.h"
+#include "tf/transform_datatypes.h"
 #include "ardrone_autonomy/Navdata.h"
 #include "ar_track_alvar_msgs/AlvarMarkers.h"
 #include "geometry_msgs/Twist.h"
@@ -17,27 +17,26 @@
 class ArdroneARTag
 {
     public:
-        ArdroneARTag(std::string tf_topic, std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, double hz);
+        ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, double hz);
         void control(void);
     
     private:
-        void tf_callback(const tf::tfMessage& msg);
         void navdata_callback(const ardrone_autonomy::Navdata& msg);
 	    void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
         int8_t state;
-        double linear_coords[3], angular_coords[3];
-        double necessary_pose[6];
-
+        double z, angular_coords[3];
         double dt;  
 
         bool is_spotted_bottom; 
+
+	    PoseRPY necessary_pose;
         
         ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom;
         ros::Publisher pub_twist;
 
-        tf::Quaternion quat;
+        tf::Quaternion quat; 
         geometry_msgs::Twist twist;
 
 

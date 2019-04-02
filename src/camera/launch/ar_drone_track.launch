@@ -4,7 +4,7 @@
 	<arg name="max_track_error" default="0.2" />
 	<arg name="cam_image_topic" default="/ardrone/image_raw" />
 	<arg name="cam_info_topic" default="/ardrone/camera_info" />
-	<arg name="output_frame" default="ardrone_base_frontcam" />
+	<arg name="output_frame" default="base_link" />
 	<arg name="bottom_cam_image_topic" default="/ardrone/bottom/image_raw" />
 	<arg name="bottom_cam_info_topic" default="/ardrone/bottom/camera_info" />
 	<arg name="bottom_output_frame" default="base_link" />
@@ -17,7 +17,7 @@
 
 		<remap from="camera_image"  to="$(arg cam_image_topic)" />
 		<remap from="camera_info"   to="$(arg cam_info_topic)" />
-		<remap from="/ar_pose_marker"   to="/ardrone/ar_tag" />
+		<remap from="/ar_pose_marker"   to="/ardrone/ar_tag_front" />
 	</node>
 
 	<node name="ar_track_alvar_bottom" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
