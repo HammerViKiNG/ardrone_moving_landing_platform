@@ -26,6 +26,7 @@ class ArdroneARTag
         void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
         int8_t state;
+        PoseRPY current_pose;
         double z, angular_coords[3];
         double dt;  
 

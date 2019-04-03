@@ -25,7 +25,7 @@ keys_attrs = {
 
 # Keys to takeoff and land
 key_takeoff = Key.space
-key_land = Key.ctrl
+key_land = KeyCode.from_char("z")
 
 # Keys to shut down
 keys_shutdown = {KeyCode.from_char("c"), Key.ctrl}
