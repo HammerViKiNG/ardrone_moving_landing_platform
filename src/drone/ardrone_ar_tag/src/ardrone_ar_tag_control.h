@@ -14,6 +14,25 @@
 #include "ardrone_pid.h"
 
 
+class ArdronePoseHandler
+{
+    public:
+        ArdronePoseHandler(std::string navdata_topic);
+        PoseRPY get_pose_rpy(void);
+        int8_t get_state(void);
+    
+    private:
+        void navdata_callback(const ardrone_autonomy::Navdata& msg);
+        void odometry(double vx, double vy, double dt);
+
+        ros::NodeHandle nh;
+        ros::Subscriber sub_navdata;
+
+        double last_time;
+        PoseRPY pose_rpy;
+        int8_t state;
+};
+
 class ArdroneARTag
 {
     public:
@@ -21,18 +40,19 @@ class ArdroneARTag
         void control(void);
     
     private:
-        void navdata_callback(const ardrone_autonomy::Navdata& msg);
 	    void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
         void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
+        void correct_necessary_pose_shift(void);
+
         int8_t state;
-        PoseRPY current_pose;
+        PoseRPY current_pose, last_pose;
         double z, angular_coords[3];
         double dt;  
 
         bool is_spotted_bottom, is_spotted_front; 
 
-	    PoseRPY necessary_pose;
+	    PoseRPY necessary_pose_shift;
         
         ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom, sub_ar_tag_front;
@@ -41,8 +61,8 @@ class ArdroneARTag
         tf::Quaternion quat; 
         geometry_msgs::Twist twist;
 
-
         ArdronePID* controller;
+        ArdronePoseHandler* pose_handler;
 };
 
 #endif
