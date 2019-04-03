@@ -1,51 +1,6 @@
 #include "ardrone_ar_tag_control.h"
 
 
-ArdronePoseHandler::ArdronePoseHandler(std::string navdata_topic)
-{
-    sub_navdata = nh.subscribe(navdata_topic, 1, &ArdronePoseHandler::navdata_callback, this);
-    boost::shared_ptr<ardrone_autonomy::Navdata const> start_data = ros::topic::waitForMessage<ardrone_autonomy::Navdata>(navdata_topic, nh);
-    last_time = start_data->tm / 1000000.0;
-    pose_rpy.x = pose_rpy.y = 0;
-    pose_rpy.z = start_data->altd / 1000.0;
-    pose_rpy.rot_x = start_data->rotX * M_PI / 180.0;
-    pose_rpy.rot_y = start_data->rotY * M_PI / 180.0;
-    pose_rpy.rot_z = start_data->rotZ * M_PI / 180.0;
-}
-
-
-PoseRPY ArdronePoseHandler::get_pose_rpy(void)
-{
-    return pose_rpy;
-}
-
-
-int8_t ArdronePoseHandler::get_state(void)
-{
-    return state;
-}
-
-
-void ArdronePoseHandler::navdata_callback(const ardrone_autonomy::Navdata& msg)
-{
-    pose_rpy.rot_x = msg.rotX * M_PI / 180.0;
-    pose_rpy.rot_y = msg.rotY * M_PI / 180.0;
-    pose_rpy.rot_z = msg.rotZ * M_PI / 180.0;
-    pose_rpy.z = msg.altd / 1000.0;
-    double curr_time = msg.tm / 1000000.0;
-    odometry(msg.vx, msg.vy, curr_time - last_time);
-    state = msg.state;
-    last_time = curr_time;
-}
-
-
-void ArdronePoseHandler::odometry(double vx, double vy, double dt)
-{
-    pose_rpy.x += ((cos(pose_rpy.rot_z) * vx + sin(pose_rpy.rot_z) * vy) * dt) / 1000.0;
-    pose_rpy.y += ((sin(pose_rpy.rot_z) * vx - cos(pose_rpy.rot_z) * vy) * dt) / 1000.0;
-}
-
-
 ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, double hz)
 {
     sub_ar_tag_bottom = nh.subscribe(ar_tag_bottom_topic, 1, &ArdroneARTag::ar_tag_bottom_callback, this);
@@ -56,15 +11,15 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
 
     is_spotted_bottom = is_spotted_front = false;
 
+    pose_handler = new ArdronePoseHandler(navdata_topic);
+    current_pose = pose_handler->get_pose_rpy();
+
     double* k_p = new double[6] {0.7, 0.7, 1, 0.1, 0.1, 1};
     double* k_d = new double[6] {0.15, 0.15, 0.15, 0.05, 0.05, 0.2};
     double* k_i = new double[6] {0.02, 0.02, 0, 0.01, 0.01, 0.03};
     double* crit = new double[6] {3, 3, 2, 1, 1, 1};
-    double* max_int_rel = new double[6] {0.25, 0.25, 0.1, 0.25, 0.25, 0.3};
-    controller = new ArdronePID(hz, k_p, k_d, k_i, crit, max_int_rel);
-
-    pose_handler = new ArdronePoseHandler(navdata_topic);
-    current_pose = pose_handler->get_pose_rpy();
+    double* max_int_rel = new double[6] {0.2, 0.2, 0.1, 0.25, 0.25, 0.3};
+    controller = new ArdronePID(hz, k_p, k_d, k_i, crit, max_int_rel, pose_handler);
 
     delete k_p, k_d, k_i, crit, max_int_rel;
 }
@@ -75,10 +30,12 @@ void ArdroneARTag::correct_necessary_pose_shift(void)
     current_pose = pose_handler->get_pose_rpy();
     double d_rot_z = current_pose.rot_z - last_pose.rot_z, 
            necessary_pose_shift_x = necessary_pose_shift.x,
-           necessary_pose_shift_y = necessary_pose_shift.y;
-
-    necessary_pose_shift.x =  necessary_pose_shift_x * cos(d_rot_z) + necessary_pose_shift_y * sin(d_rot_z);
-    necessary_pose_shift.y = -necessary_pose_shift_x * sin(d_rot_z) + necessary_pose_shift_y * cos(d_rot_z);
+           necessary_pose_shift_y = necessary_pose_shift.y,
+           dx = current_pose.x - last_pose.x,
+           dy = current_pose.y - last_pose.y;
+            
+    necessary_pose_shift.x = necessary_pose_shift_x - dx;
+    necessary_pose_shift.y = necessary_pose_shift_y - dy;
     necessary_pose_shift.rot_x = -current_pose.rot_x;
     necessary_pose_shift.rot_y = -current_pose.rot_y;
     necessary_pose_shift.rot_z -= d_rot_z;
@@ -111,11 +68,12 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
             necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;
             necessary_pose_shift.z = msg.markers[index].pose.pose.position.z;
         }
-        if (!is_spotted_bottom)
-            controller->reset_data();
         is_spotted_bottom = true;
         is_spotted_front = false;
         last_pose = current_pose;
+        //ROS_INFO("rel %f, %f, rot_z: %f", necessary_pose_shift.x, necessary_pose_shift.y, current_pose.rot_z);
+        necessary_pose_shift = pose_handler->local_to_global(necessary_pose_shift);
+        //ROS_INFO("%f, %f", necessary_pose_shift.x, necessary_pose_shift.y);
     }
 }
 
@@ -131,13 +89,16 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         tf::Matrix3x3(quat).getRPY(necessary_pose_shift.rot_x, necessary_pose_shift.rot_y, necessary_pose_shift.rot_z);
         necessary_pose_shift.x = msg.markers[index].pose.pose.position.x;
         necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;
-        necessary_pose_shift.z = msg.markers[index].pose.pose.position.z;
+        necessary_pose_shift.z = msg.markers[index].pose.pose.position.z + 2;
         necessary_pose_shift.rot_z = atan(necessary_pose_shift.y / necessary_pose_shift.x);
         if (!is_spotted_front)
             controller->reset_data();
         is_spotted_front = true;
         is_spotted_bottom = false;
         last_pose = current_pose;
+        ROS_INFO("rel %f, %f, rot_z: %f", necessary_pose_shift.x, necessary_pose_shift.y, current_pose.z);
+        necessary_pose_shift = pose_handler->local_to_global(necessary_pose_shift);
+        //ROS_INFO("%f, %f", necessary_pose_shift.x, necessary_pose_shift.y);
     }
 }
 
@@ -150,11 +111,11 @@ void ArdroneARTag::control(void)
     }
     else if (is_spotted_bottom || is_spotted_front)
     {
-        ROS_INFO("%d, %f, %d", pose_handler->get_state(), current_pose.z, is_spotted_bottom);
+        ROS_INFO("%f, %f, %d", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z);
         correct_necessary_pose_shift();
         if (pose_handler->get_state()!= 8 && pose_handler->get_state()!= 2 && current_pose.z <= 0.2 && is_spotted_bottom)
             system("rostopic pub -1 /ardrone/land std_msgs/Empty");
-        twist = controller->pid_twist(necessary_pose_shift);
+        twist = controller->pid_global(necessary_pose_shift);
         pub_twist.publish(twist);
     }
     else 

@@ -786,6 +786,33 @@ src/ardrone_pid.cpp.s:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.s
 .PHONY : src/ardrone_pid.cpp.s
 
+src/ardrone_pose_handler.o: src/ardrone_pose_handler.cpp.o
+
+.PHONY : src/ardrone_pose_handler.o
+
+# target to build an object file
+src/ardrone_pose_handler.cpp.o:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o
+.PHONY : src/ardrone_pose_handler.cpp.o
+
+src/ardrone_pose_handler.i: src/ardrone_pose_handler.cpp.i
+
+.PHONY : src/ardrone_pose_handler.i
+
+# target to preprocess a source file
+src/ardrone_pose_handler.cpp.i:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.i
+.PHONY : src/ardrone_pose_handler.cpp.i
+
+src/ardrone_pose_handler.s: src/ardrone_pose_handler.cpp.s
+
+.PHONY : src/ardrone_pose_handler.s
+
+# target to generate assembly for a file
+src/ardrone_pose_handler.cpp.s:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.s
+.PHONY : src/ardrone_pose_handler.cpp.s
+
 src/pid.o: src/pid.cpp.o
 
 .PHONY : src/pid.o
@@ -871,6 +898,9 @@ help:
 	@echo "... src/ardrone_pid.o"
 	@echo "... src/ardrone_pid.i"
 	@echo "... src/ardrone_pid.s"
+	@echo "... src/ardrone_pose_handler.o"
+	@echo "... src/ardrone_pose_handler.i"
+	@echo "... src/ardrone_pose_handler.s"
 	@echo "... src/pid.o"
 	@echo "... src/pid.i"
 	@echo "... src/pid.s"

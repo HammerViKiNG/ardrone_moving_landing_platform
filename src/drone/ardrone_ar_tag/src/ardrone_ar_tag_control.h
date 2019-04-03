@@ -14,25 +14,6 @@
 #include "ardrone_pid.h"
 
 
-class ArdronePoseHandler
-{
-    public:
-        ArdronePoseHandler(std::string navdata_topic);
-        PoseRPY get_pose_rpy(void);
-        int8_t get_state(void);
-    
-    private:
-        void navdata_callback(const ardrone_autonomy::Navdata& msg);
-        void odometry(double vx, double vy, double dt);
-
-        ros::NodeHandle nh;
-        ros::Subscriber sub_navdata;
-
-        double last_time;
-        PoseRPY pose_rpy;
-        int8_t state;
-};
-
 class ArdroneARTag
 {
     public:

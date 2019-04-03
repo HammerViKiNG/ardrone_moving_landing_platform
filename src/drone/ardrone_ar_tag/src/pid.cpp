@@ -26,7 +26,7 @@ double PID::pid(double e)
     div_e = div(e, prev_e, dt);
     integr(int_e, e, dt);
     prev_e = e;
-    return limit(K_P * e + K_D * div_e + K_I * int_e, -crit, crit);
+    return limit(K_P * k * e + K_D * k * div_e + K_I * k * int_e, -crit, crit);
 }
 
 

@@ -49,14 +49,30 @@ geometry_msgs/Pose.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/geometry_msgs/Pose.h
 geometry_msgs/Twist.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/geometry_msgs/Twist.h
-pid.h
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h
+pose_rpy.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.h
+ardrone_pose_handler.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.h
+
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.cpp
+ardrone_pose_handler.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.h
+
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.h
+ros/ros.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ros/ros.h
+pose_rpy.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.h
+ardrone_autonomy/Navdata.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_autonomy/Navdata.h
 
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.cpp
 pid.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h
 
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h
+
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.h
 
 /opt/ros/kinetic/include/ar_track_alvar_msgs/AlvarMarker.h
 string

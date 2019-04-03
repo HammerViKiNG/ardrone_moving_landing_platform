@@ -20,7 +20,7 @@ class PID
         double K_P, K_D, K_I, crit, max_int;
 
         double dt;
-        double e, prev_e, int_e, div_e;      
+        double e, prev_e, int_e, div_e;  
 };
 
 #endif
