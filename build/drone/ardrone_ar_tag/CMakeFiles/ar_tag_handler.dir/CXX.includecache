@@ -49,6 +49,8 @@ geometry_msgs/Pose.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/geometry_msgs/Pose.h
 geometry_msgs/Twist.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/geometry_msgs/Twist.h
+pid.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.h
 pose_rpy.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.h
 ardrone_pose_handler.h

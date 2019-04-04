@@ -44,7 +44,7 @@ PoseRPY ArdronePoseHandler::global_to_local(PoseRPY pose)
 }
 
 
-static double ArdronePoseHandler::global_to_local(double x, double y, double rot_z)
+std::pair<double, double> ArdronePoseHandler::global_to_local(double x, double y, double rot_z)
 {
     return std::make_pair<double, double>(x * cos(rot_z) + y * sin(rot_z),
                                           -x * sin(rot_z) + y * cos(rot_z));   

@@ -67,7 +67,7 @@ set(cvg_sim_gazebo_plugins_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(cvg_sim_gazebo_plugins_SOURCE_PREFIX /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/AR.Drone-ROS/cvg_sim_gazebo_plugins)
+  set(cvg_sim_gazebo_plugins_SOURCE_PREFIX /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/simulation_tools/AR.Drone-ROS/cvg_sim_gazebo_plugins)
   set(cvg_sim_gazebo_plugins_DEVEL_PREFIX /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel)
   set(cvg_sim_gazebo_plugins_INSTALL_PREFIX "")
   set(cvg_sim_gazebo_plugins_PREFIX ${cvg_sim_gazebo_plugins_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/deve
         message(FATAL_ERROR "Project 'cvg_sim_gazebo_plugins' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'cvg_sim_gazebo_plugins' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/AR.Drone-ROS/cvg_sim_gazebo_plugins/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'cvg_sim_gazebo_plugins' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/simulation_tools/AR.Drone-ROS/cvg_sim_gazebo_plugins/${idir}'.  ${_report}")
     endif()
     _list_append_unique(cvg_sim_gazebo_plugins_INCLUDE_DIRS ${include})
   endforeach()

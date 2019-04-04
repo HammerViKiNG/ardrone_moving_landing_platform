@@ -16,7 +16,6 @@ PID::PID(double hz, double k_p, double k_d, double k_i, double crit, double max_
 void PID::reset_data(void)
 {
     int_e = 0;
-    prev_e = 0;
     div_e = 0;
 }
 
@@ -26,7 +25,7 @@ double PID::pid(double e)
     div_e = div(e, prev_e, dt);
     integr(int_e, e, dt);
     prev_e = e;
-    return limit(K_P * k * e + K_D * k * div_e + K_I * k * int_e, -crit, crit);
+    return limit(K_P * e + K_D * div_e + K_I * int_e, -crit, crit);
 }
 
 

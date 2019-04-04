@@ -11,30 +11,20 @@
 #include "pose_rpy.h"
 #include "ardrone_pose_handler.h"
 
-//#define limit(value, min, max) (value < min) ? min : (value > max) ? max : value
-
 
 class ArdronePID
 {
     public:
-        ArdronePID(double hz, double* k_p, double* k_d, double* k_i, double* crit, double* max_int_rel, ArdronePoseHandler* pose_handler);
+        ArdronePID(double hz, double* k_p, double* k_d, double* k_i, double* crit, double* max_int_rel);
         ~ArdronePID(void);
 
-        geometry_msgs::Twist pid_global(PoseRPY e);
+        geometry_msgs::Twist pid_twist(PoseRPY e);
         void reset_data(void);
     
-    private:
-        double div(double e, double prev_e, double dt);
-        void integr(double& int_e, double e, double max_int, double dt); 
-        double limit(double value, double min, double max);
-    
+    private:  
         double dt;
 
-        double K_P[2], K_D[2], K_I[2], crit[2], max_int[2];
-
-        double e[2], prev_e[2], int_e[2], div_e[2]; 
-
-        PID* controller[6];
+        PID* controller[4];
 
         PoseRPY global_pose;
         ArdronePoseHandler* pose_handler;

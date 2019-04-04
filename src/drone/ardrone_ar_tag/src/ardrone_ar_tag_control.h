@@ -21,10 +21,11 @@ class ArdroneARTag
         void control(void);
     
     private:
-	    void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
+	void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
         void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
         void correct_necessary_pose_shift(void);
+        void ar_tag_lost(void);
 
         int8_t state;
         PoseRPY current_pose, last_pose;
@@ -33,7 +34,7 @@ class ArdroneARTag
 
         bool is_spotted_bottom, is_spotted_front; 
 
-	    PoseRPY necessary_pose_shift;
+	PoseRPY necessary_pose_shift;
         
         ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom, sub_ar_tag_front;
@@ -41,8 +42,10 @@ class ArdroneARTag
 
         tf::Quaternion quat; 
         geometry_msgs::Twist twist;
+    
+        ros::Time current_time, last_spotted_time;
 
-        ArdronePID* controller;
+        ArdronePID* controller, *controller_chasing, *controller_landing;
         ArdronePoseHandler* pose_handler;
 };
 
