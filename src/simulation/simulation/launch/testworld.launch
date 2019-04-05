@@ -1,6 +1,6 @@
 <launch>
 
-<include file="$(find simulation)/launch/spawn_ardrone_ar_tag.launch"/>
+<include file="$(find simulation)/launch/simulation.launch"/>
 
 <include file="$(find camera)/launch/ardrone_ar_tag_track.launch"/>
 

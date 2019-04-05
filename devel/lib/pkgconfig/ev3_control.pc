@@ -1,0 +1,8 @@
+prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel
+
+Name: ev3_control
+Description: Description of ev3_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib 
+Requires: 

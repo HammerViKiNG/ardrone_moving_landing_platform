@@ -67,7 +67,7 @@ set(cvg_sim_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(cvg_sim_msgs_SOURCE_PREFIX /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/simulation_tools/AR.Drone-ROS/cvg_sim_msgs)
+  set(cvg_sim_msgs_SOURCE_PREFIX /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/AR.Drone-ROS/cvg_sim_msgs)
   set(cvg_sim_msgs_DEVEL_PREFIX /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel)
   set(cvg_sim_msgs_INSTALL_PREFIX "")
   set(cvg_sim_msgs_PREFIX ${cvg_sim_msgs_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/deve
         message(FATAL_ERROR "Project 'cvg_sim_msgs' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'cvg_sim_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/simulation_tools/AR.Drone-ROS/cvg_sim_msgs/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'cvg_sim_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/AR.Drone-ROS/cvg_sim_msgs/${idir}'.  ${_report}")
     endif()
     _list_append_unique(cvg_sim_msgs_INCLUDE_DIRS ${include})
   endforeach()

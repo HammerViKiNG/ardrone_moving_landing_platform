@@ -14,8 +14,8 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
     pose_handler = new ArdronePoseHandler(navdata_topic);
     current_pose = pose_handler->get_pose_rpy();
 
-    double* k_p = new double[4] {10, 0.5, 5, 3};
-    double* k_d = new double[4] {0, 0.3, 2, 1.5};
+    double* k_p = new double[4] {10, 0.5, 5, 5};
+    double* k_d = new double[4] {0, 0.3, 2, 2.5};
     double* k_i = new double[4] {2, 0.0, 0.5, 0.0};
     double* crit = new double[4] {3, 3, 2, 1};
     double* max_int_rel = new double[6] {2, 0.0, 0.5, 0.0};
@@ -54,7 +54,7 @@ void ArdroneARTag::correct_necessary_pose_shift(void)
 void ArdroneARTag::ar_tag_lost(void)
 {
     current_pose = pose_handler->get_pose_rpy();
-    necessary_pose_shift.z = 1.5 - current_pose.z;
+    necessary_pose_shift.z = 2.5 - current_pose.z;
 }
 
 
@@ -82,8 +82,6 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
         }
         is_spotted_bottom = true;
         is_spotted_front = false;
-        if (last_pose.z >= 1.5 && current_pose.z <= 1.5)
-            controller->reset_data();
         last_pose = current_pose;
         last_spotted_time = ros::Time::now();
     }
@@ -100,8 +98,9 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
 	tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
         tf::Matrix3x3(quat).getRPY(necessary_pose_shift.rot_x, necessary_pose_shift.rot_y, necessary_pose_shift.rot_z);
         necessary_pose_shift.x = msg.markers[index].pose.pose.position.x;
-	necessary_pose_shift.y = 0;
+	//necessary_pose_shift.y = 0;
         necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;
+        necessary_pose_shift.z = 2.5 - msg.markers[index].pose.pose.position.z;
         necessary_pose_shift.rot_z = atan(msg.markers[index].pose.pose.position.y / necessary_pose_shift.x);
         is_spotted_front = true;
         is_spotted_bottom = false;
