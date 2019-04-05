@@ -1,0 +1,14 @@
+material LandingStation
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture frame.png
+      }
+    }
+  }
+}
+
