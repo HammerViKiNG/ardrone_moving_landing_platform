@@ -1,8 +1,0 @@
-prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install
-
-Name: simulation
-Description: Description of simulation
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/lib 
-Requires: 

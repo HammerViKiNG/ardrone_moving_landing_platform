@@ -1,0 +1,8 @@
+prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel
+
+Name: rrbot_gazebo
+Description: Description of rrbot_gazebo
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib 
+Requires: 

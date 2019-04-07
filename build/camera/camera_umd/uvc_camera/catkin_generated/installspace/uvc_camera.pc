@@ -1,8 +1,0 @@
-prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install
-
-Name: uvc_camera
-Description: Description of uvc_camera
-Version: 0.2.7
-Cflags: 
-Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/lib -lnodelet_uvc_camera
-Requires: roscpp nodelet sensor_msgs

@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<robot name="ev3" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <material name="AR_tag">
-    <texture filename="model://materials/textures/frame.png"/>
-  </material>
+<robot name="ev3" 
+    xmlns:xacro="http://www.ros.org/wiki/xacro"
+    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
   <joint name="back_wheel_right" type="revolute">
     <parent link="wheel_chain_right"/>
@@ -26,19 +26,17 @@
     <axis xyz="0  0  0"/>
     <limit effort="0" lower="0" upper="0" velocity="0"/>
   </joint>
-  <joint name="right_wheel_joint" type="revolute">
+  <joint name="joint2" type="continuous">
     <parent link="platform"/>
     <child link="right_wheel"/>
     <origin rpy="1.57  0    0" xyz="0.25  -0.275  0.05"/>
     <axis xyz="0.00000000e+00   0   -1"/>
-    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
   </joint> 
-  <joint name="left_wheel_joint" type="revolute">
+  <joint name="joint1" type="continuous">
     <parent link="platform"/>
     <child link="left_wheel"/>
     <origin rpy="1.57  0    0" xyz="0.25  0.275  0.05"/>
     <axis xyz="0.00000000e+00   0   -1"/>
-    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
   </joint> 
   <link name="platform">
     <inertial>
@@ -161,31 +159,8 @@
   </link>
 
   <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/ev3</robotNamespace>
-      <legacyModeNS>true</legacyModeNS>
+    <plugin name="ev3_control" filename="libev3_plugin.so">
     </plugin>
   </gazebo>
 
-  <transmission name="left_wheel_transmission">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_wheel_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="left_wheel_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-
-  <transmission name="right_wheel_transmission">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_wheel_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="right_wheel_motor">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
 </robot>
