@@ -26,16 +26,16 @@ int8_t ArdronePoseHandler::get_state(void)
 }
 
 
-PoseRPY ArdronePoseHandler::local_to_global(PoseRPY pose)
+PoseRPY ArdronePoseHandler::local_to_global(const PoseRPY& pose)
 {
-    double x = pose.x, y = pose.y;
-    pose.x = cos(pose_rpy.rot_z) * x - sin(pose_rpy.rot_z) * y;
-    pose.y = sin(pose_rpy.rot_z) * x + cos(pose_rpy.rot_z) * y;
-    return pose;
+    PoseRPY result = pose;
+    result.x = cos(pose_rpy.rot_z) * pose.x - sin(pose_rpy.rot_z) * pose.y;
+    result.y = sin(pose_rpy.rot_z) * pose.x + cos(pose_rpy.rot_z) * pose.y;
+    return result;
 }
 
 
-PoseRPY ArdronePoseHandler::global_to_local(PoseRPY pose)
+PoseRPY ArdronePoseHandler::global_to_local(const PoseRPY& pose)
 {
     PoseRPY result = pose;
     result.x = pose.x * cos(pose_rpy.rot_z) + pose.y * sin(pose_rpy.rot_z),
