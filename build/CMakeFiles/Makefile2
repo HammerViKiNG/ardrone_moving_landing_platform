@@ -5552,24 +5552,6 @@ clean: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory simulation/ev3/ev3_model
-
-# Convenience name for "all" pass in the directory.
-simulation/ev3/ev3_model/all:
-
-.PHONY : simulation/ev3/ev3_model/all
-
-# Convenience name for "clean" pass in the directory.
-simulation/ev3/ev3_model/clean:
-
-.PHONY : simulation/ev3/ev3_model/clean
-
-# Convenience name for "preinstall" pass in the directory.
-simulation/ev3/ev3_model/preinstall:
-
-.PHONY : simulation/ev3/ev3_model/preinstall
-
-#=============================================================================
 # Directory level rules for directory simulation/AR.Drone-ROS/message_to_tf
 
 # Convenience name for "all" pass in the directory.
@@ -5643,420 +5625,420 @@ simulation/simulation/preinstall:
 .PHONY : simulation/simulation/preinstall
 
 #=============================================================================
-# Directory level rules for directory simulation/ev3/ev3_control
+# Directory level rules for directory simulation/ev3
 
 # Convenience name for "all" pass in the directory.
-simulation/ev3/ev3_control/all: simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/all
+simulation/ev3/all: simulation/ev3/CMakeFiles/ev3_plugin.dir/all
 
-.PHONY : simulation/ev3/ev3_control/all
+.PHONY : simulation/ev3/all
 
 # Convenience name for "clean" pass in the directory.
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/clean
-simulation/ev3/ev3_control/clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/ev3_plugin.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/clean
+simulation/ev3/clean: simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/clean
 
-.PHONY : simulation/ev3/ev3_control/clean
+.PHONY : simulation/ev3/clean
 
 # Convenience name for "preinstall" pass in the directory.
-simulation/ev3/ev3_control/preinstall:
+simulation/ev3/preinstall:
 
-.PHONY : simulation/ev3/ev3_control/preinstall
+.PHONY : simulation/ev3/preinstall
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir
+# Target rules for target simulation/ev3/CMakeFiles/ev3_plugin.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/build.make simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/build.make simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/build
+simulation/ev3/CMakeFiles/ev3_plugin.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/ev3_plugin.dir/build.make simulation/ev3/CMakeFiles/ev3_plugin.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/ev3_plugin.dir/build.make simulation/ev3/CMakeFiles/ev3_plugin.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=80,81 "Built target ev3_plugin"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/all
+.PHONY : simulation/ev3/CMakeFiles/ev3_plugin.dir/all
 
 # Include target in all.
-all: simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/all
+all: simulation/ev3/CMakeFiles/ev3_plugin.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/ev3_plugin.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/ev3_plugin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/ev3_plugin.dir/rule
 
 # Convenience name for target.
-ev3_plugin: simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/rule
+ev3_plugin: simulation/ev3/CMakeFiles/ev3_plugin.dir/rule
 
 .PHONY : ev3_plugin
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/build.make simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/clean
+simulation/ev3/CMakeFiles/ev3_plugin.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/ev3_plugin.dir/build.make simulation/ev3/CMakeFiles/ev3_plugin.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/ev3_plugin.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/ev3_plugin.dir/clean
+clean: simulation/ev3/CMakeFiles/ev3_plugin.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir
+# Target rules for target simulation/ev3/CMakeFiles/bond_generate_messages_py.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/build
+simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target bond_generate_messages_py"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/all
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_py: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/rule
+bond_generate_messages_py: simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/rule
 
 .PHONY : bond_generate_messages_py
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/clean
+simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_py.dir/clean
+clean: simulation/ev3/CMakeFiles/bond_generate_messages_py.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir
+# Target rules for target simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/build
+simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target nodelet_generate_messages_eus"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/all
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_eus: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+nodelet_generate_messages_eus: simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 
 .PHONY : nodelet_generate_messages_eus
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_eus.dir/clean
+clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir
+# Target rules for target simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target nodelet_generate_messages_cpp"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_cpp: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+nodelet_generate_messages_cpp: simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 
 .PHONY : nodelet_generate_messages_cpp
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
+clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir
+# Target rules for target simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/build.make simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/build.make simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/build
+simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/build.make simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/build.make simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target gazebo_plugins_gencfg"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/all
+.PHONY : simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/rule
 
 # Convenience name for target.
-gazebo_plugins_gencfg: simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/rule
+gazebo_plugins_gencfg: simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/rule
 
 .PHONY : gazebo_plugins_gencfg
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/build.make simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/clean
+simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/build.make simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/gazebo_plugins_gencfg.dir/clean
+clean: simulation/ev3/CMakeFiles/gazebo_plugins_gencfg.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir
+# Target rules for target simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target nodelet_generate_messages_nodejs"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_nodejs: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+nodelet_generate_messages_nodejs: simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 
 .PHONY : nodelet_generate_messages_nodejs
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
+clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir
+# Target rules for target simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/build
+simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target nodelet_generate_messages_py"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/all
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_py: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/rule
+nodelet_generate_messages_py: simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/rule
 
 .PHONY : nodelet_generate_messages_py
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/clean
+simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_py.dir/clean
+clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_py.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir
+# Target rules for target simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/build
+simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target bond_generate_messages_cpp"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/all
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_cpp: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/rule
+bond_generate_messages_cpp: simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/rule
 
 .PHONY : bond_generate_messages_cpp
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/clean
+simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_cpp.dir/clean
+clean: simulation/ev3/CMakeFiles/bond_generate_messages_cpp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir
+# Target rules for target simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target nodelet_generate_messages_lisp"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_lisp: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+nodelet_generate_messages_lisp: simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 
 .PHONY : nodelet_generate_messages_lisp
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+clean: simulation/ev3/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir
+# Target rules for target simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/build
+simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target bond_generate_messages_nodejs"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/all
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_nodejs: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+bond_generate_messages_nodejs: simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
 .PHONY : bond_generate_messages_nodejs
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_nodejs.dir/clean
+clean: simulation/ev3/CMakeFiles/bond_generate_messages_nodejs.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir
+# Target rules for target simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/build
+simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target bond_generate_messages_eus"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/all
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_eus: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/rule
+bond_generate_messages_eus: simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/rule
 
 .PHONY : bond_generate_messages_eus
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/clean
+simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_eus.dir/clean
+clean: simulation/ev3/CMakeFiles/bond_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir
+# Target rules for target simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir
 
 # All Build rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/all:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/depend
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/build
+simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/all:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/depend
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target bond_generate_messages_lisp"
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/all
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/rule: cmake_check_build_system
+simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/rule
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_lisp: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/rule
+bond_generate_messages_lisp: simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/rule
 
 .PHONY : bond_generate_messages_lisp
 
 # clean rule for target.
-simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/clean:
-	$(MAKE) -f simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/build.make simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/clean
-.PHONY : simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/clean
+simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/clean:
+	$(MAKE) -f simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/build.make simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/clean
+.PHONY : simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/clean
 
 # clean rule for target.
-clean: simulation/ev3/ev3_control/CMakeFiles/bond_generate_messages_lisp.dir/clean
+clean: simulation/ev3/CMakeFiles/bond_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 

@@ -124,10 +124,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_gazebo/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/ev3/ev3_model/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/message_to_tf/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/simulation/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/ev3/ev3_control/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/ev3/cmake_install.cmake")
 
 endif()
 
