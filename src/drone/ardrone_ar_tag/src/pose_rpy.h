@@ -2,6 +2,8 @@
 #define POSE_RPY_H
 
 
+#include <ros/ros.h>
+
 struct PoseRPY
 {
     double x;
@@ -10,6 +12,8 @@ struct PoseRPY
     double rot_x;
     double rot_y;
     double rot_z;
+
+    PoseRPY operator-(const PoseRPY& other);
 };
 
 

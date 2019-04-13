@@ -690,6 +690,33 @@ src/pid.cpp.s:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.s
 .PHONY : src/pid.cpp.s
 
+src/pose_rpy.o: src/pose_rpy.cpp.o
+
+.PHONY : src/pose_rpy.o
+
+# target to build an object file
+src/pose_rpy.cpp.o:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o
+.PHONY : src/pose_rpy.cpp.o
+
+src/pose_rpy.i: src/pose_rpy.cpp.i
+
+.PHONY : src/pose_rpy.i
+
+# target to preprocess a source file
+src/pose_rpy.cpp.i:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.i
+.PHONY : src/pose_rpy.cpp.i
+
+src/pose_rpy.s: src/pose_rpy.cpp.s
+
+.PHONY : src/pose_rpy.s
+
+# target to generate assembly for a file
+src/pose_rpy.cpp.s:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.s
+.PHONY : src/pose_rpy.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -744,6 +771,9 @@ help:
 	@echo "... src/pid.o"
 	@echo "... src/pid.i"
 	@echo "... src/pid.s"
+	@echo "... src/pose_rpy.o"
+	@echo "... src/pose_rpy.i"
+	@echo "... src/pose_rpy.s"
 .PHONY : help
 
 

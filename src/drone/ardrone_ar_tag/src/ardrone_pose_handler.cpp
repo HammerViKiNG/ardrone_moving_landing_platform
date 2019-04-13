@@ -6,7 +6,8 @@ ArdronePoseHandler::ArdronePoseHandler(std::string navdata_topic)
     sub_navdata = nh.subscribe(navdata_topic, 1, &ArdronePoseHandler::navdata_callback, this);
     boost::shared_ptr<ardrone_autonomy::Navdata const> start_data = ros::topic::waitForMessage<ardrone_autonomy::Navdata>(navdata_topic, nh);
     last_time = start_data->tm / 1000000.0;
-    pose_rpy.x = pose_rpy.y = 0;
+    pose_rpy.x = 0.15; 
+    pose_rpy.y = 0;
     pose_rpy.z = start_data->altd / 1000.0;
     pose_rpy.rot_x = start_data->rotX * M_PI / 180.0;
     pose_rpy.rot_y = start_data->rotY * M_PI / 180.0;
@@ -29,8 +30,8 @@ int8_t ArdronePoseHandler::get_state(void)
 PoseRPY ArdronePoseHandler::local_to_global(const PoseRPY& pose)
 {
     PoseRPY result = pose;
-    result.x = cos(pose_rpy.rot_z) * pose.x - sin(pose_rpy.rot_z) * pose.y;
-    result.y = sin(pose_rpy.rot_z) * pose.x + cos(pose_rpy.rot_z) * pose.y;
+    result.x = cos(pose.rot_z) * pose.x - sin(pose.rot_z) * pose.y;
+    result.y = sin(pose.rot_z) * pose.x + cos(pose.rot_z) * pose.y;
     return result;
 }
 
@@ -38,8 +39,8 @@ PoseRPY ArdronePoseHandler::local_to_global(const PoseRPY& pose)
 PoseRPY ArdronePoseHandler::global_to_local(const PoseRPY& pose)
 {
     PoseRPY result = pose;
-    result.x = pose.x * cos(pose_rpy.rot_z) + pose.y * sin(pose_rpy.rot_z),
-    result.y = -pose.x * sin(pose_rpy.rot_z) + pose.y * cos(pose_rpy.rot_z);
+    result.x = pose.x * cos(pose.rot_z) + pose.y * sin(pose.rot_z),
+    result.y = -pose.x * sin(pose.rot_z) + pose.y * cos(pose.rot_z);
     return result;
 }
 

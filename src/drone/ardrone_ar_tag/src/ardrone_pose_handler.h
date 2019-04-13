@@ -14,8 +14,8 @@ class ArdronePoseHandler
         PoseRPY get_pose_rpy(void);
         int8_t get_state(void);
 
-        PoseRPY local_to_global(const PoseRPY& pose);
-        PoseRPY global_to_local(const PoseRPY& pose);
+        static PoseRPY local_to_global(const PoseRPY& pose);
+        static PoseRPY global_to_local(const PoseRPY& pose);
 
         static std::pair<double, double> global_to_local(double x, double y, double rot_z);
     
