@@ -1,4 +1,4 @@
-#include <filter.h>
+#include "ardrone_ar_tag/filter.h"
 
 
 MAFilter::MAFilter(size_t window)
@@ -11,18 +11,17 @@ MAFilter::MAFilter(size_t window)
 }
 
 
-MAFilter::get_filtered_value(double value)
+double MAFilter::get_filtered_value(double new_value)
 {
-    double filtered_value;
     shift_values();
-    values[size - 1] = value;
+    values[size - 1] = new_value;
     window++;
-    std::accumulate(values + size - window, values + size, filtered_value);
-    return filtered_value;
+    std::accumulate(values + size - window, values + size, value);
+    return value;
 }
 
 
-MAFilter::shift_values(void)
+void MAFilter::shift_values(void)
 {
     for (size_t i = 0; i < size - 1; i++)
         values[i] = values[i + 1];

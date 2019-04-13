@@ -1051,7 +1051,7 @@ simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gencpp.dir/all: sim
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gencpp.dir/rule
@@ -1530,7 +1530,7 @@ all: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messa
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 68
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 67
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule
@@ -1658,7 +1658,7 @@ simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/all: 
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule
@@ -1739,12 +1739,12 @@ simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_n
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/all: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawRC.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=52,53,54,55,56,57,58,59,60,61,62,63,64 "Built target cvg_sim_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=52,53,54,55,56,57,58,59,60,61,62,63,64,65 "Built target cvg_sim_msgs_generate_messages_nodejs"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/rule
@@ -1857,12 +1857,12 @@ simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_c
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/all: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawRC.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target cvg_sim_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target cvg_sim_msgs_generate_messages_cpp"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule
@@ -2022,7 +2022,7 @@ simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genpy.dir/all: simu
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genpy.dir/rule
@@ -2167,12 +2167,12 @@ simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_p
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/all: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawRC.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target cvg_sim_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target cvg_sim_msgs_generate_messages_py"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_py.dir/rule
@@ -3287,12 +3287,12 @@ clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all: camera/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/depend
 	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=5 "Built target ardrone_teleop_generate_messages_eus"
 .PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule
@@ -3324,7 +3324,7 @@ drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all: drone/ardrone_tel
 
 # Build rule for subdir invocation for target.
 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
@@ -3429,7 +3429,7 @@ all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
@@ -3584,7 +3584,7 @@ clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
 drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/all:
 	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/depend
 	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=5,6 "Built target coords_teleop"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=6,7 "Built target coords_teleop"
 .PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
 
 # Include target in all.
@@ -4576,7 +4576,7 @@ all: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_baro.dir/rule
@@ -4857,7 +4857,7 @@ all: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule
@@ -4921,7 +4921,7 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule
@@ -5048,12 +5048,12 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/all: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target cvg_sim_gazebo_plugins_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=10 "Built target cvg_sim_gazebo_plugins_generate_messages_nodejs"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/rule
@@ -5221,12 +5221,12 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/all: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=7 "Built target cvg_sim_gazebo_plugins_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target cvg_sim_gazebo_plugins_generate_messages_cpp"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/rule
@@ -5290,7 +5290,7 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_genlisp.dir/rule
@@ -5322,7 +5322,7 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_geneus.dir/rule
@@ -5353,12 +5353,12 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/all: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=9 "Built target cvg_sim_gazebo_plugins_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target cvg_sim_gazebo_plugins_generate_messages_lisp"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_lisp.dir/rule
@@ -5390,7 +5390,7 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gennodejs.dir/rule
@@ -5490,12 +5490,12 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/all: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=8 "Built target cvg_sim_gazebo_plugins_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=8,9 "Built target cvg_sim_gazebo_plugins_generate_messages_eus"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_eus.dir/rule
@@ -5526,7 +5526,7 @@ simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/all: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/all
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/depend
 	$(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=10 "Built target cvg_sim_gazebo_plugins_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=11 "Built target cvg_sim_gazebo_plugins_generate_messages_py"
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.

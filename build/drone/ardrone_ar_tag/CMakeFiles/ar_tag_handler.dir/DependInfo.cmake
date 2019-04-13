@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag_control.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o"
+  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filter.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o"
   )
@@ -22,6 +23,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

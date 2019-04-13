@@ -7,9 +7,8 @@
 #include "geometry_msgs/Pose.h"
 #include "geometry_msgs/Twist.h"
 
-#include "pid.h"
-#include "pose_rpy.h"
-#include "ardrone_pose_handler.h"
+#include "ardrone_ar_tag/pid.h"
+#include "ardrone_ar_tag/pose_rpy.h"
 
 
 class ArdronePID
@@ -27,7 +26,6 @@ class ArdronePID
         PID* controller[4];
 
         PoseRPY global_pose;
-        ArdronePoseHandler* pose_handler;
         geometry_msgs::Twist twist;
 };
 

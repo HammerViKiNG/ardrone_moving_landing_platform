@@ -1,14 +1,16 @@
 #include <numeric>
+#include <cstddef>
 
 class MAFilter
 {
     public:
         MAFilter(size_t window);
-        get_filtered_value(double value);
+        double get_filtered_value(double new_value);
 
     private:
-        shift_values(void);
+        void shift_values(void);
         
+        double value;
         double* values;
         size_t window, size;
 };

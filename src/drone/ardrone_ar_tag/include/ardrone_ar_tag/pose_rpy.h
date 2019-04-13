@@ -1,9 +1,6 @@
 #ifndef POSE_RPY_H
 #define POSE_RPY_H
 
-
-#include <ros/ros.h>
-
 struct PoseRPY
 {
     double x;

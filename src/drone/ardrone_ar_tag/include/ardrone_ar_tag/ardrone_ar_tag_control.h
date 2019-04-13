@@ -11,7 +11,8 @@
 #include "ar_track_alvar_msgs/AlvarMarkers.h"
 #include "geometry_msgs/Twist.h"
 
-#include "ardrone_pid.h"
+#include "ardrone_ar_tag/ardrone_pose_handler.h"
+#include "ardrone_ar_tag/ardrone_pid.h"
 
 
 class ArdroneARTag
