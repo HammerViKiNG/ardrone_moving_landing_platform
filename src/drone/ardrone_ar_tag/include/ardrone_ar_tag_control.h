@@ -28,6 +28,7 @@ class ArdroneARTag
 
         void correct_necessary_pose_shift(void);
         void stabilize_necessary_pose_shift(void);
+        void get_velocity(void);
 
         void ar_tag_lost(void);
 
@@ -41,7 +42,9 @@ class ArdroneARTag
         bool is_spotted_bottom, is_spotted_front; 
 
 	    PoseRPY necessary_pose_shift;
-        FilteredPose* necessary_pose_shift_global, *necessary_pose_filter;
+        FilteredPose* necessary_pose_shift_global, *necessary_pose_filter, *velocity_filter;
+
+        PoseRPY last_spotted_pose, last_necessary_shift, velocity;
         
         ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom, sub_ar_tag_front;

@@ -76,6 +76,6 @@ void ArdronePoseHandler::navdata_callback(const ardrone_autonomy::Navdata& msg)
 
 void ArdronePoseHandler::odometry(double vx, double vy, double dt)
 {
-    pose_rpy.x += ((cos(pose_rpy.rot_z) * vx + sin(pose_rpy.rot_z) * vy) * dt) / 1000.0;
-    pose_rpy.y += ((sin(pose_rpy.rot_z) * vx - cos(pose_rpy.rot_z) * vy) * dt) / 1000.0;
+    pose_rpy.x += ((cos(pose_rpy.rot_z) * vx - sin(pose_rpy.rot_z) * vy) * dt) / 1000.0;
+    pose_rpy.y += ((sin(pose_rpy.rot_z) * vx + cos(pose_rpy.rot_z) * vy) * dt) / 1000.0;
 }

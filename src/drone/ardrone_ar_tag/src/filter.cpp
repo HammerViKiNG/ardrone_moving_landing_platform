@@ -7,7 +7,8 @@ MAFilter::MAFilter(size_t window)
     values = new double[window];
     size = window;   
     this->window = 0;
-    memset(values, 0, size);
+    for (size_t i = 0; i < size; i++)
+        values[i] = 0;
 }
 
 
