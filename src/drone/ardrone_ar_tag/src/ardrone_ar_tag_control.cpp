@@ -41,7 +41,7 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
 
 void ArdroneARTag::correct_necessary_pose_shift(void)
 {
-    current_pose = pose_handler->get_pose_rpy();
+    /*current_pose = pose_handler->get_pose_rpy();
     PoseRPY delta_pose = current_pose - last_pose;
     PoseRPY delta_pose_local_past = PoseRPY::transform_pose(delta_pose, last_pose.rot_z);
     necessary_pose_shift = PoseRPY::transform_pose(necessary_pose_shift - delta_pose_local_past, delta_pose.rot_z);
@@ -52,13 +52,13 @@ void ArdroneARTag::correct_necessary_pose_shift(void)
     necessary_pose_filter->filter_pose(necessary_pose_shift);
     necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
 
-    ROS_INFO("x: %f, y: %f, z: %f, rot_x: %f, rot_y: %f", velocity.x, velocity.y, velocity.z, velocity.rot_x, velocity.rot_y);
+    ROS_INFO("x: %f, y: %f, z: %f, rot_x: %f, rot_y: %f", velocity.x, velocity.y, velocity.z, velocity.rot_x, velocity.rot_y);*/
     /*ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", necessary_pose_shift.x, 
                                                necessary_pose_shift.y, 
                                                necessary_pose_shift.z,
                                                necessary_pose_shift.rot_z);*/
 
-    /*current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
+    current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
     current_pose = current_pose_filter->get_filtered_pose();
     necessary_pose_shift_global->filter_pose(pose_handler->local_to_global_shifted(necessary_pose_shift));
     ROS_INFO("x: %f, y: %f, z: %f", necessary_pose_shift_global->get_filtered_pose().x, 
@@ -72,7 +72,7 @@ void ArdroneARTag::correct_necessary_pose_shift(void)
     ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", necessary_pose_shift.x, 
                                                necessary_pose_shift.y, 
                                                necessary_pose_shift.z,
-                                               necessary_pose_shift.rot_z);*/
+                                               necessary_pose_shift.rot_z);
 
     /*double d_rot_z = current_pose.rot_z - last_pose.rot_z, 
            dz = current_pose.z - last_pose.z,
