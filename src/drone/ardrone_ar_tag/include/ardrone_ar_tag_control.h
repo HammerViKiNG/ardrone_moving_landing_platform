@@ -11,8 +11,9 @@
 #include "ar_track_alvar_msgs/AlvarMarkers.h"
 #include "geometry_msgs/Twist.h"
 
-#include "ardrone_ar_tag/ardrone_pose_handler.h"
-#include "ardrone_ar_tag/ardrone_pid.h"
+#include "ardrone_pose_handler.h"
+#include "ardrone_pid.h"
+#include "filtered_pose.h"
 
 
 class ArdroneARTag
@@ -31,13 +32,16 @@ class ArdroneARTag
         void ar_tag_lost(void);
 
         int8_t state;
+
+        FilteredPose* current_pose_filter;
         PoseRPY current_pose, last_pose;
         double z, angular_coords[3];
         double dt;  
 
         bool is_spotted_bottom, is_spotted_front; 
 
-	PoseRPY necessary_pose_shift;
+	    PoseRPY necessary_pose_shift;
+        FilteredPose* necessary_pose_shift_global, *necessary_pose_filter;
         
         ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom, sub_ar_tag_front;

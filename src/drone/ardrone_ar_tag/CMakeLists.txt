@@ -133,7 +133,14 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(ar_tag_handler src/ar_tag_handler.cpp src/ardrone_pid.cpp src/pid.cpp src/pose_rpy.cpp src/filter.cpp src/ardrone_pose_handler.cpp src/ardrone_ar_tag_control.cpp)
+add_executable(ar_tag_handler src/ar_tag_handler.cpp
+                              src/ardrone_pid.cpp 
+                              src/pid.cpp 
+                              src/pose_rpy.cpp 
+                              src/filter.cpp 
+                              src/filtered_pose.cpp 
+                              src/ardrone_pose_handler.cpp 
+                              src/ardrone_ar_tag_control.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

@@ -1,5 +1,6 @@
 #include <numeric>
 #include <cstddef>
+#include <cstring>
 
 class MAFilter
 {

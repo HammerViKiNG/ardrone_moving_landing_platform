@@ -3,7 +3,7 @@
 
 
 #include "ros/ros.h"
-#include "ardrone_ar_tag/pose_rpy.h"
+#include "pose_rpy.h"
 #include "ardrone_autonomy/Navdata.h"
 
 
@@ -14,8 +14,11 @@ class ArdronePoseHandler
         PoseRPY get_pose_rpy(void);
         int8_t get_state(void);
 
-        static PoseRPY local_to_global(const PoseRPY& pose);
-        static PoseRPY global_to_local(const PoseRPY& pose);
+        PoseRPY local_to_global(const PoseRPY& pose);
+        PoseRPY global_to_local(const PoseRPY& pose);
+
+	    PoseRPY local_to_global_shifted(PoseRPY pose);
+	    PoseRPY global_to_local_shifted(PoseRPY pose);
 
         static std::pair<double, double> global_to_local(double x, double y, double rot_z);
     

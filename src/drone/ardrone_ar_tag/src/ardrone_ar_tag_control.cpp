@@ -1,4 +1,4 @@
-#include "ardrone_ar_tag/ardrone_ar_tag_control.h"
+#include "ardrone_ar_tag_control.h"
 
 
 ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, double hz)
@@ -12,7 +12,12 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
     is_spotted_bottom = is_spotted_front = false;
 
     pose_handler = new ArdronePoseHandler(navdata_topic);
-    current_pose = pose_handler->get_pose_rpy();
+    current_pose_filter = new FilteredPose(2);
+    current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
+    current_pose = current_pose_filter->get_filtered_pose();
+
+    necessary_pose_shift_global = new FilteredPose(2);
+    necessary_pose_filter = new FilteredPose(2);
 
     double* k_p = new double[4] {10, 0.5, 5, 5};
     double* k_d = new double[4] {0, 0.3, 2, 2.5};
@@ -34,10 +39,32 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
 void ArdroneARTag::correct_necessary_pose_shift(void)
 {
     current_pose = pose_handler->get_pose_rpy();
-    PoseRPY delta_pose = current_pose - last_pose,
-            necessary_pose_shift_global = ArdronePoseHandler::local_to_global(necessary_pose_shift);
-    necessary_pose_shift_global = necessary_pose_shift_global - delta_pose;
-    necessary_pose_shift = ArdronePoseHandler::global_to_local(necessary_pose_shift_global);
+    PoseRPY delta_pose = current_pose - last_pose;
+    PoseRPY delta_pose_local_past = PoseRPY::transform_pose(delta_pose, last_pose.rot_z);
+    necessary_pose_shift = PoseRPY::transform_pose(necessary_pose_shift - delta_pose_local_past, delta_pose.rot_z);
+    necessary_pose_filter->filter_pose(necessary_pose_shift);
+    necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
+    /*ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", necessary_pose_shift.x, 
+                                               necessary_pose_shift.y, 
+                                               necessary_pose_shift.z,
+                                               necessary_pose_shift.rot_z);*/
+
+    /*current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
+    current_pose = current_pose_filter->get_filtered_pose();
+    necessary_pose_shift_global->filter_pose(pose_handler->local_to_global_shifted(necessary_pose_shift));
+    ROS_INFO("x: %f, y: %f, z: %f", necessary_pose_shift_global->get_filtered_pose().x, 
+                                    necessary_pose_shift_global->get_filtered_pose().y, 
+                                    necessary_pose_shift_global->get_filtered_pose().z);
+    ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", current_pose.x, 
+                                    current_pose.y, 
+                                    current_pose.z,
+                                    current_pose.rot_z);
+    necessary_pose_shift = pose_handler->global_to_local_shifted(necessary_pose_shift_global->get_filtered_pose() - delta_pose);
+    ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", necessary_pose_shift.x, 
+                                               necessary_pose_shift.y, 
+                                               necessary_pose_shift.z,
+                                               necessary_pose_shift.rot_z);*/
+
     /*double d_rot_z = current_pose.rot_z - last_pose.rot_z, 
            dz = current_pose.z - last_pose.z,
            necessary_pose_shift_x = necessary_pose_shift.x,
@@ -57,15 +84,16 @@ void ArdroneARTag::correct_necessary_pose_shift(void)
 
 void ArdroneARTag::stabilize_necessary_pose_shift(void)
 {
-    necessary_pose_shift.z /= cos(current_pose.rot_x) * cos(current_pose.rot_y);
-    necessary_pose_shift.x += necessary_pose_shift.z * sin(current_pose.rot_y);
-    necessary_pose_shift.y += necessary_pose_shift.z * sin(current_pose.rot_x);
+    necessary_pose_shift.z /= cos(necessary_pose_shift.rot_x) * cos(necessary_pose_shift.rot_y);
+    necessary_pose_shift.x += necessary_pose_shift.z * sin(necessary_pose_shift.rot_x);
+    necessary_pose_shift.y += necessary_pose_shift.z * sin(necessary_pose_shift.rot_y);
 }
 
 
 void ArdroneARTag::ar_tag_lost(void)
 {
-    current_pose = pose_handler->get_pose_rpy();
+    current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
+    current_pose = current_pose_filter->get_filtered_pose();
     necessary_pose_shift.z = 2.5 - current_pose.z;
 }
 
@@ -93,9 +121,11 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
             necessary_pose_shift.z = msg.markers[index].pose.pose.position.z;
         }
         stabilize_necessary_pose_shift();
+        necessary_pose_filter->filter_pose(necessary_pose_shift);
+        necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
         is_spotted_bottom = true;
         is_spotted_front = false;
-        //ROS_INFO("x: %f, y: %f, z: %f", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z);
+        ROS_INFO("x: %f, y: %f, z: %f, rot_x: %f, rot_y: %f", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z, necessary_pose_shift.rot_x, necessary_pose_shift.rot_y);
         last_pose = current_pose;
         last_spotted_time = ros::Time::now();
     }
@@ -131,19 +161,22 @@ void ArdroneARTag::control(void)
     }
     else if (is_spotted_bottom || is_spotted_front)
     {
-        ROS_INFO("necessary shift: x: %f, y: %f, z: %f, yaw: %f, state: %d", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z, necessary_pose_shift.rot_z, pose_handler->get_state());
+        //ROS_INFO("necessary shift: x: %f, y: %f, z: %f, yaw: %f, state: %d", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z, necessary_pose_shift.rot_z, pose_handler->get_state());
         correct_necessary_pose_shift();
         controller = (is_spotted_bottom) ? controller_landing : controller_chasing;
         if ((ros::Time::now() - last_spotted_time).toNSec() / 1000000000.0 >= 0.25)
             ar_tag_lost();
         if (pose_handler->get_state()!= 8 && pose_handler->get_state()!= 2 && current_pose.z <= 0.2 && is_spotted_bottom)
-	{
+	    {
             system("rostopic pub -1 /ardrone/land std_msgs/Empty");
             is_spotted_bottom = is_spotted_front = 0;
         }
-        twist = controller->pid_twist(necessary_pose_shift);
-        //ROS_INFO("%f, %f, %f, %f", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z);
-        pub_twist.publish(twist);
+        else
+        {
+            twist = controller->pid_twist(necessary_pose_shift);
+            ROS_INFO("%f, %f, %f, %f", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z);
+            pub_twist.publish(twist);
+        }
     }
     else 
     {

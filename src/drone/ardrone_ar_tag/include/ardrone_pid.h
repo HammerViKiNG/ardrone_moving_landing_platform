@@ -7,8 +7,8 @@
 #include "geometry_msgs/Pose.h"
 #include "geometry_msgs/Twist.h"
 
-#include "ardrone_ar_tag/pid.h"
-#include "ardrone_ar_tag/pose_rpy.h"
+#include "pid.h"
+#include "pose_rpy.h"
 
 
 class ArdronePID

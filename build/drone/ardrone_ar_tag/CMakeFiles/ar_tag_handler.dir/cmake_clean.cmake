@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o"
   "CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o"
   "CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o"
+  "CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o"
   "CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o"
   "CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler.pdb"

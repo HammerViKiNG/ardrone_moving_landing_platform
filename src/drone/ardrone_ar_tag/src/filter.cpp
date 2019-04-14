@@ -1,4 +1,5 @@
-#include "ardrone_ar_tag/filter.h"
+#include "filter.h"
+#include <ros/ros.h>
 
 
 MAFilter::MAFilter(size_t window)
@@ -6,17 +7,21 @@ MAFilter::MAFilter(size_t window)
     values = new double[window];
     size = window;   
     this->window = 0;
-    for (size_t i = 0; i < size; i++)
-        values[i] = 0;
+    memset(values, 0, size);
 }
 
 
 double MAFilter::get_filtered_value(double new_value)
 {
     shift_values();
-    values[size - 1] = new_value;
-    window++;
-    std::accumulate(values + size - window, values + size, value);
+    values[size-1] = new_value;
+    if (window < size)
+        window++;
+    //ROS_INFO_STREAM(values[size-1]);
+    value = 0;
+    for (size_t i = size - window; i < size; i++)
+        value += values[i];
+    value /= window;
     return value;
 }
 

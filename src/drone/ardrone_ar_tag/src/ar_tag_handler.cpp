@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "ardrone_ar_tag/ardrone_ar_tag_control.h"
+#include "ardrone_ar_tag_control.h"
 
 int main(int argc, char** argv)
 {
