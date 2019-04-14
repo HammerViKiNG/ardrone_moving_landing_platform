@@ -12,13 +12,13 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
     is_spotted_bottom = is_spotted_front = false;
 
     pose_handler = new ArdronePoseHandler(navdata_topic);
-    current_pose_filter = new FilteredPose(2);
+    current_pose_filter = new FilteredPose(5);
     current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
     current_pose = current_pose_filter->get_filtered_pose();
 
-    necessary_pose_shift_global = new FilteredPose(2);
-    necessary_pose_filter = new FilteredPose(2);
-    velocity_filter = new FilteredPose(2);
+    necessary_pose_shift_global = new FilteredPose(5);
+    necessary_pose_filter = new FilteredPose(5);
+    velocity_filter = new FilteredPose(5);
 
     velocity = PoseRPY::make_pose_rpy();
 
@@ -29,8 +29,8 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
     double* max_int_rel = new double[6] {2, 0.0, 0.5, 0.0};
     controller_chasing = new ArdronePID(hz, k_p, k_d, k_i, crit, max_int_rel);
     
-    k_p = new double[4] {0.7, 0.7, 5, 4};
-    k_d = new double[4] {0.2, 0.2, 2, 2};
+    k_p = new double[4] {1, 1, 5, 4};
+    k_d = new double[4] {0.25, 0.25, 2, 2};
     k_i = new double[4] {0.0, 0.0, 0, 0.0};
     crit = new double[4] {3, 3, 2, 1};
     max_int_rel = new double[6] {0.0, 0.0, 0.0, 0.0};
@@ -41,8 +41,9 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
 
 void ArdroneARTag::correct_necessary_pose_shift(void)
 {
-    /*current_pose = pose_handler->get_pose_rpy();
+    current_pose = pose_handler->get_pose_rpy();
     PoseRPY delta_pose = current_pose - last_pose;
+    /*
     PoseRPY delta_pose_local_past = PoseRPY::transform_pose(delta_pose, last_pose.rot_z);
     necessary_pose_shift = PoseRPY::transform_pose(necessary_pose_shift - delta_pose_local_past, delta_pose.rot_z);
 
@@ -147,8 +148,8 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
         is_spotted_front = false;
 
         //stabilize_necessary_pose_shift();
-        necessary_pose_filter->filter_pose(necessary_pose_shift);
-        necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
+        //necessary_pose_filter->filter_pose(necessary_pose_shift);
+        //necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
         
         if (!(is_spotted_bottom || !is_spotted_front))
         {
@@ -179,8 +180,8 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;
         necessary_pose_shift.z = 2.5 - msg.markers[index].pose.pose.position.z;
         necessary_pose_shift.rot_z = atan(msg.markers[index].pose.pose.position.y / necessary_pose_shift.x);
-        necessary_pose_filter->filter_pose(necessary_pose_shift);
-        necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
+        //necessary_pose_filter->filter_pose(necessary_pose_shift);
+        //necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
         is_spotted_front = true;
         is_spotted_bottom = false;
         last_pose = current_pose;
