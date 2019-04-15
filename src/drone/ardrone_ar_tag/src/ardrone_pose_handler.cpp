@@ -39,16 +39,16 @@ PoseRPY ArdronePoseHandler::global_to_local(const PoseRPY& pose)
 }
 
 
-PoseRPY ArdronePoseHandler::local_to_global_shifted(PoseRPY pose)
+PoseRPY ArdronePoseHandler::local_to_global_shifted(PoseRPY pose, const double& rot_z)
 {
     pose.x += 0.15;
-    return this->local_to_global(pose);
+    return PoseRPY::transform_pose(pose, -rot_z);
 }
 
 
-PoseRPY ArdronePoseHandler::global_to_local_shifted(PoseRPY pose)
+PoseRPY ArdronePoseHandler::global_to_local_shifted(PoseRPY pose, const double& rot_z)
 {
-    PoseRPY result = this->global_to_local(pose);
+    PoseRPY result = PoseRPY::transform_pose(pose, rot_z);
     result.x -= 0.15;
     return result;
 }

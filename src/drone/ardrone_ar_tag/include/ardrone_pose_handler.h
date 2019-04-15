@@ -17,8 +17,8 @@ class ArdronePoseHandler
         PoseRPY local_to_global(const PoseRPY& pose);
         PoseRPY global_to_local(const PoseRPY& pose);
 
-	    PoseRPY local_to_global_shifted(PoseRPY pose);
-	    PoseRPY global_to_local_shifted(PoseRPY pose);
+	static PoseRPY local_to_global_shifted(PoseRPY pose, const double& rot_z);
+	static PoseRPY global_to_local_shifted(PoseRPY pose, const double& rot_z);
 
         static std::pair<double, double> global_to_local(double x, double y, double rot_z);
     

@@ -11,14 +11,14 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
 
     is_spotted_bottom = is_spotted_front = false;
 
-    pose_handler = new ArdronePoseHandler(navdata_topic);
     current_pose_filter = new FilteredPose(5);
-    current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
-    current_pose = current_pose_filter->get_filtered_pose();
-
     necessary_pose_shift_global = new FilteredPose(5);
     necessary_pose_filter = new FilteredPose(5);
     velocity_filter = new FilteredPose(5);
+
+    pose_handler = new ArdronePoseHandler(navdata_topic);
+    current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
+    current_pose = current_pose_filter->get_filtered_pose();
 
     velocity = PoseRPY::make_pose_rpy();
 
@@ -41,53 +41,14 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
 
 void ArdroneARTag::correct_necessary_pose_shift(void)
 {
-    current_pose = pose_handler->get_pose_rpy();
-    PoseRPY delta_pose = current_pose - last_pose;
-    /*
-    PoseRPY delta_pose_local_past = PoseRPY::transform_pose(delta_pose, last_pose.rot_z);
-    necessary_pose_shift = PoseRPY::transform_pose(necessary_pose_shift - delta_pose_local_past, delta_pose.rot_z);
-
-    PoseRPY velocity_gain = PoseRPY::transform_pose(velocity, current_pose.rot_z - last_spotted_pose.rot_z);
-    //necessary_pose_shift = necessary_pose_shift + velocity_gain * dt;
-
-    necessary_pose_filter->filter_pose(necessary_pose_shift);
-    necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
-
-    ROS_INFO("x: %f, y: %f, z: %f, rot_x: %f, rot_y: %f", velocity.x, velocity.y, velocity.z, velocity.rot_x, velocity.rot_y);*/
-    /*ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", necessary_pose_shift.x, 
-                                               necessary_pose_shift.y, 
-                                               necessary_pose_shift.z,
-                                               necessary_pose_shift.rot_z);*/
-
     current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
     current_pose = current_pose_filter->get_filtered_pose();
-    necessary_pose_shift_global->filter_pose(pose_handler->local_to_global_shifted(necessary_pose_shift));
-    ROS_INFO("x: %f, y: %f, z: %f", necessary_pose_shift_global->get_filtered_pose().x, 
-                                    necessary_pose_shift_global->get_filtered_pose().y, 
-                                    necessary_pose_shift_global->get_filtered_pose().z);
-    ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", current_pose.x, 
-                                    current_pose.y, 
-                                    current_pose.z,
-                                    current_pose.rot_z);
-    necessary_pose_shift = pose_handler->global_to_local_shifted(necessary_pose_shift_global->get_filtered_pose() - delta_pose);
-    ROS_INFO("x: %f, y: %f, z: %f, rot_z: %f", necessary_pose_shift.x, 
-                                               necessary_pose_shift.y, 
-                                               necessary_pose_shift.z,
-                                               necessary_pose_shift.rot_z);
-
-    /*double d_rot_z = current_pose.rot_z - last_pose.rot_z, 
-           dz = current_pose.z - last_pose.z,
-           necessary_pose_shift_x = necessary_pose_shift.x,
-           necessary_pose_shift_y = necessary_pose_shift.y,
-           dx = current_pose.x - last_pose.x,
-           dy = current_pose.y - last_pose.y;
-    std::pair<double, double> dx_dy = ArdronePoseHandler::global_to_local(dx, dy, last_pose.rot_z);
-    std::pair<double, double> dx_dy_rel = ArdronePoseHandler::global_to_local(necessary_pose_shift_x - dx_dy.first, necessary_pose_shift_y - dx_dy.second, d_rot_z);
-
-    necessary_pose_shift.x = dx_dy_rel.first;
-    necessary_pose_shift.y = dx_dy_rel.second;
-    necessary_pose_shift.rot_z -= d_rot_z;
-    necessary_pose_shift.z -= dz; */
+    PoseRPY delta_pose = current_pose - last_pose;
+    PoseRPY necessary_shift_global = ArdronePoseHandler::local_to_global_shifted(necessary_pose_shift, current_pose.rot_z) - delta_pose;
+    necessary_shift_global.x += 1 * velocity.x * dt;
+    necessary_shift_global.y += 1 * velocity.y * dt;
+    necessary_pose_shift_global->filter_pose(necessary_shift_global);
+    necessary_pose_shift = ArdronePoseHandler::global_to_local_shifted(necessary_pose_shift_global->get_filtered_pose(), current_pose.rot_z);
     last_pose = current_pose;
 }
 
@@ -102,13 +63,13 @@ void ArdroneARTag::stabilize_necessary_pose_shift(void)
 
 void ArdroneARTag::get_velocity(void)
 {
-    PoseRPY last_necessary_shift_local = PoseRPY::transform_pose(last_necessary_shift, current_pose.rot_z - last_spotted_pose.rot_z),
-            delta_pose = PoseRPY::transform_pose(current_pose - last_spotted_pose, current_pose.rot_z);
-    velocity_filter->filter_pose((necessary_pose_shift - last_necessary_shift_local + delta_pose) *  1000000000.0 / (ros::Time::now() - last_spotted_time).toNSec());
+    PoseRPY delta_necessary_shift = ArdronePoseHandler::local_to_global_shifted(necessary_pose_shift, current_pose.rot_z) - ArdronePoseHandler::local_to_global_shifted(last_necessary_shift, last_spotted_pose.rot_z),
+            delta_pose = current_pose - last_spotted_pose;
+    //ROS_INFO("%f, %f, %f, %f, %f, %f", delta_necessary_shift.x, delta_necessary_shift.y, delta_necessary_shift.z, delta_pose.x, delta_pose.y, delta_pose.z);
+    //ROS_INFO("%f, %f, %f, %f, %f, %f", current_pose.x, current_pose.y, current_pose.z, last_spotted_pose.x, last_spotted_pose.y, last_spotted_pose.z);
+    velocity_filter->filter_pose((delta_necessary_shift - delta_pose) *  1000000000.0 / (ros::Time::now() - last_spotted_time).toNSec());
     velocity = velocity_filter->get_filtered_pose();
-
-    last_spotted_pose = current_pose;
-    last_necessary_shift = necessary_pose_shift;
+    //velocity = (delta_necessary_shift - delta_pose) * 1000000000.0 / (ros::Time::now() - last_spotted_time).toNSec();
 }
 
 
@@ -144,22 +105,20 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
             necessary_pose_shift.z = msg.markers[index].pose.pose.position.z;
         }
 
+        if (is_spotted_front || is_spotted_bottom)
+            get_velocity(); 
+
         is_spotted_bottom = true;
         is_spotted_front = false;
 
         //stabilize_necessary_pose_shift();
         //necessary_pose_filter->filter_pose(necessary_pose_shift);
-        //necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
-        
-        if (!(is_spotted_bottom || !is_spotted_front))
-        {
-            last_necessary_shift = necessary_pose_shift;
-            last_spotted_pose = current_pose;
-        }
-
-        get_velocity();        
+        //necessary_pose_shift = necessary_pose_filter->get_filtered_pose();      
 
         //ROS_INFO("x: %f, y: %f, z: %f, rot_x: %f, rot_y: %f", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z, necessary_pose_shift.rot_x, necessary_pose_shift.rot_y);
+
+	    last_spotted_pose = current_pose;
+        last_necessary_shift = necessary_pose_shift;
 
         last_pose = current_pose;
         last_spotted_time = ros::Time::now();
@@ -182,8 +141,12 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         necessary_pose_shift.rot_z = atan(msg.markers[index].pose.pose.position.y / necessary_pose_shift.x);
         //necessary_pose_filter->filter_pose(necessary_pose_shift);
         //necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
+        if (is_spotted_front || is_spotted_bottom)
+            get_velocity();  
         is_spotted_front = true;
         is_spotted_bottom = false;
+        last_spotted_pose = current_pose;
+        last_necessary_shift = necessary_pose_shift;
         last_pose = current_pose;
         last_spotted_time = ros::Time::now();
     }
