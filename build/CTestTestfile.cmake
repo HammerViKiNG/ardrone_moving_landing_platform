@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
 subdirs(camera)
+subdirs(simulation/car/car_gazebo)
 subdirs(simulation/AR.Drone-ROS/cvg_sim_msgs)
 subdirs(simulation/AR.Drone-ROS/tum_simulator)
 subdirs(drone/ardrone_ar_tag)
@@ -14,4 +15,4 @@ subdirs(simulation/AR.Drone-ROS/cvg_sim_gazebo)
 subdirs(simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins)
 subdirs(simulation/AR.Drone-ROS/message_to_tf)
 subdirs(simulation/simulation)
-subdirs(simulation/ev3)
+subdirs(simulation/car/car_description)

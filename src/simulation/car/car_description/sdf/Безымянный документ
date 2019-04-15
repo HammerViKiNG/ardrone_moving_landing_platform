@@ -1,0 +1,15 @@
+   
+   <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <legacyMode>true</legacyMode>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100</updateRate>
+      <leftJoint>left_wheel_hinge</leftJoint>
+      <rightJoint>right_wheel_hinge</rightJoint>
+      <wheelSeparation>${chassisWidth+wheelWidth}</wheelSeparation>
+      <wheelDiameter>${2*wheelRadius}</wheelDiameter>
+      <torque>20</torque>
+      <commandTopic>car/cmd_vel</commandTopic>
+      <odometryTopic>car/odom_diffdrive</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>chassis</robotBaseFrame>
+    </plugin>

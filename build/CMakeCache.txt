@@ -604,9 +604,6 @@ actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
-//The directory containing a CMake configuration file for angles.
-angles_DIR:PATH=/opt/ros/kinetic/share/angles/cmake
-
 //Value Computed by CMake
 ardrone_ar_tag_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag
 
@@ -614,19 +611,13 @@ ardrone_ar_tag_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_mov
 ardrone_ar_tag_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag
 
 //The directory containing a CMake configuration file for ardrone_autonomy.
-ardrone_autonomy_DIR:PATH=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/share/ardrone_autonomy/cmake
+ardrone_autonomy_DIR:PATH=/opt/ros/kinetic/share/ardrone_autonomy/cmake
 
 //Value Computed by CMake
 ardrone_teleop_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop
 
 //Value Computed by CMake
 ardrone_teleop_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop
-
-//The directory containing a CMake configuration file for bond.
-bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
-
-//The directory containing a CMake configuration file for bondcpp.
-bondcpp_DIR:PATH=/opt/ros/kinetic/share/bondcpp/cmake
 
 //Value Computed by CMake
 camera_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera
@@ -639,6 +630,30 @@ camera_calibration_parsers_DIR:PATH=/opt/ros/kinetic/share/camera_calibration_pa
 
 //The directory containing a CMake configuration file for camera_info_manager.
 camera_info_manager_DIR:PATH=/opt/ros/kinetic/share/camera_info_manager/cmake
+
+//Value Computed by CMake
+car_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car
+
+//Value Computed by CMake
+car_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/car
+
+//Value Computed by CMake
+car_decription_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/models/car_description
+
+//Value Computed by CMake
+car_decription_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/models/car_description
+
+//Value Computed by CMake
+car_description_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_description
+
+//Value Computed by CMake
+car_description_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/car/car_description
+
+//Value Computed by CMake
+car_gazebo_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_gazebo
+
+//Value Computed by CMake
+car_gazebo_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/car/car_gazebo
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
@@ -673,29 +688,11 @@ diffdrive_plugin_6w_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboos
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
 
-//Value Computed by CMake
-ev3_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/ev3
-
-//Value Computed by CMake
-ev3_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/ev3
-
-//Value Computed by CMake
-ev3_control_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/ev3/ev3_control
-
-//Value Computed by CMake
-ev3_control_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/ev3/ev3_control
-
-//Dependencies for the target
-ev3_plugin_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/usr/lib/x86_64-linux-gnu/libignition-math2.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;/usr/lib/x86_64-linux-gnu/libignition-math2.so;
-
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
 
 //The directory containing a CMake configuration file for gazebo_msgs.
 gazebo_msgs_DIR:PATH=/opt/ros/kinetic/share/gazebo_msgs/cmake
-
-//The directory containing a CMake configuration file for gazebo_plugins.
-gazebo_plugins_DIR:PATH=/opt/ros/kinetic/share/gazebo_plugins/cmake
 
 //Path to a library.
 gazebo_proto_msgs_lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
@@ -792,7 +789,7 @@ ignition-math2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-math2
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libgazebo_ros_paths_plugin.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -812,9 +809,6 @@ message_to_tf_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_movi
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
-//The directory containing a CMake configuration file for nodelet.
-nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
-
 //Path to a library.
 onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libignition-math2.so
 
@@ -824,11 +818,11 @@ pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 //Dependencies for target
 reset_plugin_LIB_DEPENDS:STATIC=
 
+//The directory containing a CMake configuration file for ros.
+ros_DIR:PATH=ros_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
-
-//The directory containing a CMake configuration file for rosconsole_bridge.
-rosconsole_bridge_DIR:PATH=/opt/ros/kinetic/share/rosconsole_bridge/cmake
 
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake
@@ -866,9 +860,6 @@ simulation_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_
 //Value Computed by CMake
 simulation_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/simulation
 
-//The directory containing a CMake configuration file for smclib.
-smclib_DIR:PATH=/opt/ros/kinetic/share/smclib/cmake
-
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 
@@ -899,8 +890,8 @@ tum_simulator_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_movi
 //Value Computed by CMake
 tum_simulator_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/AR.Drone-ROS/tum_simulator
 
-//The directory containing a CMake configuration file for urdf.
-urdf_DIR:PATH=/opt/ros/kinetic/share/urdf/cmake
+//The directory containing a CMake configuration file for xacro.
+xacro_DIR:PATH=/opt/ros/kinetic/share/xacro/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
@@ -1055,7 +1046,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

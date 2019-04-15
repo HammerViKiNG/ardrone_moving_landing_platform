@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/include/ardrone_autonomy/Navdata.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/include/hector_quadrotor_controller/quadrotor_simple_controller.h
 gazebo/gazebo.hh
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/include/hector_quadrotor_controller/gazebo/gazebo.hh
@@ -52,6 +34,24 @@ gazebo/physics/physics.hh
 cmath
 -
 stdlib.h
+-
+
+/opt/ros/kinetic/include/ardrone_autonomy/Navdata.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
 -
 
 /opt/ros/kinetic/include/boost_161_condition_variable.h

@@ -1,2 +1,0 @@
-
--DCATKIN_DEVEL_PREFIX=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/devel -DCMAKE_INSTALL_PREFIX=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/install -G Unix Makefiles

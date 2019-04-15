@@ -4,7 +4,7 @@
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
-  <arg name="ev3_model" default="$(find ev3)/urdf/ev3.urdf.xacro"/> 
+  <arg name="car_model" default="$(find car_description)/sdf/model.sdf.xacro"/> 
   <arg name="x" default="0"/>
   <arg name="y" default="0"/>
 
@@ -16,15 +16,14 @@
   <arg name="headless" value="$(arg headless)"/>
 </include>
 
-<param name="ev3_description" command="$(find xacro)/xacro.py $(arg ev3_model)" />
+<param name="car_description" command="$(find xacro)/xacro.py $(arg car_model)" />
 <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
-      args="-x $(arg x) -y $(arg y) -unpause -urdf -model ev3 -param ev3_description" 
+      args="-x $(arg x) -y $(arg y) -unpause -sdf -model car -param car_description" 
       respawn="false" output="screen" /> 
-
-<!-- <include file="$(find ev3_control)/launch/ev3_control.launch"/> -->
 
 <include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch">
   <arg name="model" value="$(find cvg_sim_gazebo)/urdf/quadrotor_sensors.urdf.xacro"/>
+  <remap from="cmd_vel" to="/ardrone/cmd_vel"/>
 </include>
 
 </launch>

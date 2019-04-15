@@ -1,0 +1,113 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="Car" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="PI" value="3.1415926535897931"/>
+
+    <xacro:property name="chassisHeight" value="0.1"/>
+    <xacro:property name="chassisLength" value="0.5"/>
+    <xacro:property name="chassisWidth" value="0.5"/>
+    <xacro:property name="chassisMass" value="50"/>
+
+    <xacro:property name="casterRadius" value="0.03"/>
+    <xacro:property name="casterMass" value="5"/>
+
+    <xacro:property name="wheelWidth" value="0.05"/>
+    <xacro:property name="wheelRadius" value="0.08"/>
+    <xacro:property name="wheelPos" value="0.2"/>
+    <xacro:property name="wheelMass" value="5"/>
+    <xacro:property name="wheelDamping" value="1"/>
+
+    <xacro:property name="cameraSize" value="0.05"/>
+    <xacro:property name="cameraMass" value="0.1"/>
+
+   <xacro:include filename="$(find car_description)/sdf/macros.xacro" />
+    
+    <static>false</static>
+
+    <link name='chassis'>
+      <pose>0 0 ${wheelRadius} 0 0 0</pose>
+      <collision name='collision'>
+        <geometry>
+          <box>
+            <size>${chassisLength} ${chassisWidth} ${chassisHeight}</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name='visual'>
+        <geometry>
+          <box>
+            <size>${chassisLength} ${chassisWidth} ${chassisHeight}</size>
+          </box>
+         </geometry>
+    	<material>
+	   <script>
+		<uri>model://materials/scripts/texture.material</uri>
+		<name>LandingStation</name>
+	   </script>
+	</material>
+
+      </visual>     
+
+      <inertial> 
+        <mass>${chassisMass}</mass> 
+        <box_inertia m="${chassisMass}" x="${chassisLength}" y="${chassisWidth}" z="${chassisHeight}"/>
+      </inertial>
+
+      <collision name='caster_collision'>
+        <pose>${-chassisLength/2+casterRadius} 0 ${-chassisHeight/2} 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>${casterRadius}</radius>
+          </sphere>
+        </geometry>
+
+        <surface>
+          <friction>
+            <ode>
+              <mu>0</mu>
+              <mu2>0</mu2>
+              <slip1>1.0</slip1>
+              <slip2>1.0</slip2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+
+      <visual name='caster_visual'>
+        <pose>${-chassisLength/2+casterRadius} 0 ${-chassisHeight/2} 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>${casterRadius}</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <wheel lr="left" tY="1"/>
+    <wheel lr="right" tY="-1"/>
+   <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <legacyMode>true</legacyMode>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>100</updateRate>
+      <leftJoint>right_wheel_hinge</leftJoint>
+      <rightJoint>left_wheel_hinge</rightJoint>
+      <wheelSeparation>${chassisWidth+wheelWidth}</wheelSeparation>
+      <wheelDiameter>${2*wheelRadius}</wheelDiameter>
+      <torque>20</torque>
+      <commandTopic>car/cmd_vel</commandTopic>
+      <odometryTopic>car/odom_diffdrive</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>chassis</robotBaseFrame>
+    </plugin>
+
+  </model>
+</sdf>
+

@@ -1,8 +1,0 @@
-prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel
-
-Name: zbar_ros
-Description: Description of zbar_ros
-Version: 0.1.0
-Cflags: -I/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/zbar_ros/include
-Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib -lbarcode_reader_nodelet
-Requires: nodelet cv_bridge roscpp

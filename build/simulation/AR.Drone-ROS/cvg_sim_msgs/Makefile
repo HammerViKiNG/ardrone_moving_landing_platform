@@ -90,6 +90,28 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -110,28 +132,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -226,201 +226,6 @@ _cvg_sim_msgs_generate_messages_check_deps_ServoCommand/fast:
 .PHONY : _cvg_sim_msgs_generate_messages_check_deps_ServoCommand/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_Compass: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Compass
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_Compass/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Compass/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-cvg_sim_msgs_genlisp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule
-
-.PHONY : cvg_sim_msgs_genlisp
-
-# fast build rule for target.
-cvg_sim_msgs_genlisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/build
-.PHONY : cvg_sim_msgs_genlisp/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_Altitude: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altitude
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_Altitude/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altitude/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-cvg_sim_msgs_generate_messages_lisp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : cvg_sim_msgs_generate_messages_lisp
-
-# fast build rule for target.
-cvg_sim_msgs_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/build
-.PHONY : cvg_sim_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_Supply: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Supply
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_Supply/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Supply/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_YawrateCommand
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_YawrateCommand/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawMagnetic
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawMagnetic/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_RawImu: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawImu
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_RawImu/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawImu/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule
-
-# Convenience name for target.
-cvg_sim_msgs_generate_messages: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule
-
-.PHONY : cvg_sim_msgs_generate_messages
-
-# fast build rule for target.
-cvg_sim_msgs_generate_messages/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/build
-.PHONY : cvg_sim_msgs_generate_messages/fast
-
-# Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityXYCommand.dir/rule:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityXYCommand.dir/rule
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityXYCommand.dir/rule
@@ -436,64 +241,34 @@ _cvg_sim_msgs_generate_messages_check_deps_VelocityXYCommand/fast:
 .PHONY : _cvg_sim_msgs_generate_messages_check_deps_VelocityXYCommand/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_eus: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+cvg_sim_msgs_generate_messages_cpp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_eus
+.PHONY : cvg_sim_msgs_generate_messages_cpp
 
 # fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
+cvg_sim_msgs_generate_messages_cpp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/build
+.PHONY : cvg_sim_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_lisp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+_cvg_sim_msgs_generate_messages_check_deps_RC: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_lisp
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RC
 
 # fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule
-
-# Convenience name for target.
-cvg_sim_msgs_gennodejs: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule
-
-.PHONY : cvg_sim_msgs_gennodejs
-
-# fast build rule for target.
-cvg_sim_msgs_gennodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/build
-.PHONY : cvg_sim_msgs_gennodejs/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_Altimeter: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altimeter
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_Altimeter/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altimeter/fast
+_cvg_sim_msgs_generate_messages_check_deps_RC/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RC/fast
 
 # Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_nodejs.dir/rule:
@@ -541,34 +316,109 @@ _cvg_sim_msgs_generate_messages_check_deps_MotorPWM/fast:
 .PHONY : _cvg_sim_msgs_generate_messages_check_deps_MotorPWM/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule
 
 # Convenience name for target.
-cvg_sim_msgs_generate_messages_cpp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/rule
+cvg_sim_msgs_genlisp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/rule
 
-.PHONY : cvg_sim_msgs_generate_messages_cpp
+.PHONY : cvg_sim_msgs_genlisp
 
 # fast build rule for target.
-cvg_sim_msgs_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_cpp.dir/build
-.PHONY : cvg_sim_msgs_generate_messages_cpp/fast
+cvg_sim_msgs_genlisp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_genlisp.dir/build
+.PHONY : cvg_sim_msgs_genlisp/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule
 
 # Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_RC: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/rule
+_cvg_sim_msgs_generate_messages_check_deps_Altitude: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/rule
 
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RC
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altitude
 
 # fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_RC/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RC.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RC/fast
+_cvg_sim_msgs_generate_messages_check_deps_Altitude/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altitude.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altitude/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_YawrateCommand
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_YawrateCommand.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_YawrateCommand/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawMagnetic
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawMagnetic.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawMagnetic/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+cvg_sim_msgs_generate_messages_lisp: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : cvg_sim_msgs_generate_messages_lisp
+
+# fast build rule for target.
+cvg_sim_msgs_generate_messages_lisp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages_lisp.dir/build
+.PHONY : cvg_sim_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_Supply: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Supply
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_Supply/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Supply.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Supply/fast
 
 # Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_HeightCommand.dir/rule:
@@ -586,19 +436,34 @@ _cvg_sim_msgs_generate_messages_check_deps_HeightCommand/fast:
 .PHONY : _cvg_sim_msgs_generate_messages_check_deps_HeightCommand/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_py: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+_cvg_sim_msgs_generate_messages_check_deps_Compass: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_py
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Compass
 
 # fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
+_cvg_sim_msgs_generate_messages_check_deps_Compass/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Compass.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Compass/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand/fast
 
 # Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorCommand.dir/rule:
@@ -691,21 +556,6 @@ cvg_sim_msgs_generate_messages_py/fast:
 .PHONY : cvg_sim_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule
-
-# Convenience name for target.
-_cvg_sim_msgs_generate_messages_check_deps_MotorStatus: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule
-
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_MotorStatus
-
-# fast build rule for target.
-_cvg_sim_msgs_generate_messages_check_deps_MotorStatus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/build
-.PHONY : _cvg_sim_msgs_generate_messages_check_deps_MotorStatus/fast
-
-# Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RuddersCommand.dir/rule:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RuddersCommand.dir/rule
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RuddersCommand.dir/rule
@@ -719,6 +569,21 @@ _cvg_sim_msgs_generate_messages_check_deps_RuddersCommand: simulation/AR.Drone-R
 _cvg_sim_msgs_generate_messages_check_deps_RuddersCommand/fast:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RuddersCommand.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RuddersCommand.dir/build
 .PHONY : _cvg_sim_msgs_generate_messages_check_deps_RuddersCommand/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_MotorStatus: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_MotorStatus
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_MotorStatus/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_MotorStatus.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_MotorStatus/fast
 
 # Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawRC.dir/rule:
@@ -735,6 +600,66 @@ _cvg_sim_msgs_generate_messages_check_deps_RawRC/fast:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawRC.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawRC.dir/build
 .PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawRC/fast
 
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+cvg_sim_msgs_gennodejs: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/rule
+
+.PHONY : cvg_sim_msgs_gennodejs
+
+# fast build rule for target.
+cvg_sim_msgs_gennodejs/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_gennodejs.dir/build
+.PHONY : cvg_sim_msgs_gennodejs/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_Altimeter: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altimeter
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_Altimeter/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_Altimeter.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_Altimeter/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule
+
+# Convenience name for target.
+cvg_sim_msgs_generate_messages: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/rule
+
+.PHONY : cvg_sim_msgs_generate_messages
+
+# fast build rule for target.
+cvg_sim_msgs_generate_messages/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/cvg_sim_msgs_generate_messages.dir/build
+.PHONY : cvg_sim_msgs_generate_messages/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule
+
+# Convenience name for target.
+_cvg_sim_msgs_generate_messages_check_deps_RawImu: simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/rule
+
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawImu
+
+# fast build rule for target.
+_cvg_sim_msgs_generate_messages_check_deps_RawImu/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/build.make simulation/AR.Drone-ROS/cvg_sim_msgs/CMakeFiles/_cvg_sim_msgs_generate_messages_check_deps_RawImu.dir/build
+.PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawImu/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -748,44 +673,39 @@ help:
 	@echo "... cvg_sim_msgs_generate_messages_eus"
 	@echo "... cvg_sim_msgs_gencpp"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_ServoCommand"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Compass"
-	@echo "... list_install_components"
-	@echo "... cvg_sim_msgs_genlisp"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Altitude"
-	@echo "... cvg_sim_msgs_generate_messages_lisp"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Supply"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand"
-	@echo "... edit_cache"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_YawrateCommand"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RawMagnetic"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RawImu"
-	@echo "... cvg_sim_msgs_generate_messages"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_VelocityXYCommand"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... cvg_sim_msgs_gennodejs"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Altimeter"
+	@echo "... rebuild_cache"
+	@echo "... cvg_sim_msgs_generate_messages_cpp"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RC"
 	@echo "... test"
 	@echo "... cvg_sim_msgs_generate_messages_nodejs"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_ThrustCommand"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_MotorPWM"
-	@echo "... rebuild_cache"
-	@echo "... cvg_sim_msgs_generate_messages_cpp"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RC"
+	@echo "... list_install_components"
+	@echo "... cvg_sim_msgs_genlisp"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Altitude"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_AttitudeCommand"
+	@echo "... edit_cache"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_YawrateCommand"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RawMagnetic"
+	@echo "... cvg_sim_msgs_generate_messages_lisp"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Supply"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_HeightCommand"
-	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Compass"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_VelocityZCommand"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_MotorCommand"
 	@echo "... cvg_sim_msgs_genpy"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_HeadingCommand"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_PositionXYCommand"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_ControllerState"
 	@echo "... cvg_sim_msgs_generate_messages_py"
-	@echo "... _cvg_sim_msgs_generate_messages_check_deps_MotorStatus"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RuddersCommand"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_MotorStatus"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RawRC"
+	@echo "... cvg_sim_msgs_gennodejs"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Altimeter"
+	@echo "... cvg_sim_msgs_generate_messages"
+	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RawImu"
 .PHONY : help
 
 
