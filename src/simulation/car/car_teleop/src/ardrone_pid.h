@@ -15,7 +15,7 @@
 class ArdronePID
 {
     public:
-        ArdronePID(std::string tf_topic, std::string navdata_topic, std::string cmd_topic);
+        ArdronePID(std::string tf_topic, std::string navdata_topic, std::string cmd_topic, double hz);
         void set_necessary_coords(double* necessary_coords);
         void control(void);
     
@@ -26,16 +26,16 @@ class ArdronePID
         double div(double e, double prev_e, double dt);
         void integr(double& int_e, double e, double dt);
 
-        const double K_P = 0.5, K_D = 0.1, K_I = 0.1;
+        const double K_P = 0.5f, K_D = 0.1f, K_I = 0.1f;
 
         int8_t state;
         double necessary_coords[3], linear_coords[3], angular_coords[3];
-        double prev_time, curr_time, dt = 0.00001;
+        double dt;
         double e[3], prev_e[3], int_e[3], div_e[3];      
         
         ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata;
-        ros::Publisher pub_tf;
+        ros::Publisher pub_twist;
 
         geometry_msgs::Twist twist;
 };

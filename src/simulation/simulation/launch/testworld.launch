@@ -11,6 +11,8 @@
     <remap from="image" to="/ardrone/bottom/image_raw"/>
 </node>
 
-<node pkg="ardrone_teleop" name="keyboard_teleop" type="keyboard_teleop.py" respawn="true"/>
+<node pkg="ardrone_teleop" name="ardrone_keyboard_teleop" type="keyboard_teleop.py" respawn="true"/>
+
+<node pkg="car_teleop" name="car_keyboard_teleop" type="keyboard_teleop.py" respawn="true"/>
 
 </launch>

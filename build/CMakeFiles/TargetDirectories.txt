@@ -184,6 +184,14 @@
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/CMakeFiles/coords_teleop.dir
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/list_install_components.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/install.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/rebuild_cache.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/edit_cache.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/car_teleop_generate_messages.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/test.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/install/strip.dir
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/CMakeFiles/install/local.dir
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_gazebo/CMakeFiles/list_install_components.dir
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_gazebo/CMakeFiles/install.dir
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_gazebo/CMakeFiles/rebuild_cache.dir

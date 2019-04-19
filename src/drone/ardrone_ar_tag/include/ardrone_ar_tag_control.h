@@ -23,7 +23,7 @@ class ArdroneARTag
         void control(void);
     
     private:
-	    void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
+        void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
         void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
         void correct_necessary_pose_shift(void);
@@ -31,6 +31,7 @@ class ArdroneARTag
         void get_velocity(void);
 
         void ar_tag_lost(void);
+        void ar_tag_search(void);
 
         int8_t state;
 

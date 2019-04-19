@@ -1765,6 +1765,19 @@ ardrone_teleop_generate_messages_py/fast:
 .PHONY : ardrone_teleop_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named car_teleop_generate_messages
+
+# Build rule for target.
+car_teleop_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 car_teleop_generate_messages
+.PHONY : car_teleop_generate_messages
+
+# fast build rule for target.
+car_teleop_generate_messages/fast:
+	$(MAKE) -f simulation/car/car_teleop/CMakeFiles/car_teleop_generate_messages.dir/build.make simulation/car/car_teleop/CMakeFiles/car_teleop_generate_messages.dir/build
+.PHONY : car_teleop_generate_messages/fast
+
+#=============================================================================
 # Target rules for targets named test_trajectory
 
 # Build rule for target.
@@ -2342,6 +2355,7 @@ help:
 	@echo "... ardrone_teleop_gennodejs"
 	@echo "... coords_teleop"
 	@echo "... ardrone_teleop_generate_messages_py"
+	@echo "... car_teleop_generate_messages"
 	@echo "... test_trajectory"
 	@echo "... hector_gazebo_quadrotor_state_controller"
 	@echo "... hector_gazebo_quadrotor_simple_controller"

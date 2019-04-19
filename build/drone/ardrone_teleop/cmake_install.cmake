@@ -49,25 +49,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/catkin_generated/installspace/ardrone_teleop.pc")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_teleop/cmake" TYPE FILE FILES "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/catkin_generated/installspace/ardrone_teleop-msg-extras.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_teleop/cmake" TYPE FILE FILES
-    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/catkin_generated/installspace/ardrone_teleopConfig.cmake"
-    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/catkin_generated/installspace/ardrone_teleopConfig-version.cmake"
-    )
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ardrone_teleop" TYPE FILE FILES "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop/package.xml")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ardrone_teleop" TYPE PROGRAM FILES "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop/catkin_generated/installspace/keyboard_teleop.py")
 endif()
 
