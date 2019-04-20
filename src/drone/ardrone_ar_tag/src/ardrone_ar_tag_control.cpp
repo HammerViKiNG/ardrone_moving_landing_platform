@@ -59,9 +59,12 @@ void ArdroneARTag::correct_necessary_pose_shift(void)
 
 void ArdroneARTag::stabilize_necessary_pose_shift(void)
 {
-    necessary_pose_shift.z /= cos(necessary_pose_shift.rot_x) * cos(necessary_pose_shift.rot_y);
-    necessary_pose_shift.x -= necessary_pose_shift.z * sin(necessary_pose_shift.rot_x);
-    necessary_pose_shift.y -= necessary_pose_shift.z * sin(necessary_pose_shift.rot_y);
+    double d_rot_x = necessary_pose_shift.rot_x - current_pose.rot_x,
+           d_rot_y = necessary_pose_shift.rot_y - current_pose.rot_y,
+           d_rot_z = necessary_pose_shift.rot_z - current_pose.rot_z;
+    necessary_pose_shift.z /= cos(d_rot_x) * cos(d_rot_y);
+    necessary_pose_shift.x -= necessary_pose_shift.z * sin(d_rot_y);
+    necessary_pose_shift.y -= necessary_pose_shift.z * sin(d_rot_x);
 }
 
 
@@ -122,7 +125,7 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
         is_spotted_bottom = true;
         is_spotted_front = false;
 
-        //stabilize_necessary_pose_shift();
+        stabilize_necessary_pose_shift();
         //necessary_pose_filter->filter_pose(necessary_pose_shift);
         //necessary_pose_shift = necessary_pose_filter->get_filtered_pose();      
 
@@ -150,6 +153,9 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;
         necessary_pose_shift.z = 2.5 - msg.markers[index].pose.pose.position.z;
         necessary_pose_shift.rot_z = atan(msg.markers[index].pose.pose.position.y / necessary_pose_shift.x);
+
+        stabilize_necessary_pose_shift();
+
         //necessary_pose_filter->filter_pose(necessary_pose_shift);
         //necessary_pose_shift = necessary_pose_filter->get_filtered_pose();
         if (is_spotted_front || is_spotted_bottom)
@@ -175,7 +181,7 @@ void ArdroneARTag::control(void)
         //ROS_INFO("necessary shift: x: %f, y: %f, z: %f, yaw: %f, state: %d", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z, necessary_pose_shift.rot_z, pose_handler->get_state());
         correct_necessary_pose_shift();
         controller = (is_spotted_bottom) ? controller_landing : controller_chasing;
-        if ((ros::Time::now() - last_spotted_time).toNSec() / 1000000000.0 >= 0.25)
+        if ((ros::Time::now() - last_spotted_time).toNSec() / 1000000000.0 >= 1.0)
             ar_tag_search();
         else if ((ros::Time::now() - last_spotted_time).toNSec() / 1000000000.0 >= 0.25)
             ar_tag_lost();
