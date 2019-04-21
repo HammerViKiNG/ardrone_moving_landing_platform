@@ -70,12 +70,12 @@ PoseRPY PoseRPY::transform_pose(const PoseRPY& pose, const double& rot_z)
 }
 
 
-PoseRPY PoseRPY::transform_pose_3d(const PoseRPY& pose, const double& rot_y, const double& rot_x, const double& rot_z)
+PoseRPY PoseRPY::transform_pose_3d(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z)
 {
     PoseRPY result = transform_pose(pose, rot_z);
     double x = result.x, y = result.y, z = result.z;
-    result.x = x * cos(rot_x) + sin(rot_x) * cos(rot_y) * z;
-    result.y = y * cos(rot_y) + sin(rot_y) * cos(rot_x) * z;
-    result.z = -x * sin(rot_x) - y * sin(rot_y) + z * cos(rot_x) * cos(rot_y); 
+    result.x = x * cos(rot_y) + sin(rot_y) * cos(rot_x) * z;
+    result.y = y * cos(rot_x) + sin(rot_x) * cos(rot_y) * z;
+    result.z = -x * sin(rot_y) - y * sin(rot_x) + z * cos(rot_x) * cos(rot_y); 
     return result;
 }
