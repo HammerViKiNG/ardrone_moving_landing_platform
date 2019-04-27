@@ -4446,6 +4446,24 @@ clean: simulation/car/car_teleop/CMakeFiles/car_teleop_generate_messages.dir/cle
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory additional/pose_rpy
+
+# Convenience name for "all" pass in the directory.
+additional/pose_rpy/all:
+
+.PHONY : additional/pose_rpy/all
+
+# Convenience name for "clean" pass in the directory.
+additional/pose_rpy/clean:
+
+.PHONY : additional/pose_rpy/clean
+
+# Convenience name for "preinstall" pass in the directory.
+additional/pose_rpy/preinstall:
+
+.PHONY : additional/pose_rpy/preinstall
+
+#=============================================================================
 # Directory level rules for directory simulation/AR.Drone-ROS/cvg_sim_gazebo
 
 # Convenience name for "all" pass in the directory.
