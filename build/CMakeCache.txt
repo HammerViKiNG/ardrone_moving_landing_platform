@@ -630,6 +630,12 @@ ar_tag_position_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_mo
 ar_tag_position_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position
 
 //Value Computed by CMake
+ardrone_additional_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_additional
+
+//Value Computed by CMake
+ardrone_additional_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional
+
+//Value Computed by CMake
 ardrone_ar_tag_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag
 
 //Value Computed by CMake
@@ -637,6 +643,12 @@ ardrone_ar_tag_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_mov
 
 //The directory containing a CMake configuration file for ardrone_autonomy.
 ardrone_autonomy_DIR:PATH=/opt/ros/kinetic/share/ardrone_autonomy/cmake
+
+//Dependencies for the target
+ardrone_pid_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libimage_transport.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/libcamera_info_manager.so;general;/opt/ros/kinetic/lib/libcamera_calibration_parsers.so;general;pid;general;pose_rpy;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Dependencies for the target
+ardrone_pose_handler_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libimage_transport.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/libcamera_info_manager.so;general;/opt/ros/kinetic/lib/libcamera_calibration_parsers.so;general;pid;general;pose_rpy;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Value Computed by CMake
 ardrone_teleop_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop
@@ -718,6 +730,27 @@ diffdrive_plugin_6w_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboos
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
+
+//Value Computed by CMake
+filter_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/filter
+
+//The directory containing a CMake configuration file for filter.
+filter_DIR:PATH=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/share/filter/cmake
+
+//Dependencies for target
+filter_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+filter_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/filter
+
+//Value Computed by CMake
+filtered_pose_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/filtered_pose
+
+//Dependencies for target
+filtered_pose_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+filtered_pose_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/filtered_pose
 
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
@@ -842,6 +875,18 @@ nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
 //Path to a library.
 onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libignition-math2.so
+
+//Value Computed by CMake
+pid_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/pid
+
+//The directory containing a CMake configuration file for pid.
+pid_DIR:PATH=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/share/pid/cmake
+
+//Dependencies for target
+pid_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+pid_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pid
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
@@ -1095,7 +1140,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

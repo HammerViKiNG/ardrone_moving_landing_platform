@@ -88,16 +88,16 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : rebuild_cache/fast
+.PHONY : install/strip/fast
 
 # Special rule for the target install
 install: preinstall
@@ -111,16 +111,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : install/strip/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -241,184 +241,19 @@ hector_gazebo_ros_sonar/fast:
 .PHONY : hector_gazebo_ros_sonar/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule
 
 # Convenience name for target.
-hector_gazebo_ros_magnetic: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule
+_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule
 
-.PHONY : hector_gazebo_ros_magnetic
+.PHONY : _cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias
 
 # fast build rule for target.
-hector_gazebo_ros_magnetic/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build
-.PHONY : hector_gazebo_ros_magnetic/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule
-
-# Convenience name for target.
-reset_plugin: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule
-
-.PHONY : reset_plugin
-
-# fast build rule for target.
-reset_plugin/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/build
-.PHONY : reset_plugin/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule
-
-# Convenience name for target.
-diffdrive_plugin_6w: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule
-
-.PHONY : diffdrive_plugin_6w
-
-# fast build rule for target.
-diffdrive_plugin_6w/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build
-.PHONY : diffdrive_plugin_6w/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_eus: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-.PHONY : nav_msgs_generate_messages_eus
-
-# fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_nodejs: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_nodejs
-
-# fast build rule for target.
-ardrone_autonomy_generate_messages_nodejs/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build
-.PHONY : ardrone_autonomy_generate_messages_nodejs/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule
-
-# Convenience name for target.
-hector_gazebo_ros_imu: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule
-
-.PHONY : hector_gazebo_ros_imu
-
-# fast build rule for target.
-hector_gazebo_ros_imu/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build
-.PHONY : hector_gazebo_ros_imu/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule
-
-# Convenience name for target.
-cvg_sim_gazebo_plugins_gencpp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule
-
-.PHONY : cvg_sim_gazebo_plugins_gencpp
-
-# fast build rule for target.
-cvg_sim_gazebo_plugins_gencpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/build
-.PHONY : cvg_sim_gazebo_plugins_gencpp/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_py: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_py
-
-# fast build rule for target.
-ardrone_autonomy_generate_messages_py/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build
-.PHONY : ardrone_autonomy_generate_messages_py/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_lisp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_lisp
-
-# fast build rule for target.
-ardrone_autonomy_generate_messages_lisp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build
-.PHONY : ardrone_autonomy_generate_messages_lisp/fast
-
-# Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_cpp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_cpp
-
-# fast build rule for target.
-ardrone_autonomy_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build
-.PHONY : ardrone_autonomy_generate_messages_cpp/fast
+_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/build
+.PHONY : _cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias/fast
 
 # Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_nodejs.dir/rule:
@@ -436,21 +271,6 @@ cvg_sim_gazebo_plugins_generate_messages_nodejs/fast:
 .PHONY : cvg_sim_gazebo_plugins_generate_messages_nodejs/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages.dir/rule:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages.dir/rule
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages.dir/rule
@@ -466,34 +286,49 @@ cvg_sim_gazebo_plugins_generate_messages/fast:
 .PHONY : cvg_sim_gazebo_plugins_generate_messages/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/rule
+nav_msgs_generate_messages_cpp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : _cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias
+.PHONY : nav_msgs_generate_messages_cpp
 
 # fast build rule for target.
-_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/_cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias.dir/build
-.PHONY : _cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias/fast
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule
 
 # Convenience name for target.
-ardrone_autonomy_generate_messages_eus: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule
+diffdrive_plugin_6w: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/rule
 
-.PHONY : ardrone_autonomy_generate_messages_eus
+.PHONY : diffdrive_plugin_6w
 
 # fast build rule for target.
-ardrone_autonomy_generate_messages_eus/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build
-.PHONY : ardrone_autonomy_generate_messages_eus/fast
+diffdrive_plugin_6w/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/diffdrive_plugin_6w.dir/build
+.PHONY : diffdrive_plugin_6w/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_eus: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+.PHONY : nav_msgs_generate_messages_eus
+
+# fast build rule for target.
+nav_msgs_generate_messages_eus/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_cpp.dir/rule:
@@ -541,6 +376,66 @@ cvg_sim_gazebo_plugins_genlisp/fast:
 .PHONY : cvg_sim_gazebo_plugins_genlisp/fast
 
 # Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule
+
+# Convenience name for target.
+cvg_sim_gazebo_plugins_gencpp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/rule
+
+.PHONY : cvg_sim_gazebo_plugins_gencpp
+
+# fast build rule for target.
+cvg_sim_gazebo_plugins_gencpp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_gencpp.dir/build
+.PHONY : cvg_sim_gazebo_plugins_gencpp/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule
+
+# Convenience name for target.
+hector_gazebo_ros_imu: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/rule
+
+.PHONY : hector_gazebo_ros_imu
+
+# fast build rule for target.
+hector_gazebo_ros_imu/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_imu.dir/build
+.PHONY : hector_gazebo_ros_imu/fast
+
+# Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_geneus.dir/rule:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_geneus.dir/rule
 .PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_geneus.dir/rule
@@ -586,19 +481,34 @@ cvg_sim_gazebo_plugins_gennodejs/fast:
 .PHONY : cvg_sim_gazebo_plugins_gennodejs/fast
 
 # Convenience name for target.
-simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule
-.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule
 
 # Convenience name for target.
-hector_gazebo_ros_gps: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule
+reset_plugin: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/rule
 
-.PHONY : hector_gazebo_ros_gps
+.PHONY : reset_plugin
 
 # fast build rule for target.
-hector_gazebo_ros_gps/fast:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build
-.PHONY : hector_gazebo_ros_gps/fast
+reset_plugin/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/reset_plugin.dir/build
+.PHONY : reset_plugin/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule
+
+# Convenience name for target.
+hector_gazebo_ros_magnetic: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/rule
+
+.PHONY : hector_gazebo_ros_magnetic
+
+# fast build rule for target.
+hector_gazebo_ros_magnetic/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_magnetic.dir/build
+.PHONY : hector_gazebo_ros_magnetic/fast
 
 # Convenience name for target.
 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
@@ -644,6 +554,21 @@ cvg_sim_gazebo_plugins_generate_messages_py: simulation/AR.Drone-ROS/cvg_sim_gaz
 cvg_sim_gazebo_plugins_generate_messages_py/fast:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/cvg_sim_gazebo_plugins_generate_messages_py.dir/build
 .PHONY : cvg_sim_gazebo_plugins_generate_messages_py/fast
+
+# Convenience name for target.
+simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule
+.PHONY : simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule
+
+# Convenience name for target.
+hector_gazebo_ros_gps: simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/rule
+
+.PHONY : hector_gazebo_ros_gps
+
+# fast build rule for target.
+hector_gazebo_ros_gps/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build.make simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/CMakeFiles/hector_gazebo_ros_gps.dir/build
+.PHONY : hector_gazebo_ros_gps/fast
 
 src/diffdrive_plugin_6w.o: src/diffdrive_plugin_6w.cpp.o
 
@@ -924,42 +849,37 @@ help:
 	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/strip"
 	@echo "... test_trajectory"
 	@echo "... hector_gazebo_quadrotor_state_controller"
 	@echo "... hector_gazebo_quadrotor_simple_controller"
 	@echo "... hector_gazebo_ros_baro"
 	@echo "... hector_gazebo_ros_sonar"
-	@echo "... hector_gazebo_ros_magnetic"
-	@echo "... rebuild_cache"
-	@echo "... reset_plugin"
-	@echo "... diffdrive_plugin_6w"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... ardrone_autonomy_generate_messages_nodejs"
-	@echo "... install"
-	@echo "... hector_gazebo_ros_imu"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... cvg_sim_gazebo_plugins_gencpp"
-	@echo "... ardrone_autonomy_generate_messages_py"
-	@echo "... install/strip"
-	@echo "... ardrone_autonomy_generate_messages_lisp"
-	@echo "... ardrone_autonomy_generate_messages_cpp"
-	@echo "... cvg_sim_gazebo_plugins_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... cvg_sim_gazebo_plugins_generate_messages"
 	@echo "... _cvg_sim_gazebo_plugins_generate_messages_check_deps_SetBias"
-	@echo "... ardrone_autonomy_generate_messages_eus"
+	@echo "... cvg_sim_gazebo_plugins_generate_messages_nodejs"
+	@echo "... cvg_sim_gazebo_plugins_generate_messages"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... diffdrive_plugin_6w"
+	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... cvg_sim_gazebo_plugins_generate_messages_cpp"
 	@echo "... cvg_sim_gazebo_plugins_genpy"
 	@echo "... cvg_sim_gazebo_plugins_genlisp"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... install"
+	@echo "... cvg_sim_gazebo_plugins_gencpp"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... hector_gazebo_ros_imu"
 	@echo "... cvg_sim_gazebo_plugins_geneus"
 	@echo "... cvg_sim_gazebo_plugins_generate_messages_lisp"
 	@echo "... cvg_sim_gazebo_plugins_gennodejs"
+	@echo "... rebuild_cache"
+	@echo "... reset_plugin"
+	@echo "... hector_gazebo_ros_magnetic"
 	@echo "... install/local"
-	@echo "... hector_gazebo_ros_gps"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... cvg_sim_gazebo_plugins_generate_messages_eus"
 	@echo "... cvg_sim_gazebo_plugins_generate_messages_py"
+	@echo "... hector_gazebo_ros_gps"
 	@echo "... src/diffdrive_plugin_6w.o"
 	@echo "... src/diffdrive_plugin_6w.i"
 	@echo "... src/diffdrive_plugin_6w.s"
