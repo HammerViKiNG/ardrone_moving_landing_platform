@@ -1778,6 +1778,175 @@ car_teleop_generate_messages/fast:
 .PHONY : car_teleop_generate_messages/fast
 
 #=============================================================================
+# Target rules for targets named pose_rpy_handler
+
+# Build rule for target.
+pose_rpy_handler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_handler
+.PHONY : pose_rpy_handler
+
+# fast build rule for target.
+pose_rpy_handler/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_handler.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_handler.dir/build
+.PHONY : pose_rpy_handler/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_genpy
+
+# Build rule for target.
+pose_rpy_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_genpy
+.PHONY : pose_rpy_genpy
+
+# fast build rule for target.
+pose_rpy_genpy/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_genpy.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_genpy.dir/build
+.PHONY : pose_rpy_genpy/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_generate_messages_py
+
+# Build rule for target.
+pose_rpy_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_py
+.PHONY : pose_rpy_generate_messages_py
+
+# fast build rule for target.
+pose_rpy_generate_messages_py/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_py.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_py.dir/build
+.PHONY : pose_rpy_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_gencpp
+
+# Build rule for target.
+pose_rpy_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_gencpp
+.PHONY : pose_rpy_gencpp
+
+# fast build rule for target.
+pose_rpy_gencpp/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_gencpp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_gencpp.dir/build
+.PHONY : pose_rpy_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named _pose_rpy_generate_messages_check_deps_PoseRPY
+
+# Build rule for target.
+_pose_rpy_generate_messages_check_deps_PoseRPY: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pose_rpy_generate_messages_check_deps_PoseRPY
+.PHONY : _pose_rpy_generate_messages_check_deps_PoseRPY
+
+# fast build rule for target.
+_pose_rpy_generate_messages_check_deps_PoseRPY/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/_pose_rpy_generate_messages_check_deps_PoseRPY.dir/build.make additional/pose_rpy/CMakeFiles/_pose_rpy_generate_messages_check_deps_PoseRPY.dir/build
+.PHONY : _pose_rpy_generate_messages_check_deps_PoseRPY/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_generate_messages_eus
+
+# Build rule for target.
+pose_rpy_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_eus
+.PHONY : pose_rpy_generate_messages_eus
+
+# fast build rule for target.
+pose_rpy_generate_messages_eus/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_eus.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_eus.dir/build
+.PHONY : pose_rpy_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_generate_messages
+
+# Build rule for target.
+pose_rpy_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages
+.PHONY : pose_rpy_generate_messages
+
+# fast build rule for target.
+pose_rpy_generate_messages/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages.dir/build
+.PHONY : pose_rpy_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_generate_messages_cpp
+
+# Build rule for target.
+pose_rpy_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_cpp
+.PHONY : pose_rpy_generate_messages_cpp
+
+# fast build rule for target.
+pose_rpy_generate_messages_cpp/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_cpp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_cpp.dir/build
+.PHONY : pose_rpy_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_geneus
+
+# Build rule for target.
+pose_rpy_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_geneus
+.PHONY : pose_rpy_geneus
+
+# fast build rule for target.
+pose_rpy_geneus/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_geneus.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_geneus.dir/build
+.PHONY : pose_rpy_geneus/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_generate_messages_lisp
+
+# Build rule for target.
+pose_rpy_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_lisp
+.PHONY : pose_rpy_generate_messages_lisp
+
+# fast build rule for target.
+pose_rpy_generate_messages_lisp/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_lisp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_lisp.dir/build
+.PHONY : pose_rpy_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_genlisp
+
+# Build rule for target.
+pose_rpy_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_genlisp
+.PHONY : pose_rpy_genlisp
+
+# fast build rule for target.
+pose_rpy_genlisp/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_genlisp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_genlisp.dir/build
+.PHONY : pose_rpy_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_generate_messages_nodejs
+
+# Build rule for target.
+pose_rpy_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_nodejs
+.PHONY : pose_rpy_generate_messages_nodejs
+
+# fast build rule for target.
+pose_rpy_generate_messages_nodejs/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_nodejs.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_nodejs.dir/build
+.PHONY : pose_rpy_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named pose_rpy_gennodejs
+
+# Build rule for target.
+pose_rpy_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_gennodejs
+.PHONY : pose_rpy_gennodejs
+
+# fast build rule for target.
+pose_rpy_gennodejs/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_gennodejs.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_gennodejs.dir/build
+.PHONY : pose_rpy_gennodejs/fast
+
+#=============================================================================
 # Target rules for targets named test_trajectory
 
 # Build rule for target.
@@ -2356,6 +2525,19 @@ help:
 	@echo "... coords_teleop"
 	@echo "... ardrone_teleop_generate_messages_py"
 	@echo "... car_teleop_generate_messages"
+	@echo "... pose_rpy_handler"
+	@echo "... pose_rpy_genpy"
+	@echo "... pose_rpy_generate_messages_py"
+	@echo "... pose_rpy_gencpp"
+	@echo "... _pose_rpy_generate_messages_check_deps_PoseRPY"
+	@echo "... pose_rpy_generate_messages_eus"
+	@echo "... pose_rpy_generate_messages"
+	@echo "... pose_rpy_generate_messages_cpp"
+	@echo "... pose_rpy_geneus"
+	@echo "... pose_rpy_generate_messages_lisp"
+	@echo "... pose_rpy_genlisp"
+	@echo "... pose_rpy_generate_messages_nodejs"
+	@echo "... pose_rpy_gennodejs"
 	@echo "... test_trajectory"
 	@echo "... hector_gazebo_quadrotor_state_controller"
 	@echo "... hector_gazebo_quadrotor_simple_controller"

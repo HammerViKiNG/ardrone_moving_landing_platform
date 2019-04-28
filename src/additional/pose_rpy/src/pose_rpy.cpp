@@ -15,10 +15,13 @@ PoseRPY::PoseRPY(const pose_rpy::PoseRPY& pose)
 PoseRPY::PoseRPY(const geometry_msgs::Pose& pose)
 {
     tf::quaternionMsgToTF(pose.orientation, quat);
-    tf::Matrix3x3(quat).getRPY(this->rot_x, this->rot_y, this->rot_z);
+    tf::Matrix3x3(quat).getRPY(temp_rpy[0], temp_rpy[1], temp_rpy[2]);
     this->x = pose.position.x;
     this->y = pose.position.y;
     this->z = pose.position.z;
+    this->rot_x = temp_rpy[0];
+    this->rot_y = temp_rpy[1];
+    this->rot_z = temp_rpy[2];
 }
 
 

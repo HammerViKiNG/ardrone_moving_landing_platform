@@ -16,10 +16,15 @@ struct PoseRPY : pose_rpy::PoseRPY
     PoseRPY operator/(const double& other);
 
     static PoseRPY transform_pose(const PoseRPY& pose, const double& rot_z); 
-    static PoseRPY transform_pose_3d(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z); 
+    static PoseRPY transform_pose_3d(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z);
 
-    static tf::Quaternion quat; 
+    private:
+        static tf::Quaternion quat; 
+        static double temp_rpy[2]; 
+
 };
 
+tf::Quaternion PoseRPY::quat;
+double PoseRPY::temp_rpy[2];
 
 #endif
