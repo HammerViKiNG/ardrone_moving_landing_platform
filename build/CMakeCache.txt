@@ -114,6 +114,10 @@ CATKIN_WHITELIST_PACKAGES:STRING=
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
+//For backwards compatibility, what version of CMake commands and
+// syntax should this version of CMake try to support.
+CMAKE_BACKWARDS_COMPATIBILITY:STRING=2.4
+
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
 CMAKE_BUILD_TYPE:STRING=
@@ -271,6 +275,9 @@ EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
 
+//Single output directory for building all executables.
+EXECUTABLE_OUTPUT_PATH:PATH=
+
 //The directory containing a CMake configuration file for GMock.
 GMock_DIR:PATH=GMock_DIR-NOTFOUND
 
@@ -288,6 +295,9 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
+
+//Single output directory for building all libraries.
+LIBRARY_OUTPUT_PATH:PATH=
 
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
@@ -536,6 +546,9 @@ OGRE_Volume_LIBRARY_REL:FILEPATH=/usr/lib/x86_64-linux-gnu/libOgreVolume.so
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a file.
+PROJECTCONFIG:FILEPATH=PROJECTCONFIG-NOTFOUND
+
+//Path to a file.
 PROTOBUF_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
@@ -571,6 +584,9 @@ Project_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_lan
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src
 
+//rospack executable
+ROSPACK_EXE:FILEPATH=/opt/ros/kinetic/bin/rospack
+
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
@@ -585,6 +601,9 @@ UBUNTU:BOOL=TRUE
 
 //LSB Distrib - codename tag
 UBUNTU_XENIAL:BOOL=TRUE
+
+//Path to a file.
+USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -605,6 +624,12 @@ actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
+ar_tag_position_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/ar_tag_position
+
+//Value Computed by CMake
+ar_tag_position_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position
+
+//Value Computed by CMake
 ardrone_ar_tag_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag
 
 //Value Computed by CMake
@@ -620,10 +645,10 @@ ardrone_teleop_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_mov
 ardrone_teleop_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_teleop
 
 //Value Computed by CMake
-camera_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera
+camera_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/camera
 
 //Value Computed by CMake
-camera_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera
+camera_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/camera
 
 //The directory containing a CMake configuration file for camera_calibration_parsers.
 camera_calibration_parsers_DIR:PATH=/opt/ros/kinetic/share/camera_calibration_parsers/cmake
@@ -824,6 +849,12 @@ pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 //Value Computed by CMake
 pose_rpy_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/pose_rpy
 
+//The directory containing a CMake configuration file for pose_rpy.
+pose_rpy_DIR:PATH=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/share/pose_rpy/cmake
+
+//Dependencies for the target
+pose_rpy_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
 //Value Computed by CMake
 pose_rpy_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pose_rpy
 
@@ -871,6 +902,12 @@ simulation_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_
 
 //Value Computed by CMake
 simulation_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/simulation/simulation
+
+//Value Computed by CMake
+src_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/pose_rpy
+
+//Value Computed by CMake
+src_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pose_rpy
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
@@ -1058,7 +1095,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

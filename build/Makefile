@@ -292,7 +292,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make camera/camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -305,7 +305,7 @@ std_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make camera/camera/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -318,7 +318,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make camera/camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -331,7 +331,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make camera/camera/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -344,7 +344,7 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make camera/camera/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -357,7 +357,7 @@ roscpp_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	$(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make camera/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/roscpp_generate_messages_eus.dir/build.make camera/camera/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
@@ -370,7 +370,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make camera/camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -383,7 +383,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make camera/camera/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -396,7 +396,7 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -409,7 +409,7 @@ rosgraph_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -422,7 +422,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make camera/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/roscpp_generate_messages_py.dir/build.make camera/camera/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -435,7 +435,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -448,7 +448,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -461,7 +461,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f camera/CMakeFiles/std_msgs_generate_messages_py.dir/build.make camera/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/std_msgs_generate_messages_py.dir/build.make camera/camera/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -474,7 +474,7 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make camera/camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -1778,19 +1778,6 @@ car_teleop_generate_messages/fast:
 .PHONY : car_teleop_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named pose_rpy_handler
-
-# Build rule for target.
-pose_rpy_handler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_handler
-.PHONY : pose_rpy_handler
-
-# fast build rule for target.
-pose_rpy_handler/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_handler.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_handler.dir/build
-.PHONY : pose_rpy_handler/fast
-
-#=============================================================================
 # Target rules for targets named pose_rpy_genpy
 
 # Build rule for target.
@@ -1895,6 +1882,19 @@ pose_rpy_geneus/fast:
 .PHONY : pose_rpy_geneus/fast
 
 #=============================================================================
+# Target rules for targets named pose_rpy
+
+# Build rule for target.
+pose_rpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy
+.PHONY : pose_rpy
+
+# fast build rule for target.
+pose_rpy/fast:
+	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy.dir/build
+.PHONY : pose_rpy/fast
+
+#=============================================================================
 # Target rules for targets named pose_rpy_generate_messages_lisp
 
 # Build rule for target.
@@ -1945,6 +1945,175 @@ pose_rpy_gennodejs: cmake_check_build_system
 pose_rpy_gennodejs/fast:
 	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_gennodejs.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_gennodejs.dir/build
 .PHONY : pose_rpy_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_generate_messages_py
+
+# Build rule for target.
+ar_tag_position_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_py
+.PHONY : ar_tag_position_generate_messages_py
+
+# fast build rule for target.
+ar_tag_position_generate_messages_py/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_py.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_py.dir/build
+.PHONY : ar_tag_position_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_gencpp
+
+# Build rule for target.
+ar_tag_position_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_gencpp
+.PHONY : ar_tag_position_gencpp
+
+# fast build rule for target.
+ar_tag_position_gencpp/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_gencpp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_gencpp.dir/build
+.PHONY : ar_tag_position_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_generate_messages_cpp
+
+# Build rule for target.
+ar_tag_position_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_cpp
+.PHONY : ar_tag_position_generate_messages_cpp
+
+# fast build rule for target.
+ar_tag_position_generate_messages_cpp/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_cpp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_cpp.dir/build
+.PHONY : ar_tag_position_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_generate_messages_nodejs
+
+# Build rule for target.
+ar_tag_position_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_nodejs
+.PHONY : ar_tag_position_generate_messages_nodejs
+
+# fast build rule for target.
+ar_tag_position_generate_messages_nodejs/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_nodejs.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_nodejs.dir/build
+.PHONY : ar_tag_position_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _ar_tag_position_generate_messages_check_deps_ArTagPose
+
+# Build rule for target.
+_ar_tag_position_generate_messages_check_deps_ArTagPose: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _ar_tag_position_generate_messages_check_deps_ArTagPose
+.PHONY : _ar_tag_position_generate_messages_check_deps_ArTagPose
+
+# fast build rule for target.
+_ar_tag_position_generate_messages_check_deps_ArTagPose/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/_ar_tag_position_generate_messages_check_deps_ArTagPose.dir/build.make camera/ar_tag_position/CMakeFiles/_ar_tag_position_generate_messages_check_deps_ArTagPose.dir/build
+.PHONY : _ar_tag_position_generate_messages_check_deps_ArTagPose/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_generate_messages
+
+# Build rule for target.
+ar_tag_position_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages
+.PHONY : ar_tag_position_generate_messages
+
+# fast build rule for target.
+ar_tag_position_generate_messages/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages.dir/build
+.PHONY : ar_tag_position_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_generate_messages_eus
+
+# Build rule for target.
+ar_tag_position_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_eus
+.PHONY : ar_tag_position_generate_messages_eus
+
+# fast build rule for target.
+ar_tag_position_generate_messages_eus/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_eus.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_eus.dir/build
+.PHONY : ar_tag_position_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position
+
+# Build rule for target.
+ar_tag_position: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position
+.PHONY : ar_tag_position
+
+# fast build rule for target.
+ar_tag_position/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position.dir/build
+.PHONY : ar_tag_position/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_genpy
+
+# Build rule for target.
+ar_tag_position_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_genpy
+.PHONY : ar_tag_position_genpy
+
+# fast build rule for target.
+ar_tag_position_genpy/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_genpy.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_genpy.dir/build
+.PHONY : ar_tag_position_genpy/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_geneus
+
+# Build rule for target.
+ar_tag_position_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_geneus
+.PHONY : ar_tag_position_geneus
+
+# fast build rule for target.
+ar_tag_position_geneus/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_geneus.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_geneus.dir/build
+.PHONY : ar_tag_position_geneus/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_generate_messages_lisp
+
+# Build rule for target.
+ar_tag_position_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_lisp
+.PHONY : ar_tag_position_generate_messages_lisp
+
+# fast build rule for target.
+ar_tag_position_generate_messages_lisp/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_lisp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_lisp.dir/build
+.PHONY : ar_tag_position_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_genlisp
+
+# Build rule for target.
+ar_tag_position_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_genlisp
+.PHONY : ar_tag_position_genlisp
+
+# fast build rule for target.
+ar_tag_position_genlisp/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_genlisp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_genlisp.dir/build
+.PHONY : ar_tag_position_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_position_gennodejs
+
+# Build rule for target.
+ar_tag_position_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_gennodejs
+.PHONY : ar_tag_position_gennodejs
+
+# fast build rule for target.
+ar_tag_position_gennodejs/fast:
+	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_gennodejs.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_gennodejs.dir/build
+.PHONY : ar_tag_position_gennodejs/fast
 
 #=============================================================================
 # Target rules for targets named test_trajectory
@@ -2525,7 +2694,6 @@ help:
 	@echo "... coords_teleop"
 	@echo "... ardrone_teleop_generate_messages_py"
 	@echo "... car_teleop_generate_messages"
-	@echo "... pose_rpy_handler"
 	@echo "... pose_rpy_genpy"
 	@echo "... pose_rpy_generate_messages_py"
 	@echo "... pose_rpy_gencpp"
@@ -2534,10 +2702,24 @@ help:
 	@echo "... pose_rpy_generate_messages"
 	@echo "... pose_rpy_generate_messages_cpp"
 	@echo "... pose_rpy_geneus"
+	@echo "... pose_rpy"
 	@echo "... pose_rpy_generate_messages_lisp"
 	@echo "... pose_rpy_genlisp"
 	@echo "... pose_rpy_generate_messages_nodejs"
 	@echo "... pose_rpy_gennodejs"
+	@echo "... ar_tag_position_generate_messages_py"
+	@echo "... ar_tag_position_gencpp"
+	@echo "... ar_tag_position_generate_messages_cpp"
+	@echo "... ar_tag_position_generate_messages_nodejs"
+	@echo "... _ar_tag_position_generate_messages_check_deps_ArTagPose"
+	@echo "... ar_tag_position_generate_messages"
+	@echo "... ar_tag_position_generate_messages_eus"
+	@echo "... ar_tag_position"
+	@echo "... ar_tag_position_genpy"
+	@echo "... ar_tag_position_geneus"
+	@echo "... ar_tag_position_generate_messages_lisp"
+	@echo "... ar_tag_position_genlisp"
+	@echo "... ar_tag_position_gennodejs"
 	@echo "... test_trajectory"
 	@echo "... hector_gazebo_quadrotor_state_controller"
 	@echo "... hector_gazebo_quadrotor_simple_controller"

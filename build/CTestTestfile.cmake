@@ -5,7 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
-subdirs(camera)
+subdirs(camera/camera)
 subdirs(simulation/car/car_gazebo)
 subdirs(simulation/AR.Drone-ROS/cvg_sim_msgs)
 subdirs(simulation/AR.Drone-ROS/tum_simulator)
@@ -13,6 +13,7 @@ subdirs(drone/ardrone_ar_tag)
 subdirs(drone/ardrone_teleop)
 subdirs(simulation/car/car_teleop)
 subdirs(additional/pose_rpy)
+subdirs(camera/ar_tag_position)
 subdirs(simulation/AR.Drone-ROS/cvg_sim_gazebo)
 subdirs(simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins)
 subdirs(simulation/AR.Drone-ROS/message_to_tf)

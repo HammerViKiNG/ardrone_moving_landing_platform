@@ -1,4 +1,4 @@
-#include "pose_rpy.h"
+#include "pose_rpy/pose_rpy.h"
 
 
 PoseRPY::PoseRPY(const pose_rpy::PoseRPY& pose)
@@ -73,6 +73,34 @@ PoseRPY PoseRPY::operator/(const double& other)
     result.rot_x /= other;
     result.rot_y /= other;
     result.rot_z /= other;
+    return result;
+}
+
+
+PoseRPY PoseRPY::get_pose_rpy(const geometry_msgs::Pose& pose)
+{
+    PoseRPY result;
+    tf::quaternionMsgToTF(pose.orientation, quat);
+    tf::Matrix3x3(quat).getRPY(temp_rpy[0], temp_rpy[1], temp_rpy[2]);
+    result.x = pose.position.x;
+    result.y = pose.position.y;
+    result.z = pose.position.z;
+    result.rot_x = temp_rpy[0];
+    result.rot_y = temp_rpy[1];
+    result.rot_z = temp_rpy[2];
+    return result;
+}
+
+
+PoseRPY PoseRPY::get_pose_rpy(const pose_rpy::PoseRPY& pose)
+{
+    PoseRPY result;
+    result.x = pose.x;
+    result.y = pose.y;
+    result.z = pose.z;
+    result.rot_x = pose.rot_x;
+    result.rot_y = pose.rot_y;
+    result.rot_z = pose.rot_z;
     return result;
 }
 
