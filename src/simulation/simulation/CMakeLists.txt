@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   roscpp
   rospy
+  ar_tag_position
 )
 
 ## System dependencies are found with CMake's conventions
@@ -105,7 +106,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES simulation
-#  CATKIN_DEPENDS gazebo_ros roscpp rospy
+  CATKIN_DEPENDS gazebo_ros roscpp rospy ar_tag_position
 #  DEPENDS system_lib
 )
 

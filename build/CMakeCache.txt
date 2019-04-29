@@ -626,6 +626,9 @@ actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 //Value Computed by CMake
 ar_tag_position_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/ar_tag_position
 
+//The directory containing a CMake configuration file for ar_tag_position.
+ar_tag_position_DIR:PATH=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/share/ar_tag_position/cmake
+
 //Value Computed by CMake
 ar_tag_position_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position
 

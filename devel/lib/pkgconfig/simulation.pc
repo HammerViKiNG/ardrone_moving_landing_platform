@@ -5,4 +5,4 @@ Description: Description of simulation
 Version: 0.0.0
 Cflags: 
 Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib 
-Requires: 
+Requires: gazebo_ros roscpp rospy ar_tag_position

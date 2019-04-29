@@ -7,12 +7,11 @@
 
 #include "ar_track_alvar_msgs/AlvarMarkers.h"
 
-
 const int LARGE_AR_TAG_ID = 4;
 const int SMALL_AR_TAG_ID = 8;
 
-ros::NodeHandle nh;
-ros::Publisher pub_pose;
+double last_time;
+bool is_spotted;
 
 PoseRPY pose;
 ar_tag_position::ArTagPose ar_tag_pose;
@@ -23,6 +22,7 @@ void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
     if (!msg.markers.empty())
     {
         size_t index = 0;
+		is_spotted = true;
         if (msg.markers.size() == 2 && msg.markers[1].id == LARGE_AR_TAG_ID)
             index = 1;
         pose = PoseRPY::get_pose_rpy(msg.markers[index].pose.pose);
@@ -36,7 +36,8 @@ void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
         }
         ar_tag_pose.pose = pose;
         ar_tag_pose.camera_name = "bottom";
-        pub_pose.publish(ar_tag_pose);
+		ar_tag_pose.is_spotted = is_spotted;
+        last_time = (ros::Time::now()).toNSec() / 1000000000.0;
     }
 }
 
@@ -46,12 +47,14 @@ void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
     if (!msg.markers.empty())
     {
         size_t index = 0;
+		is_spotted = true;
         if (msg.markers.size() == 2 && msg.markers[1].id == LARGE_AR_TAG_ID)
             index = 1;
-	pose = PoseRPY::get_pose_rpy(msg.markers[index].pose.pose);
+	    pose = PoseRPY::get_pose_rpy(msg.markers[index].pose.pose);
         ar_tag_pose.pose = pose;
         ar_tag_pose.camera_name = "front";
-        pub_pose.publish(ar_tag_pose);
+		ar_tag_pose.is_spotted = is_spotted;
+        last_time = (ros::Time::now()).toNSec() / 1000000000.0;
     }
 }
 
@@ -59,13 +62,25 @@ void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "ar_tag_position");
-    if (argc == 3)
-    {
-        ros::Subscriber sub_ar_tag_bottom = nh.subscribe(argv[0], 1, ar_tag_bottom_callback),
-                        sub_ar_tag_front = nh.subscribe(argv[1], 1, ar_tag_bottom_callback);
-        pub_pose = nh.advertise<ar_tag_position::ArTagPose>(argv[2], 1);
-        while (ros::ok())
-            ros::spinOnce();
-    }
+    ros::NodeHandle nh;
+	last_time = (ros::Time::now()).toNSec() / 1000000000.0;
+    std::string bottom_camera_topic, front_camera_topic, output_topic;
+    /*if (nh.getParam("bottom_camera_topic", bottom_camera_topic))
+        ros::Subscriber sub_ar_tag_bottom = nh.subscribe(bottom_camera_topic, 1, ar_tag_bottom_callback);
+    if (nh.getParam("front_camera_topic", front_camera_topic))
+        ros::Subscriber sub_ar_tag_front = nh.subscribe(front_camera_topic, 1, ar_tag_bottom_callback);
+    if (nh.getParam("output_topic", output_topic))
+        pub_pose = nh.advertise<ar_tag_position::ArTagPose>(output_topic, 1);*/
+    ros::Subscriber sub_ar_tag_bottom = nh.subscribe("/ardrone/ar_tag_bottom", 1, ar_tag_bottom_callback);
+    ros::Subscriber sub_ar_tag_front = nh.subscribe("/ardrone/ar_tag_front", 1, ar_tag_bottom_callback);
+    ros::Publisher pub_pose = nh.advertise<ar_tag_position::ArTagPose>("ar_tag_position", 1);
+	ros::Rate rate(1000);
+    while (ros::ok())
+	{
+		ar_tag_pose.period = ((ros::Time::now()).toNSec() / 1000000000.0 - last_time);
+		pub_pose.publish(ar_tag_pose);
+        ros::spinOnce();
+		rate.sleep();
+	}
     return 0;
 }
