@@ -8,10 +8,8 @@ project(ar_tag_position)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  std_msgs
   pose_rpy
   roscpp
-  message_generation
 )
 
 
@@ -49,10 +47,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  ArTagPose.msg
-)
+# add_message_files(
+#  FILES
+#  ArTagPose.msg
+# )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -69,10 +67,10 @@ add_message_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  pose_rpy
-)
+# generate_messages(
+#  DEPENDENCIES
+#  pose_rpy
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -105,8 +103,8 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES pose_rpy
-  CATKIN_DEPENDS message_runtime pose_rpy
+  LIBRARIES ar_tag_position
+# CATKIN_DEPENDS message_runtime pose_rpy
 #  DEPENDS system_lib
 )
 
@@ -134,7 +132,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(ar_tag_position src/ar_tag_position.cpp)
+add_library(ar_tag_position src/ar_tag_position.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -144,7 +142,7 @@ add_executable(ar_tag_position src/ar_tag_position.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(ar_tag_position ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(ar_tag_position ${catkin_EXPORTED_TARGETS} custom_msg_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(ar_tag_position

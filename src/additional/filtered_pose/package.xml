@@ -58,6 +58,7 @@
   <exec_depend>filter</exec_depend>
   <exec_depend>pose_rpy</exec_depend>
   <exec_depend>roscpp</exec_depend>
+  <depend>pose_msgs</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

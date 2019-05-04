@@ -21,7 +21,7 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
     current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
     current_pose = current_pose_filter->get_filtered_pose();
 
-    velocity = PoseRPY::make_pose_rpy();
+    velocity = PoseRPY::zero_pose_rpy();
 
     double* k_p = new double[4] {10, 0.5, 5, 5};
     double* k_d = new double[4] {0, 0.3, 2, 2.5};
@@ -158,7 +158,7 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         size_t index = 0;
         if (msg.markers.size() == 2 && msg.markers[1].id == 4)
             index = 1;
-	    tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
+	tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
         tf::Matrix3x3(quat).getRPY(necessary_pose_shift.rot_x, necessary_pose_shift.rot_y, necessary_pose_shift.rot_z);
         necessary_pose_shift.x = msg.markers[index].pose.pose.position.x;
         necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;

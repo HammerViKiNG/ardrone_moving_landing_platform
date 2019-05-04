@@ -10,7 +10,6 @@ project(pose_rpy)
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
   roscpp
-  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -47,11 +46,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-#   Message1.msg
-  PoseRPY.msg
-)
+# add_message_files(
+#  FILES
+#  PoseRPY.msg
+#)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -68,10 +66,10 @@ add_message_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
+#generate_messages(
+#  DEPENDENCIES
+#  std_msgs
+#)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -105,7 +103,7 @@ generate_messages(
 catkin_package(
    INCLUDE_DIRS include
    LIBRARIES pose_rpy
-   CATKIN_DEPENDS message_runtime
+#   CATKIN_DEPENDS message_runtime
 #  DEPENDS system_lib
 )
 
@@ -143,12 +141,13 @@ add_library(pose_rpy src/pose_rpy.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(pose_rpy ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(pose_rpy ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(pose_rpy
   ${catkin_LIBRARIES}
 )
+
 
 #############
 ## Install ##

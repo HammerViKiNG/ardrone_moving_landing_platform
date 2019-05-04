@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ardrone_ar_tag)
+project(ardrone_pose_handler)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -8,16 +8,9 @@ project(ardrone_ar_tag)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  rospy
-  tf
+  ardrone_autonomy
   pose_rpy
-  ardrone_pid
-  ardrone_pose_handler
-  filtered_pose
-  pid
-  filter
-
+  roscpp
 )
 
 ## System dependencies are found with CMake's conventions
@@ -110,9 +103,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES ardrone_ar_tag
-#  CATKIN_DEPENDS roscpp rospy
+  INCLUDE_DIRS include
+  LIBRARIES ardrone_pose_handler
+#  CATKIN_DEPENDS ardrone_autonomy pose_rpy roscpp
 #  DEPENDS system_lib
 )
 
@@ -128,9 +121,9 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/ardrone_ar_tag_control.cpp
-# )
+add_library(ardrone_pose_handler
+  src/ardrone_pose_handler.cpp
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -140,8 +133,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(ar_tag_handler src/ar_tag_handler.cpp
-                              src/ardrone_ar_tag_control.cpp)
+# add_executable(${PROJECT_NAME}_node src/ardrone_pose_handler_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -151,10 +143,10 @@ add_executable(ar_tag_handler src/ar_tag_handler.cpp
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(ar_tag_handler ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(ardrone_pose_handler ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(ar_tag_handler
+target_link_libraries(ardrone_pose_handler
   ${catkin_LIBRARIES}
 )
 
@@ -198,7 +190,7 @@ target_link_libraries(ar_tag_handler
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_ardrone_ar_tag.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_ardrone_pose_handler.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

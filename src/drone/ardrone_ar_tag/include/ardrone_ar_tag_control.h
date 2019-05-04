@@ -11,10 +11,10 @@
 #include "ar_track_alvar_msgs/AlvarMarkers.h"
 #include "geometry_msgs/Twist.h"
 
-#include "ardrone_pose_handler.h"
-#include "ardrone_pid.h"
-#include "filtered_pose.h"
-
+#include "pose_rpy/pose_rpy.h"
+#include "ardrone_pose_handler/ardrone_pose_handler.h"
+#include "ardrone_pid/ardrone_pid.h"
+#include "filtered_pose/filtered_pose.h"
 
 class ArdroneARTag
 {
@@ -42,7 +42,7 @@ class ArdroneARTag
 
         bool is_spotted_bottom, is_spotted_front; 
 
-	    PoseRPY necessary_pose_shift;
+	PoseRPY necessary_pose_shift;
         FilteredPose* necessary_pose_shift_global, *necessary_pose_filter, *velocity_filter;
 
         PoseRPY last_spotted_pose, last_necessary_shift, velocity;

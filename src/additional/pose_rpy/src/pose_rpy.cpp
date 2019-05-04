@@ -1,30 +1,6 @@
 #include "pose_rpy/pose_rpy.h"
 
 
-PoseRPY::PoseRPY(const pose_rpy::PoseRPY& pose)
-{
-    this->x = pose.x;
-    this->y = pose.y;
-    this->z = pose.z;
-    this->rot_x = pose.rot_x;
-    this->rot_y = pose.rot_y;
-    this->rot_z = pose.rot_z;
-}
-
-
-PoseRPY::PoseRPY(const geometry_msgs::Pose& pose)
-{
-    tf::quaternionMsgToTF(pose.orientation, quat);
-    tf::Matrix3x3(quat).getRPY(temp_rpy[0], temp_rpy[1], temp_rpy[2]);
-    this->x = pose.position.x;
-    this->y = pose.position.y;
-    this->z = pose.position.z;
-    this->rot_x = temp_rpy[0];
-    this->rot_y = temp_rpy[1];
-    this->rot_z = temp_rpy[2];
-}
-
-
 PoseRPY PoseRPY::operator-(const PoseRPY& other)
 {
     PoseRPY result = *this;
@@ -77,30 +53,23 @@ PoseRPY PoseRPY::operator/(const double& other)
 }
 
 
-PoseRPY PoseRPY::get_pose_rpy(const geometry_msgs::Pose& pose)
+PoseRPY PoseRPY::zero_pose_rpy(void)
 {
     PoseRPY result;
-    tf::quaternionMsgToTF(pose.orientation, quat);
-    tf::Matrix3x3(quat).getRPY(temp_rpy[0], temp_rpy[1], temp_rpy[2]);
-    result.x = pose.position.x;
-    result.y = pose.position.y;
-    result.z = pose.position.z;
-    result.rot_x = temp_rpy[0];
-    result.rot_y = temp_rpy[1];
-    result.rot_z = temp_rpy[2];
+    result.x = result.y = result.z = result.rot_x = result.rot_y = result.rot_z = 0;
     return result;
 }
 
 
-PoseRPY PoseRPY::get_pose_rpy(const pose_rpy::PoseRPY& pose)
+PoseRPY PoseRPY::get_pose_rpy(const geometry_msgs::Pose& pose)
 {
     PoseRPY result;
-    result.x = pose.x;
-    result.y = pose.y;
-    result.z = pose.z;
-    result.rot_x = pose.rot_x;
-    result.rot_y = pose.rot_y;
-    result.rot_z = pose.rot_z;
+    tf::Quaternion quat; 
+    tf::quaternionMsgToTF(pose.orientation, quat);
+    tf::Matrix3x3(quat).getRPY(result.rot_x, result.rot_y, result.rot_y);
+    result.x = pose.position.x;
+    result.y = pose.position.y;
+    result.z = pose.position.z;
     return result;
 }
 
