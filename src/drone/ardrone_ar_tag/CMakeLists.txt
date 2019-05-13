@@ -11,6 +11,13 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   tf
+  pose_rpy
+  ardrone_pid
+  ardrone_pose_handler
+  filtered_pose
+  pid
+  filter
+  rqt_mypkg
 )
 
 ## System dependencies are found with CMake's conventions
@@ -134,12 +141,6 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(ar_tag_handler src/ar_tag_handler.cpp
-                              src/ardrone_pid.cpp 
-                              src/pid.cpp 
-                              src/pose_rpy.cpp 
-                              src/filter.cpp 
-                              src/filtered_pose.cpp 
-                              src/ardrone_pose_handler.cpp 
                               src/ardrone_ar_tag_control.cpp)
 
 ## Rename C++ executable without prefix
@@ -150,7 +151,7 @@ add_executable(ar_tag_handler src/ar_tag_handler.cpp
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(ar_tag_handler ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(ar_tag_handler

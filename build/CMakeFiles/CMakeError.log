@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8da4b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8da4b.dir/build.make CMakeFiles/cmTC_8da4b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_eea55/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eea55.dir/build.make CMakeFiles/cmTC_eea55.dir/build
 make[1]: Entering directory '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8da4b.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_8da4b.dir/CheckSymbolExists.c.o   -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_8da4b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8da4b.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_8da4b.dir/CheckSymbolExists.c.o  -o cmTC_8da4b -rdynamic 
-CMakeFiles/cmTC_8da4b.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_eea55.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_eea55.dir/CheckSymbolExists.c.o   -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_eea55
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eea55.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_eea55.dir/CheckSymbolExists.c.o  -o cmTC_eea55 -rdynamic 
+CMakeFiles/cmTC_eea55.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_8da4b.dir/build.make:97: recipe for target 'cmTC_8da4b' failed
-make[1]: *** [cmTC_8da4b] Error 1
+CMakeFiles/cmTC_eea55.dir/build.make:97: recipe for target 'cmTC_eea55' failed
+make[1]: *** [cmTC_eea55] Error 1
 make[1]: Leaving directory '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_8da4b/fast' failed
-make: *** [cmTC_8da4b/fast] Error 2
+Makefile:126: recipe for target 'cmTC_eea55/fast' failed
+make: *** [cmTC_eea55/fast] Error 2
 
 File /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2da91/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2da91.dir/build.make CMakeFiles/cmTC_2da91.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9ea1a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9ea1a.dir/build.make CMakeFiles/cmTC_9ea1a.dir/build
 make[1]: Entering directory '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2da91.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2da91.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_2da91
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2da91.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2da91.dir/CheckFunctionExists.c.o  -o cmTC_2da91 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTC_9ea1a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9ea1a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9ea1a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ea1a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_9ea1a.dir/CheckFunctionExists.c.o  -o cmTC_9ea1a -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_2da91.dir/build.make:97: recipe for target 'cmTC_2da91' failed
-make[1]: *** [cmTC_2da91] Error 1
+CMakeFiles/cmTC_9ea1a.dir/build.make:97: recipe for target 'cmTC_9ea1a' failed
+make[1]: *** [cmTC_9ea1a] Error 1
 make[1]: Leaving directory '/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_2da91/fast' failed
-make: *** [cmTC_2da91/fast] Error 2
+Makefile:126: recipe for target 'cmTC_9ea1a/fast' failed
+make: *** [cmTC_9ea1a/fast] Error 2
 
 

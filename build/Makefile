@@ -1596,19 +1596,6 @@ _cvg_sim_msgs_generate_messages_check_deps_RawImu/fast:
 .PHONY : _cvg_sim_msgs_generate_messages_check_deps_RawImu/fast
 
 #=============================================================================
-# Target rules for targets named ar_tag_handler
-
-# Build rule for target.
-ar_tag_handler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_handler
-.PHONY : ar_tag_handler
-
-# fast build rule for target.
-ar_tag_handler/fast:
-	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build
-.PHONY : ar_tag_handler/fast
-
-#=============================================================================
 # Target rules for targets named ardrone_teleop_genpy
 
 # Build rule for target.
@@ -1804,110 +1791,6 @@ pid/fast:
 .PHONY : pid/fast
 
 #=============================================================================
-# Target rules for targets named pose_rpy_genpy
-
-# Build rule for target.
-pose_rpy_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_genpy
-.PHONY : pose_rpy_genpy
-
-# fast build rule for target.
-pose_rpy_genpy/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_genpy.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_genpy.dir/build
-.PHONY : pose_rpy_genpy/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_generate_messages_py
-
-# Build rule for target.
-pose_rpy_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_py
-.PHONY : pose_rpy_generate_messages_py
-
-# fast build rule for target.
-pose_rpy_generate_messages_py/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_py.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_py.dir/build
-.PHONY : pose_rpy_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_gencpp
-
-# Build rule for target.
-pose_rpy_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_gencpp
-.PHONY : pose_rpy_gencpp
-
-# fast build rule for target.
-pose_rpy_gencpp/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_gencpp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_gencpp.dir/build
-.PHONY : pose_rpy_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named _pose_rpy_generate_messages_check_deps_PoseRPY
-
-# Build rule for target.
-_pose_rpy_generate_messages_check_deps_PoseRPY: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _pose_rpy_generate_messages_check_deps_PoseRPY
-.PHONY : _pose_rpy_generate_messages_check_deps_PoseRPY
-
-# fast build rule for target.
-_pose_rpy_generate_messages_check_deps_PoseRPY/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/_pose_rpy_generate_messages_check_deps_PoseRPY.dir/build.make additional/pose_rpy/CMakeFiles/_pose_rpy_generate_messages_check_deps_PoseRPY.dir/build
-.PHONY : _pose_rpy_generate_messages_check_deps_PoseRPY/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_generate_messages_eus
-
-# Build rule for target.
-pose_rpy_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_eus
-.PHONY : pose_rpy_generate_messages_eus
-
-# fast build rule for target.
-pose_rpy_generate_messages_eus/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_eus.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_eus.dir/build
-.PHONY : pose_rpy_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_generate_messages
-
-# Build rule for target.
-pose_rpy_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages
-.PHONY : pose_rpy_generate_messages
-
-# fast build rule for target.
-pose_rpy_generate_messages/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages.dir/build
-.PHONY : pose_rpy_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_generate_messages_cpp
-
-# Build rule for target.
-pose_rpy_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_cpp
-.PHONY : pose_rpy_generate_messages_cpp
-
-# fast build rule for target.
-pose_rpy_generate_messages_cpp/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_cpp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_cpp.dir/build
-.PHONY : pose_rpy_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_geneus
-
-# Build rule for target.
-pose_rpy_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_geneus
-.PHONY : pose_rpy_geneus
-
-# fast build rule for target.
-pose_rpy_geneus/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_geneus.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_geneus.dir/build
-.PHONY : pose_rpy_geneus/fast
-
-#=============================================================================
 # Target rules for targets named pose_rpy
 
 # Build rule for target.
@@ -1919,149 +1802,6 @@ pose_rpy: cmake_check_build_system
 pose_rpy/fast:
 	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy.dir/build
 .PHONY : pose_rpy/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_generate_messages_lisp
-
-# Build rule for target.
-pose_rpy_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_lisp
-.PHONY : pose_rpy_generate_messages_lisp
-
-# fast build rule for target.
-pose_rpy_generate_messages_lisp/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_lisp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_lisp.dir/build
-.PHONY : pose_rpy_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_genlisp
-
-# Build rule for target.
-pose_rpy_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_genlisp
-.PHONY : pose_rpy_genlisp
-
-# fast build rule for target.
-pose_rpy_genlisp/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_genlisp.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_genlisp.dir/build
-.PHONY : pose_rpy_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_generate_messages_nodejs
-
-# Build rule for target.
-pose_rpy_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_generate_messages_nodejs
-.PHONY : pose_rpy_generate_messages_nodejs
-
-# fast build rule for target.
-pose_rpy_generate_messages_nodejs/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_nodejs.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_generate_messages_nodejs.dir/build
-.PHONY : pose_rpy_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named pose_rpy_gennodejs
-
-# Build rule for target.
-pose_rpy_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_rpy_gennodejs
-.PHONY : pose_rpy_gennodejs
-
-# fast build rule for target.
-pose_rpy_gennodejs/fast:
-	$(MAKE) -f additional/pose_rpy/CMakeFiles/pose_rpy_gennodejs.dir/build.make additional/pose_rpy/CMakeFiles/pose_rpy_gennodejs.dir/build
-.PHONY : pose_rpy_gennodejs/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_generate_messages_py
-
-# Build rule for target.
-ar_tag_position_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_py
-.PHONY : ar_tag_position_generate_messages_py
-
-# fast build rule for target.
-ar_tag_position_generate_messages_py/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_py.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_py.dir/build
-.PHONY : ar_tag_position_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_gencpp
-
-# Build rule for target.
-ar_tag_position_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_gencpp
-.PHONY : ar_tag_position_gencpp
-
-# fast build rule for target.
-ar_tag_position_gencpp/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_gencpp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_gencpp.dir/build
-.PHONY : ar_tag_position_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_generate_messages_cpp
-
-# Build rule for target.
-ar_tag_position_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_cpp
-.PHONY : ar_tag_position_generate_messages_cpp
-
-# fast build rule for target.
-ar_tag_position_generate_messages_cpp/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_cpp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_cpp.dir/build
-.PHONY : ar_tag_position_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_generate_messages_nodejs
-
-# Build rule for target.
-ar_tag_position_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_nodejs
-.PHONY : ar_tag_position_generate_messages_nodejs
-
-# fast build rule for target.
-ar_tag_position_generate_messages_nodejs/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_nodejs.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_nodejs.dir/build
-.PHONY : ar_tag_position_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named _ar_tag_position_generate_messages_check_deps_ArTagPose
-
-# Build rule for target.
-_ar_tag_position_generate_messages_check_deps_ArTagPose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _ar_tag_position_generate_messages_check_deps_ArTagPose
-.PHONY : _ar_tag_position_generate_messages_check_deps_ArTagPose
-
-# fast build rule for target.
-_ar_tag_position_generate_messages_check_deps_ArTagPose/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/_ar_tag_position_generate_messages_check_deps_ArTagPose.dir/build.make camera/ar_tag_position/CMakeFiles/_ar_tag_position_generate_messages_check_deps_ArTagPose.dir/build
-.PHONY : _ar_tag_position_generate_messages_check_deps_ArTagPose/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_generate_messages
-
-# Build rule for target.
-ar_tag_position_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages
-.PHONY : ar_tag_position_generate_messages
-
-# fast build rule for target.
-ar_tag_position_generate_messages/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages.dir/build
-.PHONY : ar_tag_position_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_generate_messages_eus
-
-# Build rule for target.
-ar_tag_position_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_eus
-.PHONY : ar_tag_position_generate_messages_eus
-
-# fast build rule for target.
-ar_tag_position_generate_messages_eus/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_eus.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_eus.dir/build
-.PHONY : ar_tag_position_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named ar_tag_position
@@ -2077,69 +1817,17 @@ ar_tag_position/fast:
 .PHONY : ar_tag_position/fast
 
 #=============================================================================
-# Target rules for targets named ar_tag_position_genpy
+# Target rules for targets named ardrone_pid
 
 # Build rule for target.
-ar_tag_position_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_genpy
-.PHONY : ar_tag_position_genpy
+ardrone_pid: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ardrone_pid
+.PHONY : ardrone_pid
 
 # fast build rule for target.
-ar_tag_position_genpy/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_genpy.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_genpy.dir/build
-.PHONY : ar_tag_position_genpy/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_geneus
-
-# Build rule for target.
-ar_tag_position_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_geneus
-.PHONY : ar_tag_position_geneus
-
-# fast build rule for target.
-ar_tag_position_geneus/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_geneus.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_geneus.dir/build
-.PHONY : ar_tag_position_geneus/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_generate_messages_lisp
-
-# Build rule for target.
-ar_tag_position_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_generate_messages_lisp
-.PHONY : ar_tag_position_generate_messages_lisp
-
-# fast build rule for target.
-ar_tag_position_generate_messages_lisp/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_lisp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_generate_messages_lisp.dir/build
-.PHONY : ar_tag_position_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_genlisp
-
-# Build rule for target.
-ar_tag_position_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_genlisp
-.PHONY : ar_tag_position_genlisp
-
-# fast build rule for target.
-ar_tag_position_genlisp/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_genlisp.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_genlisp.dir/build
-.PHONY : ar_tag_position_genlisp/fast
-
-#=============================================================================
-# Target rules for targets named ar_tag_position_gennodejs
-
-# Build rule for target.
-ar_tag_position_gennodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_position_gennodejs
-.PHONY : ar_tag_position_gennodejs
-
-# fast build rule for target.
-ar_tag_position_gennodejs/fast:
-	$(MAKE) -f camera/ar_tag_position/CMakeFiles/ar_tag_position_gennodejs.dir/build.make camera/ar_tag_position/CMakeFiles/ar_tag_position_gennodejs.dir/build
-.PHONY : ar_tag_position_gennodejs/fast
+ardrone_pid/fast:
+	$(MAKE) -f drone/ardrone_additional/ardrone_pid/CMakeFiles/ardrone_pid.dir/build.make drone/ardrone_additional/ardrone_pid/CMakeFiles/ardrone_pid.dir/build
+.PHONY : ardrone_pid/fast
 
 #=============================================================================
 # Target rules for targets named filtered_pose
@@ -2155,6 +1843,162 @@ filtered_pose/fast:
 .PHONY : filtered_pose/fast
 
 #=============================================================================
+# Target rules for targets named rqt_mypkg_genpy
+
+# Build rule for target.
+rqt_mypkg_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_genpy
+.PHONY : rqt_mypkg_genpy
+
+# fast build rule for target.
+rqt_mypkg_genpy/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_genpy.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_genpy.dir/build
+.PHONY : rqt_mypkg_genpy/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_generate_messages_py
+
+# Build rule for target.
+rqt_mypkg_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_generate_messages_py
+.PHONY : rqt_mypkg_generate_messages_py
+
+# fast build rule for target.
+rqt_mypkg_generate_messages_py/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_py.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_py.dir/build
+.PHONY : rqt_mypkg_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_generate_messages_cpp
+
+# Build rule for target.
+rqt_mypkg_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_generate_messages_cpp
+.PHONY : rqt_mypkg_generate_messages_cpp
+
+# fast build rule for target.
+rqt_mypkg_generate_messages_cpp/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_cpp.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_cpp.dir/build
+.PHONY : rqt_mypkg_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_gencpp
+
+# Build rule for target.
+rqt_mypkg_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_gencpp
+.PHONY : rqt_mypkg_gencpp
+
+# fast build rule for target.
+rqt_mypkg_gencpp/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_gencpp.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_gencpp.dir/build
+.PHONY : rqt_mypkg_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named _rqt_mypkg_generate_messages_check_deps_GUIControl
+
+# Build rule for target.
+_rqt_mypkg_generate_messages_check_deps_GUIControl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _rqt_mypkg_generate_messages_check_deps_GUIControl
+.PHONY : _rqt_mypkg_generate_messages_check_deps_GUIControl
+
+# fast build rule for target.
+_rqt_mypkg_generate_messages_check_deps_GUIControl/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/_rqt_mypkg_generate_messages_check_deps_GUIControl.dir/build.make rqt_mypkg/CMakeFiles/_rqt_mypkg_generate_messages_check_deps_GUIControl.dir/build
+.PHONY : _rqt_mypkg_generate_messages_check_deps_GUIControl/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_generate_messages_lisp
+
+# Build rule for target.
+rqt_mypkg_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_generate_messages_lisp
+.PHONY : rqt_mypkg_generate_messages_lisp
+
+# fast build rule for target.
+rqt_mypkg_generate_messages_lisp/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_lisp.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_lisp.dir/build
+.PHONY : rqt_mypkg_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_generate_messages
+
+# Build rule for target.
+rqt_mypkg_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_generate_messages
+.PHONY : rqt_mypkg_generate_messages
+
+# fast build rule for target.
+rqt_mypkg_generate_messages/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages.dir/build
+.PHONY : rqt_mypkg_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_geneus
+
+# Build rule for target.
+rqt_mypkg_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_geneus
+.PHONY : rqt_mypkg_geneus
+
+# fast build rule for target.
+rqt_mypkg_geneus/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_geneus.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_geneus.dir/build
+.PHONY : rqt_mypkg_geneus/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_generate_messages_nodejs
+
+# Build rule for target.
+rqt_mypkg_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_generate_messages_nodejs
+.PHONY : rqt_mypkg_generate_messages_nodejs
+
+# fast build rule for target.
+rqt_mypkg_generate_messages_nodejs/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_nodejs.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_nodejs.dir/build
+.PHONY : rqt_mypkg_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_generate_messages_eus
+
+# Build rule for target.
+rqt_mypkg_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_generate_messages_eus
+.PHONY : rqt_mypkg_generate_messages_eus
+
+# fast build rule for target.
+rqt_mypkg_generate_messages_eus/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_eus.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_generate_messages_eus.dir/build
+.PHONY : rqt_mypkg_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_genlisp
+
+# Build rule for target.
+rqt_mypkg_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_genlisp
+.PHONY : rqt_mypkg_genlisp
+
+# fast build rule for target.
+rqt_mypkg_genlisp/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_genlisp.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_genlisp.dir/build
+.PHONY : rqt_mypkg_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named rqt_mypkg_gennodejs
+
+# Build rule for target.
+rqt_mypkg_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rqt_mypkg_gennodejs
+.PHONY : rqt_mypkg_gennodejs
+
+# fast build rule for target.
+rqt_mypkg_gennodejs/fast:
+	$(MAKE) -f rqt_mypkg/CMakeFiles/rqt_mypkg_gennodejs.dir/build.make rqt_mypkg/CMakeFiles/rqt_mypkg_gennodejs.dir/build
+.PHONY : rqt_mypkg_gennodejs/fast
+
+#=============================================================================
 # Target rules for targets named ardrone_autonomy_generate_messages_cpp
 
 # Build rule for target.
@@ -2164,7 +2008,7 @@ ardrone_autonomy_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_autonomy_generate_messages_cpp/fast:
-	$(MAKE) -f drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build
 .PHONY : ardrone_autonomy_generate_messages_cpp/fast
 
 #=============================================================================
@@ -2177,7 +2021,7 @@ ardrone_autonomy_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_autonomy_generate_messages_lisp/fast:
-	$(MAKE) -f drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build
 .PHONY : ardrone_autonomy_generate_messages_lisp/fast
 
 #=============================================================================
@@ -2190,34 +2034,8 @@ ardrone_autonomy_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_autonomy_generate_messages_py/fast:
-	$(MAKE) -f drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build
 .PHONY : ardrone_autonomy_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named ardrone_pid
-
-# Build rule for target.
-ardrone_pid: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ardrone_pid
-.PHONY : ardrone_pid
-
-# fast build rule for target.
-ardrone_pid/fast:
-	$(MAKE) -f drone/ardrone_additional/CMakeFiles/ardrone_pid.dir/build.make drone/ardrone_additional/CMakeFiles/ardrone_pid.dir/build
-.PHONY : ardrone_pid/fast
-
-#=============================================================================
-# Target rules for targets named ardrone_autonomy_generate_messages_eus
-
-# Build rule for target.
-ardrone_autonomy_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ardrone_autonomy_generate_messages_eus
-.PHONY : ardrone_autonomy_generate_messages_eus
-
-# fast build rule for target.
-ardrone_autonomy_generate_messages_eus/fast:
-	$(MAKE) -f drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build
-.PHONY : ardrone_autonomy_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named ardrone_autonomy_generate_messages_nodejs
@@ -2229,7 +2047,7 @@ ardrone_autonomy_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_autonomy_generate_messages_nodejs/fast:
-	$(MAKE) -f drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_additional/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build
 .PHONY : ardrone_autonomy_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -2242,8 +2060,34 @@ ardrone_pose_handler: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_pose_handler/fast:
-	$(MAKE) -f drone/ardrone_additional/CMakeFiles/ardrone_pose_handler.dir/build.make drone/ardrone_additional/CMakeFiles/ardrone_pose_handler.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/build
 .PHONY : ardrone_pose_handler/fast
+
+#=============================================================================
+# Target rules for targets named ardrone_autonomy_generate_messages_eus
+
+# Build rule for target.
+ardrone_autonomy_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ardrone_autonomy_generate_messages_eus
+.PHONY : ardrone_autonomy_generate_messages_eus
+
+# fast build rule for target.
+ardrone_autonomy_generate_messages_eus/fast:
+	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build
+.PHONY : ardrone_autonomy_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named ar_tag_handler
+
+# Build rule for target.
+ar_tag_handler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ar_tag_handler
+.PHONY : ar_tag_handler
+
+# fast build rule for target.
+ar_tag_handler/fast:
+	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build
+.PHONY : ar_tag_handler/fast
 
 #=============================================================================
 # Target rules for targets named test_trajectory
@@ -2745,7 +2589,6 @@ help:
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_Altimeter"
 	@echo "... cvg_sim_msgs_generate_messages"
 	@echo "... _cvg_sim_msgs_generate_messages_check_deps_RawImu"
-	@echo "... ar_tag_handler"
 	@echo "... ardrone_teleop_genpy"
 	@echo "... ardrone_teleop_generate_messages_eus"
 	@echo "... ardrone_teleop_geneus"
@@ -2761,40 +2604,29 @@ help:
 	@echo "... car_teleop_generate_messages"
 	@echo "... filter"
 	@echo "... pid"
-	@echo "... pose_rpy_genpy"
-	@echo "... pose_rpy_generate_messages_py"
-	@echo "... pose_rpy_gencpp"
-	@echo "... _pose_rpy_generate_messages_check_deps_PoseRPY"
-	@echo "... pose_rpy_generate_messages_eus"
-	@echo "... pose_rpy_generate_messages"
-	@echo "... pose_rpy_generate_messages_cpp"
-	@echo "... pose_rpy_geneus"
 	@echo "... pose_rpy"
-	@echo "... pose_rpy_generate_messages_lisp"
-	@echo "... pose_rpy_genlisp"
-	@echo "... pose_rpy_generate_messages_nodejs"
-	@echo "... pose_rpy_gennodejs"
-	@echo "... ar_tag_position_generate_messages_py"
-	@echo "... ar_tag_position_gencpp"
-	@echo "... ar_tag_position_generate_messages_cpp"
-	@echo "... ar_tag_position_generate_messages_nodejs"
-	@echo "... _ar_tag_position_generate_messages_check_deps_ArTagPose"
-	@echo "... ar_tag_position_generate_messages"
-	@echo "... ar_tag_position_generate_messages_eus"
 	@echo "... ar_tag_position"
-	@echo "... ar_tag_position_genpy"
-	@echo "... ar_tag_position_geneus"
-	@echo "... ar_tag_position_generate_messages_lisp"
-	@echo "... ar_tag_position_genlisp"
-	@echo "... ar_tag_position_gennodejs"
+	@echo "... ardrone_pid"
 	@echo "... filtered_pose"
+	@echo "... rqt_mypkg_genpy"
+	@echo "... rqt_mypkg_generate_messages_py"
+	@echo "... rqt_mypkg_generate_messages_cpp"
+	@echo "... rqt_mypkg_gencpp"
+	@echo "... _rqt_mypkg_generate_messages_check_deps_GUIControl"
+	@echo "... rqt_mypkg_generate_messages_lisp"
+	@echo "... rqt_mypkg_generate_messages"
+	@echo "... rqt_mypkg_geneus"
+	@echo "... rqt_mypkg_generate_messages_nodejs"
+	@echo "... rqt_mypkg_generate_messages_eus"
+	@echo "... rqt_mypkg_genlisp"
+	@echo "... rqt_mypkg_gennodejs"
 	@echo "... ardrone_autonomy_generate_messages_cpp"
 	@echo "... ardrone_autonomy_generate_messages_lisp"
 	@echo "... ardrone_autonomy_generate_messages_py"
-	@echo "... ardrone_pid"
-	@echo "... ardrone_autonomy_generate_messages_eus"
 	@echo "... ardrone_autonomy_generate_messages_nodejs"
 	@echo "... ardrone_pose_handler"
+	@echo "... ardrone_autonomy_generate_messages_eus"
+	@echo "... ar_tag_handler"
 	@echo "... test_trajectory"
 	@echo "... hector_gazebo_quadrotor_state_controller"
 	@echo "... hector_gazebo_quadrotor_simple_controller"

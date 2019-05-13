@@ -81,153 +81,9 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o.prov
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o.provides.build: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o
 
 
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/flags.make
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.cpp
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.i"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.cpp > CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.i
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.s"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pid.cpp -o CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.s
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.requires:
-
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.requires
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.provides: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.requires
-	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.provides.build
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.provides
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.provides.build: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o
-
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/flags.make
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.cpp
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_tag_handler.dir/src/pid.cpp.i"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.cpp > CMakeFiles/ar_tag_handler.dir/src/pid.cpp.i
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_tag_handler.dir/src/pid.cpp.s"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pid.cpp -o CMakeFiles/ar_tag_handler.dir/src/pid.cpp.s
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.requires:
-
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.requires
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.provides: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.requires
-	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.provides.build
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.provides
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.provides.build: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o
-
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/flags.make
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.cpp
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.i"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.cpp > CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.i
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.s"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/pose_rpy.cpp -o CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.s
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.requires:
-
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.requires
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.provides: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.requires
-	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.provides.build
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.provides
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.provides.build: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o
-
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/flags.make
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filter.cpp
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_tag_handler.dir/src/filter.cpp.i"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filter.cpp > CMakeFiles/ar_tag_handler.dir/src/filter.cpp.i
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_tag_handler.dir/src/filter.cpp.s"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filter.cpp -o CMakeFiles/ar_tag_handler.dir/src/filter.cpp.s
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.requires:
-
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.requires
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.provides: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.requires
-	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.provides.build
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.provides
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.provides.build: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o
-
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/flags.make
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filtered_pose.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filtered_pose.cpp
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.i"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filtered_pose.cpp > CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.i
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.s"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/filtered_pose.cpp -o CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.s
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.requires:
-
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.requires
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.provides: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.requires
-	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.provides.build
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.provides
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.provides.build: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o
-
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/flags.make
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.cpp
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.i"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.cpp > CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.i
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.s"
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_pose_handler.cpp -o CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.s
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.requires:
-
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.requires
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.provides: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.requires
-	$(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.provides.build
-.PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.provides
-
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.provides.build: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o
-
-
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/flags.make
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag_control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o"
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o -c /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag_control.cpp
 
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.i: cmake_force
@@ -252,24 +108,12 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cp
 # Object files for target ar_tag_handler
 ar_tag_handler_OBJECTS = \
 "CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o" \
-"CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o" \
-"CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o" \
-"CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o" \
-"CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o" \
-"CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o" \
-"CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o" \
 "CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o"
 
 # External object files for target ar_tag_handler
 ar_tag_handler_EXTERNAL_OBJECTS =
 
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libtf.so
@@ -281,12 +125,54 @@ ar_tag_handler_EXTERNAL_OBJECTS =
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libxmlrpcpp.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libtf2.so
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librosconsole.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libardrone_pid.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libardrone_pose_handler.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libfiltered_pose.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libpid.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libfilter.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librostime.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libcpp_common.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libpose_rpy.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libimage_transport.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libclass_loader.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/libPocoFoundation.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libroslib.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librospack.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libtf.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libtf2_ros.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libactionlib.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libmessage_filters.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libtf2.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libcamera_info_manager.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libcamera_calibration_parsers.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libroscpp.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librosconsole.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libroscpp_serialization.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/librostime.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libcpp_common.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -297,7 +183,7 @@ ar_tag_handler_EXTERNAL_OBJECTS =
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler"
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ar_tag_handler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -306,12 +192,6 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build: /home/hammerviking/rob
 .PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build
 
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o.requires
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pid.cpp.o.requires
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pid.cpp.o.requires
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/pose_rpy.cpp.o.requires
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filter.cpp.o.requires
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/filtered_pose.cpp.o.requires
-drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_pose_handler.cpp.o.requires
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o.requires
 
 .PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/requires

@@ -101,7 +101,7 @@
       <rightJoint>left_wheel_hinge</rightJoint>
       <wheelSeparation>${chassisWidth+wheelWidth}</wheelSeparation>
       <wheelDiameter>${2*wheelRadius}</wheelDiameter>
-      <torque>20</torque>
+      <torque>1000</torque>
       <commandTopic>car/cmd_vel</commandTopic>
       <odometryTopic>car/odom_diffdrive</odometryTopic>
       <odometryFrame>odom</odometryFrame>

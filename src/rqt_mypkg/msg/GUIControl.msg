@@ -1,0 +1,2 @@
+bool is_hovering
+float32 necessary_height

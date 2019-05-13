@@ -2,10 +2,11 @@
 #define limit(value, min, max) (value < min) ? min : (value > max) ? max : value
 
 
-ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, double hz)
+ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, std::string gui_control_topic, double hz)
 {
     sub_ar_tag_bottom = nh.subscribe(ar_tag_bottom_topic, 1, &ArdroneARTag::ar_tag_bottom_callback, this);
     sub_ar_tag_front = nh.subscribe(ar_tag_front_topic, 1, &ArdroneARTag::ar_tag_front_callback, this);
+    sub_gui_control = nh.subscribe(gui_control_topic, 1, &ArdroneARTag::gui_control_callback, this);
     pub_twist = nh.advertise<geometry_msgs::Twist>(cmd_topic, 1);
 
     dt = 1 / hz;
@@ -21,20 +22,20 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
     current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
     current_pose = current_pose_filter->get_filtered_pose();
 
-    velocity = PoseRPY::make_pose_rpy();
+    velocity = PoseRPY::zero_pose_rpy();
 
     double* k_p = new double[4] {10, 0.5, 5, 5};
-    double* k_d = new double[4] {0, 0.3, 2, 2.5};
+    double* k_d = new double[4] {0, 0.3, 2, 1};
     double* k_i = new double[4] {2, 0.0, 0.5, 0.0};
     double* crit = new double[4] {3, 3, 2, 1};
     double* max_int_rel = new double[6] {2, 0.0, 0.5, 0.0};
     controller_chasing = new ArdronePID(hz, k_p, k_d, k_i, crit, max_int_rel);
     
-    k_p = new double[4] {5, 2, 5, 4};
-    k_d = new double[4] {0.25, 0.25, 2, 2};
-    k_i = new double[4] {0.75, 0.0, 0, 0.0};
-    crit = new double[4] {3, 3, 2, 1};
-    max_int_rel = new double[6] {0.75, 0.0, 0.0, 0.0};
+    k_p = new double[4] {5, 2, 5, 5};
+    k_d = new double[4] {0.5, 0.5, 2, 1};
+    k_i = new double[4] {0.25, 0.0, 0, 0.25};
+    crit = new double[4] {5, 3, 2, 1};
+    max_int_rel = new double[6] {0.25, 0.0, 0.0, 0.25};
     controller_landing = new ArdronePID(hz, k_p, k_d, k_i, crit, max_int_rel);
     delete k_p, k_d, k_i, crit, max_int_rel;
 }
@@ -127,6 +128,8 @@ void ArdroneARTag::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarker
             necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;
             necessary_pose_shift.z = msg.markers[index].pose.pose.position.z;
         }
+        if (this->is_hovering)
+            necessary_pose_shift.z = this->necessary_height - current_pose.z;
 
         is_spotted_bottom = true;
         is_spotted_front = false;
@@ -181,6 +184,13 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
 }
 
 
+void ArdroneARTag::gui_control_callback(const rqt_mypkg::GUIControl& msg)
+{
+    this->is_hovering = msg.is_hovering;
+    this->necessary_height = msg.necessary_height;
+}
+
+
 void ArdroneARTag::control(void)
 {
     if (state == 2)
@@ -198,14 +208,14 @@ void ArdroneARTag::control(void)
         else if ((ros::Time::now() - last_spotted_time).toNSec() / 1000000000.0 >= 0.25)
             ar_tag_lost();
         if (pose_handler->get_state()!= 8 && pose_handler->get_state()!= 2 && current_pose.z <= 0.2 && is_spotted_bottom)
-	    {
+	{
             system("rostopic pub -1 /ardrone/land std_msgs/Empty");
             is_spotted_bottom = is_spotted_front = 0;
         }
         else
         {
             twist = controller->pid_twist(necessary_pose_shift);
-            //ROS_INFO("%f, %f, %f, %f", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z);
+            ROS_INFO("%f, %f, %f, %f", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z);
             pub_twist.publish(twist);
         }
     }

@@ -1,8 +1,0 @@
-prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install
-
-Name: ardrone_teleop
-Description: Description of ardrone_teleop
-Version: 0.0.0
-Cflags: -I/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/include
-Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/lib -lardrone_teleop
-Requires: roscpp rospy std_msgs
