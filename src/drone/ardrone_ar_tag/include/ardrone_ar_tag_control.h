@@ -47,7 +47,7 @@ class ArdroneARTag
 
         bool is_spotted_bottom, is_spotted_front; 
 
-        PoseRPY necessary_pose_shift;
+	PoseRPY necessary_pose_shift;
         FilteredPose* necessary_pose_shift_global, *necessary_pose_filter, *velocity_filter;
 
         PoseRPY last_spotted_pose, last_necessary_shift, velocity;

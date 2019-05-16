@@ -161,7 +161,7 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         size_t index = 0;
         if (msg.markers.size() == 2 && msg.markers[1].id == 4)
             index = 1;
-	    tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
+	tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
         tf::Matrix3x3(quat).getRPY(necessary_pose_shift.rot_x, necessary_pose_shift.rot_y, necessary_pose_shift.rot_z);
         necessary_pose_shift.x = msg.markers[index].pose.pose.position.x;
         necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;

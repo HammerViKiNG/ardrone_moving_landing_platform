@@ -1,0 +1,20 @@
+<library path="lib/libgui">
+  <class name="gui/GUIPlugin" type="gui::GUIPlugin" base_class_type="rqt_gui_cpp::Plugin">
+    <description>
+      GUI plugin.
+    </description>
+    <qtgui>
+      <!-- optional grouping...
+      <group>
+        <label>Group</label>
+      </group>
+      <group>
+        <label>Subgroup</label>
+      </group>
+      -->
+      <label>GUI plugin</label>
+      <icon type="theme">system-help</icon>
+      <statustip>GUI plugin.</statustip>
+    </qtgui>
+  </class>
+</library>
