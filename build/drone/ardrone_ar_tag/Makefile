@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/hammerviking/robotic_software/ardrone_moving_landing_pl
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,28 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -122,17 +133,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/progress.marks
@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/rule:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/rule
+.PHONY : drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/rule
+
+# Convenience name for target.
+ardrone_ar_tag: drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/rule
+
+.PHONY : ardrone_ar_tag
+
+# fast build rule for target.
+ardrone_ar_tag/fast:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/build
+.PHONY : ardrone_ar_tag/fast
+
+# Convenience name for target.
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule
 .PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule
@@ -180,59 +195,62 @@ ar_tag_handler/fast:
 	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build
 .PHONY : ar_tag_handler/fast
 
-src/ar_tag_handler.o: src/ar_tag_handler.cpp.o
+src/ardrone_ar_tag/ar_tag_handler.o: src/ardrone_ar_tag/ar_tag_handler.cpp.o
 
-.PHONY : src/ar_tag_handler.o
-
-# target to build an object file
-src/ar_tag_handler.cpp.o:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o
-.PHONY : src/ar_tag_handler.cpp.o
-
-src/ar_tag_handler.i: src/ar_tag_handler.cpp.i
-
-.PHONY : src/ar_tag_handler.i
-
-# target to preprocess a source file
-src/ar_tag_handler.cpp.i:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.i
-.PHONY : src/ar_tag_handler.cpp.i
-
-src/ar_tag_handler.s: src/ar_tag_handler.cpp.s
-
-.PHONY : src/ar_tag_handler.s
-
-# target to generate assembly for a file
-src/ar_tag_handler.cpp.s:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.s
-.PHONY : src/ar_tag_handler.cpp.s
-
-src/ardrone_ar_tag_control.o: src/ardrone_ar_tag_control.cpp.o
-
-.PHONY : src/ardrone_ar_tag_control.o
+.PHONY : src/ardrone_ar_tag/ar_tag_handler.o
 
 # target to build an object file
-src/ardrone_ar_tag_control.cpp.o:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o
-.PHONY : src/ardrone_ar_tag_control.cpp.o
+src/ardrone_ar_tag/ar_tag_handler.cpp.o:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ar_tag_handler.cpp.o
+.PHONY : src/ardrone_ar_tag/ar_tag_handler.cpp.o
 
-src/ardrone_ar_tag_control.i: src/ardrone_ar_tag_control.cpp.i
+src/ardrone_ar_tag/ar_tag_handler.i: src/ardrone_ar_tag/ar_tag_handler.cpp.i
 
-.PHONY : src/ardrone_ar_tag_control.i
+.PHONY : src/ardrone_ar_tag/ar_tag_handler.i
 
 # target to preprocess a source file
-src/ardrone_ar_tag_control.cpp.i:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.i
-.PHONY : src/ardrone_ar_tag_control.cpp.i
+src/ardrone_ar_tag/ar_tag_handler.cpp.i:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ar_tag_handler.cpp.i
+.PHONY : src/ardrone_ar_tag/ar_tag_handler.cpp.i
 
-src/ardrone_ar_tag_control.s: src/ardrone_ar_tag_control.cpp.s
+src/ardrone_ar_tag/ar_tag_handler.s: src/ardrone_ar_tag/ar_tag_handler.cpp.s
 
-.PHONY : src/ardrone_ar_tag_control.s
+.PHONY : src/ardrone_ar_tag/ar_tag_handler.s
 
 # target to generate assembly for a file
-src/ardrone_ar_tag_control.cpp.s:
-	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.s
-.PHONY : src/ardrone_ar_tag_control.cpp.s
+src/ardrone_ar_tag/ar_tag_handler.cpp.s:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ar_tag_handler.cpp.s
+.PHONY : src/ardrone_ar_tag/ar_tag_handler.cpp.s
+
+src/ardrone_ar_tag/ardrone_ar_tag_control.o: src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.o
+
+.PHONY : src/ardrone_ar_tag/ardrone_ar_tag_control.o
+
+# target to build an object file
+src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.o:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.o
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.o
+.PHONY : src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.o
+
+src/ardrone_ar_tag/ardrone_ar_tag_control.i: src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.i
+
+.PHONY : src/ardrone_ar_tag/ardrone_ar_tag_control.i
+
+# target to preprocess a source file
+src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.i:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.i
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.i
+.PHONY : src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.i
+
+src/ardrone_ar_tag/ardrone_ar_tag_control.s: src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.s
+
+.PHONY : src/ardrone_ar_tag/ardrone_ar_tag_control.s
+
+# target to generate assembly for a file
+src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.s:
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.s
+	cd /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build && $(MAKE) -f drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/build.make drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.s
+.PHONY : src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.s
 
 # Help Target
 help:
@@ -240,20 +258,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... rebuild_cache"
+	@echo "... ardrone_ar_tag"
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... ar_tag_handler"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... test"
-	@echo "... src/ar_tag_handler.o"
-	@echo "... src/ar_tag_handler.i"
-	@echo "... src/ar_tag_handler.s"
-	@echo "... src/ardrone_ar_tag_control.o"
-	@echo "... src/ardrone_ar_tag_control.i"
-	@echo "... src/ardrone_ar_tag_control.s"
+	@echo "... src/ardrone_ar_tag/ar_tag_handler.o"
+	@echo "... src/ardrone_ar_tag/ar_tag_handler.i"
+	@echo "... src/ardrone_ar_tag/ar_tag_handler.s"
+	@echo "... src/ardrone_ar_tag/ardrone_ar_tag_control.o"
+	@echo "... src/ardrone_ar_tag/ardrone_ar_tag_control.i"
+	@echo "... src/ardrone_ar_tag/ardrone_ar_tag_control.s"
 .PHONY : help
 
 

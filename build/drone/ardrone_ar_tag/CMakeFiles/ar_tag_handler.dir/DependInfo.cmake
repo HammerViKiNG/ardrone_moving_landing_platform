@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ar_tag_handler.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ar_tag_handler.cpp.o"
-  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag_control.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag_control.cpp.o"
+  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag/ar_tag_handler.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ar_tag_handler.cpp.o"
+  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp" "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ardrone_ar_tag_control.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,7 +19,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include"
-  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pose_rpy/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pid/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pose_handler/include"

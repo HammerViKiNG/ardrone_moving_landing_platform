@@ -59,7 +59,6 @@
   <depend>ardrone_pid</depend>
   <depend>ardrone_pose_handler</depend>
   <depend>filtered_pose</depend>
-  <depend>rqt_mypkg</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

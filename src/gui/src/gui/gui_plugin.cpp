@@ -1,6 +1,7 @@
 #include "gui/gui_plugin.h"
 #include <pluginlib/class_list_macros.h>
 #include <QStringList>
+#include <QDebug>
 
 namespace gui {
 
@@ -14,6 +15,7 @@ GUIPlugin::GUIPlugin()
     setObjectName("GUIPlugin");
 }
 
+
 void GUIPlugin::initPlugin(qt_gui_cpp::PluginContext& context)
 {
   // access standalone command line arguments
@@ -25,27 +27,43 @@ void GUIPlugin::initPlugin(qt_gui_cpp::PluginContext& context)
     // add widget to the user interface
     context.addWidget(widget_);
     std::string topic_front = "/ardrone/front/image_raw",
-                topic_bottom = "/ardrone/bottom/image_raw";
-    image_transport::ImageTransport it_(getNodeHandle());
+                topic_bottom = "/ardrone/bottom/image_raw",
+                topic_navdata = "/ardrone/navdata";
+
+    controller = nullptr;
+
+    ongoing = false;
+
+    ros::NodeHandle nh_ = getNodeHandle();
+    image_transport::ImageTransport it_(nh_);
 
     ui_.front_image_frame->setOuterLayout(ui_.front_layout);
     ui_.bottom_image_frame->setOuterLayout(ui_.bottom_layout);
     
-    front_sub_ = it_.subscribe(topic_front, 1, boost::bind(&GUIPlugin::callbackImage, this, _1, ui_.front_image_frame));
-    bottom_sub_ = it_.subscribe(topic_bottom, 1, boost::bind(&GUIPlugin::callbackImage, this, _1, ui_.bottom_image_frame));
+    front_sub_ = it_.subscribe(topic_front, 1, std::bind(&GUIPlugin::callbackImage, this, std::placeholders::_1, ui_.front_image_frame));
+    bottom_sub_ = it_.subscribe(topic_bottom, 1, std::bind(&GUIPlugin::callbackImage, this, std::placeholders::_1, ui_.bottom_image_frame));
+    sub_navdata_ = nh_.subscribe(topic_navdata, 10, &GUIPlugin::callbackNavdata, this);
+
+    connect(ui_.s_high, SIGNAL(valueChanged(int)), this, SLOT(setNecessaryHeight(int)));
+    connect(ui_.start_button, SIGNAL(clicked(void)), this, SLOT(startSequence(void)));
+    connect(ui_.stop_button, SIGNAL(clicked(void)), this, SLOT(stopSequence(void)));
 }
+
   
 void GUIPlugin::shutdownPlugin()
 {
     front_sub_.shutdown();
     bottom_sub_.shutdown();
+    sub_navdata_.shutdown();
 }
+
   
 void GUIPlugin::saveSettings(qt_gui_cpp::Settings& plugin_settings, qt_gui_cpp::Settings& instance_settings) const
 {
     // TODO save intrinsic configuration, usually using:
     // instance_settings.setValue(k, v)
 }
+
 
 void GUIPlugin::restoreSettings(const qt_gui_cpp::Settings& plugin_settings, const qt_gui_cpp::Settings& instance_settings)
 {
@@ -58,10 +76,12 @@ void GUIPlugin::restoreSettings(const qt_gui_cpp::Settings& plugin_settings, con
     return true;
 }
 
+
 void triggerConfiguration()
 {
     // Usually used to open a dialog to offer the user a set of configuration
 }*/
+
 
 void GUIPlugin::callbackImage(const sensor_msgs::Image::ConstPtr& msg, rqt_image_view::RatioLayoutedFrame* image_frame)
 {
@@ -83,21 +103,92 @@ void GUIPlugin::callbackImage(const sensor_msgs::Image::ConstPtr& msg, rqt_image
       } else if (msg->encoding == "8UC1") {
         // convert gray to rgb
         cv::cvtColor(cv_ptr->image, conversion_mat_, CV_GRAY2RGB);
-      } else if (msg->encoding == "16UC1" || msg->encoding == "32FC1") {
-        // scale / quantify
-        image_frame->setImage(QImage());
-        return;
       }
     }
     catch (cv_bridge::Exception& e)
     {
-      qWarning("ImageView.callback_image() while trying to convert image from '%s' to 'rgb8' an exception was thrown (%s)", msg->encoding.c_str(), e.what());
       image_frame->setImage(QImage());
       return;
     }
   }
   QImage image(conversion_mat_.data, conversion_mat_.cols, conversion_mat_.rows, conversion_mat_.step[0], QImage::Format_RGB888);
   image_frame->setImage(image);
+}
+
+
+void GUIPlugin::setNecessaryHeight(int value)
+{
+    ui_.curr_s_high->setText(QString::number(value / sliderCoeff));
+    if (controller != nullptr)
+    {
+        std::lock_guard<std::mutex> lock(mutex_ardrone);
+        this->controller->set_necessary_height(value / sliderCoeff);
+    }
+}
+
+
+void GUIPlugin::setFlightMode()
+{
+    if (controller != nullptr)
+    {
+        std::lock_guard<std::mutex> lock(mutex_ardrone);
+        this->controller->set_is_hovering(ui_.rb_hovering->isChecked());
+    }
+}
+
+
+void GUIPlugin::startSequence()
+{
+    if (this->controller == nullptr)
+    {
+        this->ongoing = true;
+        ardrone_thread = new std::thread([this]() {
+            this->controller = new ArdroneARTag("/ardrone/navdata", "/cmd_vel", "/ardrone/ar_tag_front", "/ardrone/ar_tag_bottom", "/gui_control", 200);
+            ros::NodeHandlePtr node = boost::make_shared<ros::NodeHandle>();
+            ros::Rate rate(200);
+            while (this->ongoing)
+            {
+                mutex_ardrone.lock();
+                this->controller->control();
+                mutex_ardrone.unlock();
+                ros::spinOnce();
+                rate.sleep();
+            }
+        } );
+    }
+}
+
+
+void GUIPlugin::stopSequence()
+{
+    if (ardrone_thread != nullptr)
+    {
+        this->ongoing = false;
+        this->ardrone_thread = nullptr;
+        this->controller = nullptr;
+    }
+}
+
+
+void GUIPlugin::callbackNavdata(const ardrone_autonomy::Navdata& msg)
+{
+    uint8_t rounding_digit = 1;
+    ui_.v_label->setText(QString( "vx: ") + QString::number( round_digit(msg.vx, rounding_digit) ) 
+                       + QString( " vy: ") + QString::number( round_digit(msg.vy, rounding_digit) ) 
+                       + QString( " vz: ") + QString::number( round_digit(msg.vz, rounding_digit) ));
+    ui_.a_label->setText(QString( "ax: ") + QString::number( round_digit(msg.ax, rounding_digit) ) 
+                       + QString( " ay: ") + QString::number( round_digit(msg.ay, rounding_digit) ) 
+                       + QString( " az: ") + QString::number( round_digit(msg.az, rounding_digit) ));
+    ui_.rot_label->setText(QString( " rot_x: ") + QString::number( round_digit(msg.rotX, rounding_digit) ) 
+                         + QString( " rot_y: ") + QString::number( round_digit(msg.rotY, rounding_digit) ) 
+                         + QString( " rot_z: ") + QString::number( round_digit(msg.rotZ, rounding_digit) ));
+}
+
+
+
+float GUIPlugin::round_digit(float number, uint8_t digit)
+{
+    return round(number * pow(10, digit)) / pow(10.0f, digit);
 }
 
 } // namespace

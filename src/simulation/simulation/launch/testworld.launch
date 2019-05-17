@@ -15,6 +15,4 @@
 
 <node pkg="car_teleop" name="car_keyboard_teleop" type="keyboard_teleop.py" respawn="true"/>
 
-<node pkg="rqt_mypkg" name="gui_control" type="gui" respawn="false"/>
-
 </launch>

@@ -63,6 +63,11 @@
   <depend>cv_bridge</depend>
   <depend>image_transport</depend>
   <depend>rqt_image_view</depend>
+  <depend>ardrone_ar_tag</depend>
+  <depend>pose_rpy</depend>
+  <depend>ardrone_pid</depend>
+  <depend>ardrone_pose_handler</depend>
+  <depend>filtered_pose</depend>
 
 
   <export>

@@ -1,4 +1,4 @@
-#include "ardrone_ar_tag_control.h"
+#include "ardrone_ar_tag/ardrone_ar_tag_control.h"
 #define limit(value, min, max) (value < min) ? min : (value > max) ? max : value
 
 
@@ -6,7 +6,6 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
 {
     sub_ar_tag_bottom = nh.subscribe(ar_tag_bottom_topic, 1, &ArdroneARTag::ar_tag_bottom_callback, this);
     sub_ar_tag_front = nh.subscribe(ar_tag_front_topic, 1, &ArdroneARTag::ar_tag_front_callback, this);
-    sub_gui_control = nh.subscribe(gui_control_topic, 1, &ArdroneARTag::gui_control_callback, this);
     pub_twist = nh.advertise<geometry_msgs::Twist>(cmd_topic, 1);
 
     dt = 1 / hz;
@@ -38,6 +37,16 @@ ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std
     max_int_rel = new double[6] {0.25, 0.0, 0.0, 0.25};
     controller_landing = new ArdronePID(hz, k_p, k_d, k_i, crit, max_int_rel);
     delete k_p, k_d, k_i, crit, max_int_rel;
+
+    is_hovering = false;
+}
+
+
+ArdroneARTag::~ArdroneARTag()
+{
+    sub_ar_tag_bottom.shutdown();
+    sub_ar_tag_front.shutdown();
+    pub_twist.shutdown();
 }
 
 
@@ -161,7 +170,7 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         size_t index = 0;
         if (msg.markers.size() == 2 && msg.markers[1].id == 4)
             index = 1;
-	tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
+        tf::quaternionMsgToTF(msg.markers[index].pose.pose.orientation, quat);
         tf::Matrix3x3(quat).getRPY(necessary_pose_shift.rot_x, necessary_pose_shift.rot_y, necessary_pose_shift.rot_z);
         necessary_pose_shift.x = msg.markers[index].pose.pose.position.x;
         necessary_pose_shift.y = msg.markers[index].pose.pose.position.y;
@@ -181,13 +190,6 @@ void ArdroneARTag::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers
         last_pose = current_pose;
         last_spotted_time = ros::Time::now();
     }
-}
-
-
-void ArdroneARTag::gui_control_callback(const rqt_mypkg::GUIControl& msg)
-{
-    this->is_hovering = msg.is_hovering;
-    this->necessary_height = msg.necessary_height;
 }
 
 

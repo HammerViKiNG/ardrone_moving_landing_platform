@@ -3,6 +3,6 @@ prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/insta
 Name: ardrone_ar_tag
 Description: Description of ardrone_ar_tag
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/lib 
+Cflags: -I/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/include
+Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/lib -lardrone_ar_tag
 Requires: 

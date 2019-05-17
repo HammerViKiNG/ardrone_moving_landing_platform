@@ -21,6 +21,10 @@ class ArdroneARTag
     public:
         ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, std::string gui_control_topic, double hz);
         ~ArdroneARTag();
+
+        void set_necessary_height(float necessary_height) { this->necessary_height = necessary_height; }
+        void set_is_hovering(bool is_hovering) { this->is_hovering = is_hovering; }
+
         void control(void);
     
     private:
@@ -46,7 +50,7 @@ class ArdroneARTag
 
         bool is_spotted_bottom, is_spotted_front; 
 
-	    PoseRPY necessary_pose_shift;
+        PoseRPY necessary_pose_shift;
         FilteredPose *necessary_pose_shift_global, *necessary_pose_filter, *velocity_filter;
 
         PoseRPY last_spotted_pose, last_necessary_shift, velocity;
@@ -60,7 +64,7 @@ class ArdroneARTag
     
         ros::Time current_time, last_spotted_time;
 
-        ArdronePID* controller, *controller_chasing, *controller_landing;
+        ArdronePID *controller, *controller_chasing, *controller_landing;
         ArdronePoseHandler* pose_handler;
 };
 
