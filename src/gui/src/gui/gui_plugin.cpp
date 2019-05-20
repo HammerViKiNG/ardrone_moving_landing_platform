@@ -85,34 +85,37 @@ void triggerConfiguration()
 
 void GUIPlugin::callbackImage(const sensor_msgs::Image::ConstPtr& msg, rqt_image_view::RatioLayoutedFrame* image_frame)
 {
-  try
-  {
-    cv_bridge::CvImageConstPtr cv_ptr = cv_bridge::toCvShare(msg, sensor_msgs::image_encodings::RGB8);
-    conversion_mat_ = cv_ptr->image;
-  }
-  catch (cv_bridge::Exception& e)
-  {
+    std::lock_guard<std::mutex> lock(mutex_ardrone);
     try
     {
-      // If we're here, there is no conversion that makes sense, but let's try to imagine a few first
-      cv_bridge::CvImageConstPtr cv_ptr = cv_bridge::toCvShare(msg);
-      if (msg->encoding == "CV_8UC3")
-      {
-        // assuming it is rgb
+        cv_bridge::CvImageConstPtr cv_ptr = cv_bridge::toCvShare(msg, sensor_msgs::image_encodings::RGB8);
         conversion_mat_ = cv_ptr->image;
-      } else if (msg->encoding == "8UC1") {
-        // convert gray to rgb
-        cv::cvtColor(cv_ptr->image, conversion_mat_, CV_GRAY2RGB);
-      }
     }
     catch (cv_bridge::Exception& e)
     {
-      image_frame->setImage(QImage());
-      return;
+        try
+        {
+            // If we're here, there is no conversion that makes sense, but let's try to imagine a few first
+            cv_bridge::CvImageConstPtr cv_ptr = cv_bridge::toCvShare(msg);
+            if (msg->encoding == "CV_8UC3")
+            {
+                // assuming it is rgb
+                conversion_mat_ = cv_ptr->image;
+            }
+            else if (msg->encoding == "8UC1")
+            {
+            // convert gray to rgb
+                cv::cvtColor(cv_ptr->image, conversion_mat_, CV_GRAY2RGB);
+            }
+        }
+        catch (cv_bridge::Exception& e)
+        {
+            image_frame->setImage(QImage());
+            return;
+        }
     }
-  }
-  QImage image(conversion_mat_.data, conversion_mat_.cols, conversion_mat_.rows, conversion_mat_.step[0], QImage::Format_RGB888);
-  image_frame->setImage(image);
+    QImage image(conversion_mat_.data, conversion_mat_.cols, conversion_mat_.rows, conversion_mat_.step[0], QImage::Format_RGB888);
+    image_frame->setImage(image);
 }
 
 
@@ -163,6 +166,7 @@ void GUIPlugin::stopSequence()
 {
     if (ardrone_thread != nullptr)
     {
+        std::lock_guard<std::mutex> lock(mutex_ardrone);
         this->ongoing = false;
         this->ardrone_thread = nullptr;
         this->controller = nullptr;
@@ -172,6 +176,7 @@ void GUIPlugin::stopSequence()
 
 void GUIPlugin::callbackNavdata(const ardrone_autonomy::Navdata& msg)
 {
+    std::lock_guard<std::mutex> lock(mutex_ardrone);
     uint8_t rounding_digit = 1;
     ui_.v_label->setText(QString( "vx: ") + QString::number( round_digit(msg.vx, rounding_digit) ) 
                        + QString( " vy: ") + QString::number( round_digit(msg.vy, rounding_digit) ) 

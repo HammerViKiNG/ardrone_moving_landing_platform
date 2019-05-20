@@ -1843,6 +1843,19 @@ filtered_pose/fast:
 .PHONY : filtered_pose/fast
 
 #=============================================================================
+# Target rules for targets named ardrone_autonomy_generate_messages_nodejs
+
+# Build rule for target.
+ardrone_autonomy_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ardrone_autonomy_generate_messages_nodejs
+.PHONY : ardrone_autonomy_generate_messages_nodejs
+
+# fast build rule for target.
+ardrone_autonomy_generate_messages_nodejs/fast:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build
+.PHONY : ardrone_autonomy_generate_messages_nodejs/fast
+
+#=============================================================================
 # Target rules for targets named ardrone_autonomy_generate_messages_cpp
 
 # Build rule for target.
@@ -1852,7 +1865,7 @@ ardrone_autonomy_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_autonomy_generate_messages_cpp/fast:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build
 .PHONY : ardrone_autonomy_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1865,7 +1878,7 @@ ardrone_autonomy_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_autonomy_generate_messages_lisp/fast:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build
 .PHONY : ardrone_autonomy_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1878,21 +1891,21 @@ ardrone_autonomy_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_autonomy_generate_messages_py/fast:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build
 .PHONY : ardrone_autonomy_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named ardrone_autonomy_generate_messages_nodejs
+# Target rules for targets named ardrone_autonomy_generate_messages_eus
 
 # Build rule for target.
-ardrone_autonomy_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ardrone_autonomy_generate_messages_nodejs
-.PHONY : ardrone_autonomy_generate_messages_nodejs
+ardrone_autonomy_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ardrone_autonomy_generate_messages_eus
+.PHONY : ardrone_autonomy_generate_messages_eus
 
 # fast build rule for target.
-ardrone_autonomy_generate_messages_nodejs/fast:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build
-.PHONY : ardrone_autonomy_generate_messages_nodejs/fast
+ardrone_autonomy_generate_messages_eus/fast:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build
+.PHONY : ardrone_autonomy_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named ardrone_pose_handler
@@ -1906,19 +1919,6 @@ ardrone_pose_handler: cmake_check_build_system
 ardrone_pose_handler/fast:
 	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/build
 .PHONY : ardrone_pose_handler/fast
-
-#=============================================================================
-# Target rules for targets named ardrone_autonomy_generate_messages_eus
-
-# Build rule for target.
-ardrone_autonomy_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ardrone_autonomy_generate_messages_eus
-.PHONY : ardrone_autonomy_generate_messages_eus
-
-# fast build rule for target.
-ardrone_autonomy_generate_messages_eus/fast:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build
-.PHONY : ardrone_autonomy_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named ardrone_ar_tag
@@ -2608,12 +2608,12 @@ help:
 	@echo "... ar_tag_position"
 	@echo "... ardrone_pid"
 	@echo "... filtered_pose"
+	@echo "... ardrone_autonomy_generate_messages_nodejs"
 	@echo "... ardrone_autonomy_generate_messages_cpp"
 	@echo "... ardrone_autonomy_generate_messages_lisp"
 	@echo "... ardrone_autonomy_generate_messages_py"
-	@echo "... ardrone_autonomy_generate_messages_nodejs"
-	@echo "... ardrone_pose_handler"
 	@echo "... ardrone_autonomy_generate_messages_eus"
+	@echo "... ardrone_pose_handler"
 	@echo "... ardrone_ar_tag"
 	@echo "... ar_tag_handler"
 	@echo "... test_trajectory"

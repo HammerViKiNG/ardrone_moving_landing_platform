@@ -4,9 +4,11 @@
 
 ArdroneARTag::ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, std::string gui_control_topic, double hz)
 {
-    sub_ar_tag_bottom = nh.subscribe(ar_tag_bottom_topic, 1, &ArdroneARTag::ar_tag_bottom_callback, this);
-    sub_ar_tag_front = nh.subscribe(ar_tag_front_topic, 1, &ArdroneARTag::ar_tag_front_callback, this);
-    pub_twist = nh.advertise<geometry_msgs::Twist>(cmd_topic, 1);
+    ros::NodeHandlePtr nh = boost::make_shared<ros::NodeHandle>();
+
+    sub_ar_tag_bottom = nh->subscribe(ar_tag_bottom_topic, 1, &ArdroneARTag::ar_tag_bottom_callback, this);
+    sub_ar_tag_front = nh->subscribe(ar_tag_front_topic, 1, &ArdroneARTag::ar_tag_front_callback, this);
+    pub_twist = nh->advertise<geometry_msgs::Twist>(cmd_topic, 1);
 
     dt = 1 / hz;
 

@@ -55,7 +55,7 @@ class ArdroneARTag
 
         PoseRPY last_spotted_pose, last_necessary_shift, velocity;
         
-        ros::NodeHandle nh;
+        //ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom, sub_ar_tag_front, sub_gui_control;
         ros::Publisher pub_twist;
 

@@ -4771,6 +4771,188 @@ clean: additional/filtered_pose/CMakeFiles/filtered_pose.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory drone/ardrone_connection
+
+# Convenience name for "all" pass in the directory.
+drone/ardrone_connection/all:
+
+.PHONY : drone/ardrone_connection/all
+
+# Convenience name for "clean" pass in the directory.
+drone/ardrone_connection/clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
+drone/ardrone_connection/clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
+drone/ardrone_connection/clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
+drone/ardrone_connection/clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
+drone/ardrone_connection/clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
+
+.PHONY : drone/ardrone_connection/clean
+
+# Convenience name for "preinstall" pass in the directory.
+drone/ardrone_connection/preinstall:
+
+.PHONY : drone/ardrone_connection/preinstall
+
+#=============================================================================
+# Target rules for target drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir
+
+# All Build rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/depend
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_nodejs"
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+ardrone_autonomy_generate_messages_nodejs: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule
+
+.PHONY : ardrone_autonomy_generate_messages_nodejs
+
+# clean rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir
+
+# All Build rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/depend
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_cpp"
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+ardrone_autonomy_generate_messages_cpp: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule
+
+.PHONY : ardrone_autonomy_generate_messages_cpp
+
+# clean rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir
+
+# All Build rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/depend
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_lisp"
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+ardrone_autonomy_generate_messages_lisp: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule
+
+.PHONY : ardrone_autonomy_generate_messages_lisp
+
+# clean rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir
+
+# All Build rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/depend
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_py"
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule
+
+# Convenience name for target.
+ardrone_autonomy_generate_messages_py: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule
+
+.PHONY : ardrone_autonomy_generate_messages_py
+
+# clean rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir
+
+# All Build rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/depend
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_eus"
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+ardrone_autonomy_generate_messages_eus: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule
+
+.PHONY : ardrone_autonomy_generate_messages_eus
+
+# clean rule for target.
+drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean:
+	$(MAKE) -f drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
+.PHONY : drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory drone/ardrone_additional/ardrone_pose_handler
 
 # Convenience name for "all" pass in the directory.
@@ -4779,12 +4961,7 @@ drone/ardrone_additional/ardrone_pose_handler/all: drone/ardrone_additional/ardr
 .PHONY : drone/ardrone_additional/ardrone_pose_handler/all
 
 # Convenience name for "clean" pass in the directory.
-drone/ardrone_additional/ardrone_pose_handler/clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
-drone/ardrone_additional/ardrone_pose_handler/clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
-drone/ardrone_additional/ardrone_pose_handler/clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
-drone/ardrone_additional/ardrone_pose_handler/clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
 drone/ardrone_additional/ardrone_pose_handler/clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/clean
-drone/ardrone_additional/ardrone_pose_handler/clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
 
 .PHONY : drone/ardrone_additional/ardrone_pose_handler/clean
 
@@ -4792,134 +4969,6 @@ drone/ardrone_additional/ardrone_pose_handler/clean: drone/ardrone_additional/ar
 drone/ardrone_additional/ardrone_pose_handler/preinstall:
 
 .PHONY : drone/ardrone_additional/ardrone_pose_handler/preinstall
-
-#=============================================================================
-# Target rules for target drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir
-
-# All Build rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/depend
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_cpp"
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_cpp: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_cpp
-
-# clean rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
-
-# clean rule for target.
-clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir
-
-# All Build rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/depend
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_lisp"
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_lisp: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_lisp
-
-# clean rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir
-
-# All Build rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/depend
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_py"
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_py: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_py
-
-# clean rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
-
-# clean rule for target.
-clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir
-
-# All Build rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/depend
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_nodejs"
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_nodejs: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_nodejs
-
-# clean rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
-
-# clean rule for target.
-clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
 
 #=============================================================================
 # Target rules for target drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir
@@ -4977,11 +5026,11 @@ drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.di
 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: simulation/car/car_gazebo/CMakeFiles/_catkin_empty_exported_target.dir/all
 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: simulation/car/car_gazebo/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: additional/pose_rpy/CMakeFiles/pose_rpy.dir/all
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all
+drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_nodejs.dir/all
+drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_cpp.dir/all
+drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_lisp.dir/all
+drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_py.dir/all
+drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all: drone/ardrone_connection/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all
 	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/depend
 	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=5,6 "Built target ardrone_pose_handler"
@@ -5011,38 +5060,6 @@ drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.di
 
 # clean rule for target.
 clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir
-
-# All Build rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/depend
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_autonomy_generate_messages_eus"
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-ardrone_autonomy_generate_messages_eus: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/rule
-
-.PHONY : ardrone_autonomy_generate_messages_eus
-
-# clean rule for target.
-drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean:
-	$(MAKE) -f drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
-.PHONY : drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
-
-# clean rule for target.
-clean: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_autonomy_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
