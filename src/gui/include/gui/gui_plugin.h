@@ -52,7 +52,7 @@ namespace gui {
         Ui::GUI ui_;
         QWidget* widget_;
 
-        image_transport::Subscriber front_sub_, bottom_sub_;
+        image_transport::Subscriber image_sub_;
         cv::Mat conversion_mat_;
 
         ros::Subscriber sub_navdata_;

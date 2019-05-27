@@ -4,8 +4,8 @@
 	<arg name="max_track_error" default="0.2" />
 	<arg name="cam_image_topic" default="/ardrone/image_raw" />
 	<arg name="cam_info_topic" default="/ardrone/camera_info" />
-	<arg name="output_frame" default="ardrone_base_baselink" />
-    <arg name="output_topic" default="/ardrone/ar_tag_position">
+	<arg name="output_frame" default="ardrone_base_link" />
+    <arg name="output_topic" default="/ardrone/ar_tag_position" />
 
 	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
 		<param name="marker_size"           type="double" value="$(arg marker_size)" />
@@ -15,7 +15,7 @@
 
 		<remap from="camera_image"  to="$(arg cam_image_topic)" />
 		<remap from="camera_info"   to="$(arg cam_info_topic)" />
-        <remap from="\ar_pose_marker" to="">
+        <remap from="/ar_pose_marker" to="$(arg output_topic)" />
 	</node>
 
 </launch>

@@ -31,36 +31,14 @@
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>20</y>
+      <y>125</y>
       <width>391</width>
-      <height>211</height>
+      <height>250</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="front_layout">
+    <layout class="QHBoxLayout" name="image_layout">
      <item>
-      <widget class="rqt_image_view::RatioLayoutedFrame" name="front_image_frame">
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>270</y>
-      <width>391</width>
-      <height>231</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="bottom_layout">
-     <item>
-      <widget class="rqt_image_view::RatioLayoutedFrame" name="bottom_image_frame">
+      <widget class="rqt_image_view::RatioLayoutedFrame" name="image_frame">
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>

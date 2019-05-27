@@ -26,8 +26,7 @@ void GUIPlugin::initPlugin(qt_gui_cpp::PluginContext& context)
     ui_.setupUi(widget_);
     // add widget to the user interface
     context.addWidget(widget_);
-    std::string topic_front = "/ardrone/front/image_raw",
-                topic_bottom = "/ardrone/bottom/image_raw",
+    std::string topic_image = "/ardrone/image_raw",
                 topic_navdata = "/ardrone/navdata";
 
     controller = nullptr;
@@ -37,11 +36,9 @@ void GUIPlugin::initPlugin(qt_gui_cpp::PluginContext& context)
     ros::NodeHandle nh_ = getNodeHandle();
     image_transport::ImageTransport it_(nh_);
 
-    ui_.front_image_frame->setOuterLayout(ui_.front_layout);
-    ui_.bottom_image_frame->setOuterLayout(ui_.bottom_layout);
+    ui_.image_frame->setOuterLayout(ui_.image_layout);
     
-    front_sub_ = it_.subscribe(topic_front, 1, std::bind(&GUIPlugin::callbackImage, this, std::placeholders::_1, ui_.front_image_frame));
-    bottom_sub_ = it_.subscribe(topic_bottom, 1, std::bind(&GUIPlugin::callbackImage, this, std::placeholders::_1, ui_.bottom_image_frame));
+    image_sub_ = it_.subscribe(topic_image, 1, std::bind(&GUIPlugin::callbackImage, this, std::placeholders::_1, ui_.image_frame));
     sub_navdata_ = nh_.subscribe(topic_navdata, 10, &GUIPlugin::callbackNavdata, this);
 
     connect(ui_.s_high, SIGNAL(valueChanged(int)), this, SLOT(setNecessaryHeight(int)));
@@ -52,8 +49,7 @@ void GUIPlugin::initPlugin(qt_gui_cpp::PluginContext& context)
   
 void GUIPlugin::shutdownPlugin()
 {
-    front_sub_.shutdown();
-    bottom_sub_.shutdown();
+    image_sub_.shutdown();
     sub_navdata_.shutdown();
 }
 
