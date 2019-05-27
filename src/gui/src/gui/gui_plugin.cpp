@@ -142,7 +142,7 @@ void GUIPlugin::startSequence()
     {
         this->ongoing = true;
         ardrone_thread = new std::thread([this]() {
-            this->controller = new ArdroneARTag("/ardrone/navdata", "/cmd_vel", "/ardrone/ar_tag_front", "/ardrone/ar_tag_bottom", "/gui_control", 200);
+            this->controller = new ArdroneARTag("/ardrone/navdata", "/cmd_vel", "/ardrone/ar_tag_position", "/gui_control", 200);
             ros::NodeHandlePtr node = boost::make_shared<ros::NodeHandle>();
             ros::Rate rate(200);
             while (this->ongoing)

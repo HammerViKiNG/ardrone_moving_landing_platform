@@ -19,7 +19,7 @@
 class ArdroneARTag
 {
     public:
-        ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_front_topic, std::string ar_tag_bottom_topic, std::string gui_control_topic, double hz);
+        ArdroneARTag(std::string navdata_topic, std::string cmd_topic, std::string ar_tag_topic, std::string gui_control_topic, double hz);
         ~ArdroneARTag();
 
         void set_necessary_height(float necessary_height) { this->necessary_height = necessary_height; }
@@ -28,8 +28,7 @@ class ArdroneARTag
         void control(void);
     
     private:
-        void ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
-        void ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
+        void ar_tag_callback(const ar_track_alvar_msgs::AlvarMarkers& msg);
 
         void correct_necessary_pose_shift(void);
         void stabilize_necessary_pose_shift(void);
@@ -37,6 +36,8 @@ class ArdroneARTag
 
         void ar_tag_lost(void);
         void ar_tag_search(void);
+
+        bool is_camera_bottom;
 
         int8_t state;
 
@@ -56,7 +57,7 @@ class ArdroneARTag
         PoseRPY last_spotted_pose, last_necessary_shift, velocity;
         
         //ros::NodeHandle nh;
-        ros::Subscriber sub_tf, sub_navdata, sub_ar_tag_bottom, sub_ar_tag_front, sub_gui_control;
+        ros::Subscriber sub_tf, sub_navdata, sub_ar_tag, sub_gui_control;
         ros::Publisher pub_twist;
 
         tf::Quaternion quat; 
