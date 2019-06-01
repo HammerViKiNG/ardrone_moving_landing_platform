@@ -81,7 +81,7 @@ void triggerConfiguration()
 
 void GUIPlugin::callbackImage(const sensor_msgs::Image::ConstPtr& msg, rqt_image_view::RatioLayoutedFrame* image_frame)
 {
-    std::lock_guard<std::mutex> lock(mutex_ardrone);
+    std::lock_guard<std::recursive_mutex> lock(mutex_ardrone);
     try
     {
         cv_bridge::CvImageConstPtr cv_ptr = cv_bridge::toCvShare(msg, sensor_msgs::image_encodings::RGB8);
@@ -120,7 +120,7 @@ void GUIPlugin::setNecessaryHeight(int value)
     ui_.curr_s_high->setText(QString::number(value / sliderCoeff));
     if (controller != nullptr)
     {
-        std::lock_guard<std::mutex> lock(mutex_ardrone);
+        std::lock_guard<std::recursive_mutex> lock(mutex_ardrone);
         this->controller->set_necessary_height(value / sliderCoeff);
     }
 }
@@ -130,7 +130,7 @@ void GUIPlugin::setFlightMode()
 {
     if (controller != nullptr)
     {
-        std::lock_guard<std::mutex> lock(mutex_ardrone);
+        std::lock_guard<std::recursive_mutex> lock(mutex_ardrone);
         this->controller->set_is_hovering(ui_.rb_hovering->isChecked());
     }
 }
@@ -162,7 +162,7 @@ void GUIPlugin::stopSequence()
 {
     if (ardrone_thread != nullptr)
     {
-        std::lock_guard<std::mutex> lock(mutex_ardrone);
+        std::lock_guard<std::recursive_mutex> lock(mutex_ardrone);
         this->ongoing = false;
         this->ardrone_thread = nullptr;
         this->controller = nullptr;
@@ -172,7 +172,7 @@ void GUIPlugin::stopSequence()
 
 void GUIPlugin::callbackNavdata(const ardrone_autonomy::Navdata& msg)
 {
-    std::lock_guard<std::mutex> lock(mutex_ardrone);
+    std::lock_guard<std::recursive_mutex> lock(mutex_ardrone);
     uint8_t rounding_digit = 1;
     ui_.v_label->setText(QString( "vx: ") + QString::number( round_digit(msg.vx, rounding_digit) ) 
                        + QString( " vy: ") + QString::number( round_digit(msg.vy, rounding_digit) ) 

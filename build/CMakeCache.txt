@@ -641,6 +641,12 @@ ardrone_pose_handler_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libimage_tr
 ardrone_pose_handler_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pose_handler
 
 //Value Computed by CMake
+ardrone_real_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_real
+
+//Value Computed by CMake
+ardrone_real_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_real
+
+//Value Computed by CMake
 ardrone_teleop_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_teleop
 
 //Value Computed by CMake
@@ -663,6 +669,12 @@ camera_calibration_parsers_DIR:PATH=/opt/ros/kinetic/share/camera_calibration_pa
 
 //The directory containing a CMake configuration file for camera_info_manager.
 camera_info_manager_DIR:PATH=/opt/ros/kinetic/share/camera_info_manager/cmake
+
+//Value Computed by CMake
+camera_stabilized_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/camera_stabilized
+
+//Value Computed by CMake
+camera_stabilized_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/camera_stabilized
 
 //Value Computed by CMake
 car_description_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_description
@@ -1140,7 +1152,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=25
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

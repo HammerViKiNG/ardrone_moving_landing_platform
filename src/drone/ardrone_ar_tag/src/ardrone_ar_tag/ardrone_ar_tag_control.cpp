@@ -134,7 +134,7 @@ void ArdroneARTag::ar_tag_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
         
             if (msg.markers[index].id == 8)
             {
-	            necessary_pose_shift.x = msg.markers[index].pose.pose.position.x / 9.0;
+	        necessary_pose_shift.x = msg.markers[index].pose.pose.position.x / 9.0;
                 necessary_pose_shift.y = msg.markers[index].pose.pose.position.y / 9.0;
                 necessary_pose_shift.z = msg.markers[index].pose.pose.position.z / 9.0;
             }
@@ -189,13 +189,13 @@ void ArdroneARTag::control(void)
         else if ((ros::Time::now() - last_spotted_time).toNSec() / 1000000000.0 >= 0.25)
             ar_tag_lost();
         if (pose_handler->get_state()!= 8 && pose_handler->get_state()!= 2 && current_pose.z <= 0.2 && is_spotted_bottom)
-	    {
+	{
             //system("rostopic pub -1 /ardrone/land std_msgs/Empty");
             //is_spotted_bottom = is_spotted_front = 0;
         }
         else
         {
-            //twist = controller->pid_twist(necessary_pose_shift);
+            twist = controller->pid_twist(necessary_pose_shift);
             ROS_INFO("%f, %f, %f, %f", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z);
             //pub_twist.publish(twist);
         }

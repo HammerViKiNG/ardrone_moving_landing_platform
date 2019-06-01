@@ -1,0 +1,4 @@
+<launch>
+        <include file="$(find ardrone_real)/launch/ardrone_connection.launch"/>
+	<include file="$(find camera)/launch/ardrone_ar_tag_track_real.launch"/>
+</launch>

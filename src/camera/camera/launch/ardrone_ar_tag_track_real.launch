@@ -5,7 +5,7 @@
 	<arg name="cam_image_topic" default="/ardrone/image_raw" />
 	<arg name="cam_info_topic" default="/ardrone/camera_info" />
 	<arg name="output_frame" default="ardrone_base_link" />
-    <arg name="output_topic" default="/ardrone/ar_tag_position" />
+    	<arg name="output_topic" default="/ardrone/ar_tag_position" />
 
 	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
 		<param name="marker_size"           type="double" value="$(arg marker_size)" />

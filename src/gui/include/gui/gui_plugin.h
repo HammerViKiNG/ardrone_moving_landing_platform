@@ -58,7 +58,7 @@ namespace gui {
         ros::Subscriber sub_navdata_;
 
         std::thread *ardrone_thread;
-        std::mutex mutex_ardrone;
+        std::recursive_mutex mutex_ardrone;
 
         bool ongoing;
 
