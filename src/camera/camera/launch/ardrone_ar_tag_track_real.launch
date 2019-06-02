@@ -2,7 +2,7 @@
 	<arg name="marker_size" default="40" />
 	<arg name="max_new_marker_error" default="0.08" />
 	<arg name="max_track_error" default="0.2" />
-	<arg name="cam_image_topic" default="/ardrone/image_raw" />
+	<arg name="cam_image_topic" default="/ardrone/image_raw_stabilized" />
 	<arg name="cam_info_topic" default="/ardrone/camera_info" />
 	<arg name="output_frame" default="ardrone_base_link" />
     	<arg name="output_topic" default="/ardrone/ar_tag_position" />
