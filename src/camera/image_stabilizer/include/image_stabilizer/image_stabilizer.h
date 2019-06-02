@@ -1,6 +1,7 @@
 #include "ros/ros.h"
 
 #include <image_transport/image_transport.h>
+#include <opencv2/imgproc/imgproc.hpp>
 #include <cv_bridge/cv_bridge.h>
 
 
@@ -13,8 +14,11 @@ class ImageStabilizer
 
     sensor_msgs::ImageConstPtr curr_image;
 
+    cv::Mat curr_mat, prev_mat;
+    cv::Mat curr_mat_gray, prev_mat_gray;
+
     void image_callback(const sensor_msgs::ImageConstPtr& msg);
-    cv_bridge::CvImagePtr stabilize_image(const cv_bridge::CvImagePtr& img);
+    cv::Mat stabilize_image(const cv::Mat& img);
 
     public:
         ImageStabilizer(std::string sub_topic, std::string pub_topic);

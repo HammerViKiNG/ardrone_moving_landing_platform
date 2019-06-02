@@ -1,4 +1,4 @@
-#include "camera_stabilized/image_stabilization.h"
+#include "image_stabilizer/image_stabilizer.h"
 
 
 int main(int argc, char** argv)

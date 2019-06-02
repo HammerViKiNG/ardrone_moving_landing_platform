@@ -4789,57 +4789,57 @@ clean: additional/filtered_pose/CMakeFiles/filtered_pose.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory camera/camera_stabilized
+# Directory level rules for directory camera/image_stabilizer
 
 # Convenience name for "all" pass in the directory.
-camera/camera_stabilized/all: camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/all
+camera/image_stabilizer/all: camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/all
 
-.PHONY : camera/camera_stabilized/all
+.PHONY : camera/image_stabilizer/all
 
 # Convenience name for "clean" pass in the directory.
-camera/camera_stabilized/clean: camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/clean
+camera/image_stabilizer/clean: camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/clean
 
-.PHONY : camera/camera_stabilized/clean
+.PHONY : camera/image_stabilizer/clean
 
 # Convenience name for "preinstall" pass in the directory.
-camera/camera_stabilized/preinstall:
+camera/image_stabilizer/preinstall:
 
-.PHONY : camera/camera_stabilized/preinstall
+.PHONY : camera/image_stabilizer/preinstall
 
 #=============================================================================
-# Target rules for target camera/camera_stabilized/CMakeFiles/image_stabilizer.dir
+# Target rules for target camera/image_stabilizer/CMakeFiles/image_stabilizer.dir
 
 # All Build rule for target.
-camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/all:
-	$(MAKE) -f camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/build.make camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/depend
-	$(MAKE) -f camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/build.make camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/build
+camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/all:
+	$(MAKE) -f camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/build.make camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/depend
+	$(MAKE) -f camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/build.make camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=94 "Built target image_stabilizer"
-.PHONY : camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/all
+.PHONY : camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/all
 
 # Include target in all.
-all: camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/all
+all: camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/rule: cmake_check_build_system
+camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/rule
+.PHONY : camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/rule
 
 # Convenience name for target.
-image_stabilizer: camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/rule
+image_stabilizer: camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/rule
 
 .PHONY : image_stabilizer
 
 # clean rule for target.
-camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/clean:
-	$(MAKE) -f camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/build.make camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/clean
-.PHONY : camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/clean
+camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/clean:
+	$(MAKE) -f camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/build.make camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/clean
+.PHONY : camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/clean
 
 # clean rule for target.
-clean: camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/clean
+clean: camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/clean
 
 .PHONY : clean
 

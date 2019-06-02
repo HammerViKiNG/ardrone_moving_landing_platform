@@ -860,6 +860,12 @@ hector_gazebo_ros_sonar_LIB_DEPENDS:STATIC=
 //The directory containing a CMake configuration file for ignition-math2.
 ignition-math2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-math2
 
+//Value Computed by CMake
+image_stabilizer_BINARY_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/image_stabilizer
+
+//Value Computed by CMake
+image_stabilizer_SOURCE_DIR:STATIC=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/image_stabilizer
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 

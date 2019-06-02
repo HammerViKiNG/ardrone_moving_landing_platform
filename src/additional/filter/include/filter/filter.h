@@ -4,6 +4,7 @@
 #include <numeric>
 #include <cstddef>
 #include <cstring>
+#include <boost/circular_buffer.hpp>
 
 class MAFilter
 {
@@ -14,9 +15,8 @@ class MAFilter
     private:
         void shift_values(void);
         
-        double value;
-        double* values;
-        size_t window, size;
+        boost::circular_buffer<double> values;
+        size_t size;
 };
 
 

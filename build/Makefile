@@ -1852,7 +1852,7 @@ image_stabilizer: cmake_check_build_system
 
 # fast build rule for target.
 image_stabilizer/fast:
-	$(MAKE) -f camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/build.make camera/camera_stabilized/CMakeFiles/image_stabilizer.dir/build
+	$(MAKE) -f camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/build.make camera/image_stabilizer/CMakeFiles/image_stabilizer.dir/build
 .PHONY : image_stabilizer/fast
 
 #=============================================================================

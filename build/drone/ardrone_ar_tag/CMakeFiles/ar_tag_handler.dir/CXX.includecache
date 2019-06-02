@@ -13,6 +13,8 @@ cstddef
 -
 cstring
 -
+boost/circular_buffer.hpp
+-
 
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/filtered_pose/include/filtered_pose/filtered_pose.h
 pose_rpy/pose_rpy.h

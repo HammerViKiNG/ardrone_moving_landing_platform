@@ -1,4 +1,4 @@
-#include "camera_stabilized/image_stabilization.h"
+#include "image_stabilizer/image_stabilizer.h"
 
 
 ImageStabilizer::ImageStabilizer(std::string sub_topic, std::string pub_topic) : it_(nh_)
@@ -24,6 +24,6 @@ void ImageStabilizer::image_callback(const sensor_msgs::ImageConstPtr& msg)
 }
 
 
-cv_bridge::CvImagePtr ImageStabilizer::stabilize_image(const cv_bridge::CvImagePtr& img)
+cv::Mat ImageStabilizer::stabilize_image(const cv::Mat& img)
 {
 }
