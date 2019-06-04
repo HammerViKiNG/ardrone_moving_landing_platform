@@ -25,6 +25,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/filtered_pose/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pid/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/filter/include"
+  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
@@ -36,6 +37,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/filtered_pose/CMakeFiles/filtered_pose.dir/DependInfo.cmake"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/pid/CMakeFiles/pid.dir/DependInfo.cmake"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/filter/CMakeFiles/filter.dir/DependInfo.cmake"
+  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/ar_tag_position/CMakeFiles/ar_tag_position.dir/DependInfo.cmake"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/pose_rpy/CMakeFiles/pose_rpy.dir/DependInfo.cmake"
   )
 

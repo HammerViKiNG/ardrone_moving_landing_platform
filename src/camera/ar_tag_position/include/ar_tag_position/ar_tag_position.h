@@ -8,10 +8,15 @@
 class ArTagPose
 {
     public:
+        ArTagPose(void) {}
         ArTagPose(ros::NodeHandle nh, std::string bottom_camera_topic, std::string front_camera_topic);
-        PoseRPY get_pose(void) {return pose;}
-        std::string get_camera_name(void) {return camera_name;}
-        bool get_is_spotted(void) {return is_spotted;}
+        PoseRPY get_pose(void) const {return pose;}
+        bool get_bottom_selected(void) const {return bottom_selected;}
+        bool get_is_spotted(void) const {return is_spotted;}
+        double get_last_time(void) const {return last_time;}
+
+        void select_bottom_camera(void);
+        void select_front_camera(void);
 
     private:
         ros::Subscriber sub_ar_tag_bottom, sub_ar_tag_front;
@@ -25,7 +30,7 @@ class ArTagPose
         double last_time;
 
         PoseRPY pose;
-        std::string camera_name;
+        bool bottom_selected;
         bool is_spotted;
 };
 

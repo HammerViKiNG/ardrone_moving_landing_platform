@@ -30,6 +30,14 @@ tf/transform_datatypes.h
 cmath
 -
 
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position/include/ar_tag_position/ar_tag_position.h
+ros/ros.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position/include/ar_tag_position/ros/ros.h
+pose_rpy/pose_rpy.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position/include/ar_tag_position/pose_rpy/pose_rpy.h
+ar_track_alvar_msgs/AlvarMarkers.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position/include/ar_tag_position/ar_track_alvar_msgs/AlvarMarkers.h
+
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pid/include/ardrone_pid/ardrone_pid.h
 cmath
 -
@@ -73,6 +81,8 @@ ardrone_pid/ardrone_pid.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include/ardrone_ar_tag/ardrone_pid/ardrone_pid.h
 filtered_pose/filtered_pose.h
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include/ardrone_ar_tag/filtered_pose/filtered_pose.h
+ar_tag_position/ar_tag_position.h
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include/ardrone_ar_tag/ar_tag_position/ar_tag_position.h
 
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/src/ardrone_ar_tag/ar_tag_handler.cpp
 ros/ros.h

@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   filtered_pose
   pid
   filter
+  ar_tag_position
 )
 
 ## System dependencies are found with CMake's conventions

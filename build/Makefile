@@ -1605,7 +1605,7 @@ ardrone_teleop_genpy: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_genpy/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build
 .PHONY : ardrone_teleop_genpy/fast
 
 #=============================================================================
@@ -1618,7 +1618,7 @@ ardrone_teleop_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_generate_messages_eus/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build
 .PHONY : ardrone_teleop_generate_messages_eus/fast
 
 #=============================================================================
@@ -1631,7 +1631,7 @@ ardrone_teleop_geneus: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_geneus/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build
 .PHONY : ardrone_teleop_geneus/fast
 
 #=============================================================================
@@ -1644,7 +1644,7 @@ ardrone_teleop_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_generate_messages_cpp/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build
 .PHONY : ardrone_teleop_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1657,7 +1657,7 @@ ardrone_teleop_gencpp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_gencpp/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build
 .PHONY : ardrone_teleop_gencpp/fast
 
 #=============================================================================
@@ -1670,7 +1670,7 @@ ardrone_teleop_generate_messages: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_generate_messages/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build
 .PHONY : ardrone_teleop_generate_messages/fast
 
 #=============================================================================
@@ -1683,7 +1683,7 @@ ardrone_teleop_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_generate_messages_lisp/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build
 .PHONY : ardrone_teleop_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1696,7 +1696,7 @@ ardrone_teleop_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_generate_messages_nodejs/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build
 .PHONY : ardrone_teleop_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1709,7 +1709,7 @@ ardrone_teleop_genlisp: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_genlisp/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build
 .PHONY : ardrone_teleop_genlisp/fast
 
 #=============================================================================
@@ -1722,7 +1722,7 @@ ardrone_teleop_gennodejs: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_gennodejs/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build
 .PHONY : ardrone_teleop_gennodejs/fast
 
 #=============================================================================
@@ -1735,7 +1735,7 @@ coords_teleop: cmake_check_build_system
 
 # fast build rule for target.
 coords_teleop/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
 .PHONY : coords_teleop/fast
 
 #=============================================================================
@@ -1748,7 +1748,7 @@ ardrone_teleop_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 ardrone_teleop_generate_messages_py/fast:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build
 .PHONY : ardrone_teleop_generate_messages_py/fast
 
 #=============================================================================

@@ -15,6 +15,7 @@
 #include "ardrone_pose_handler/ardrone_pose_handler.h"
 #include "ardrone_pid/ardrone_pid.h"
 #include "filtered_pose/filtered_pose.h"
+#include "ar_tag_position/ar_tag_position.h"
 
 class ArdroneARTag
 {
@@ -67,6 +68,8 @@ class ArdroneARTag
 
         ArdronePID *controller, *controller_chasing, *controller_landing;
         ArdronePoseHandler* pose_handler;
+
+        ArTagPose ar_tag_pose;
 };
 
 #endif

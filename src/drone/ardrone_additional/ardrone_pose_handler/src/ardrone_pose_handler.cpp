@@ -15,18 +15,6 @@ ArdronePoseHandler::ArdronePoseHandler(std::string navdata_topic)
 }
 
 
-PoseRPY ArdronePoseHandler::get_pose_rpy(void)
-{
-    return pose_rpy;
-}
-
-
-int8_t ArdronePoseHandler::get_state(void)
-{
-    return state;
-}
-
-
 PoseRPY ArdronePoseHandler::local_to_global(const PoseRPY& pose)
 {
     return PoseRPY::transform_pose(pose, -pose_rpy.rot_z);
@@ -69,6 +57,10 @@ void ArdronePoseHandler::navdata_callback(const ardrone_autonomy::Navdata& msg)
     pose_rpy.z = msg.altd / 1000.0;
     double curr_time = msg.tm / 1000000.0;
     odometry(msg.vx, msg.vy, curr_time - last_time);
+    std::pair<double, double> v_global = global_to_local(msg.vx, msg.vy, -pose_rpy.rot_z);
+    velocity.x = v_global.first;
+    velocity.y = v_global.second;
+    velocity.z = msg.vz;
     state = msg.state;
     last_time = curr_time;
 }

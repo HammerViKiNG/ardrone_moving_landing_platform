@@ -3926,430 +3926,430 @@ simulation/AR.Drone-ROS/tum_simulator/preinstall:
 .PHONY : simulation/AR.Drone-ROS/tum_simulator/preinstall
 
 #=============================================================================
-# Directory level rules for directory drone/ardrone_teleop
+# Directory level rules for directory drone/ardrone_additional/ardrone_teleop
 
 # Convenience name for "all" pass in the directory.
-drone/ardrone_teleop/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
-drone/ardrone_teleop/all: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
+drone/ardrone_additional/ardrone_teleop/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
+drone/ardrone_additional/ardrone_teleop/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
 
-.PHONY : drone/ardrone_teleop/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/all
 
 # Convenience name for "clean" pass in the directory.
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
-drone/ardrone_teleop/clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
+drone/ardrone_additional/ardrone_teleop/clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
 
-.PHONY : drone/ardrone_teleop/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/clean
 
 # Convenience name for "preinstall" pass in the directory.
-drone/ardrone_teleop/preinstall:
+drone/ardrone_additional/ardrone_teleop/preinstall:
 
-.PHONY : drone/ardrone_teleop/preinstall
+.PHONY : drone/ardrone_additional/ardrone_teleop/preinstall
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_genpy"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_genpy: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
+ardrone_teleop_genpy: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/rule
 
 .PHONY : ardrone_teleop_genpy
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genpy.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=6 "Built target ardrone_teleop_generate_messages_eus"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_generate_messages_eus: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule
+ardrone_teleop_generate_messages_eus: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/rule
 
 .PHONY : ardrone_teleop_generate_messages_eus
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_geneus"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_geneus: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
+ardrone_teleop_geneus: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/rule
 
 .PHONY : ardrone_teleop_geneus
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_geneus.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_generate_messages_cpp"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_generate_messages_cpp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/rule
+ardrone_teleop_generate_messages_cpp: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/rule
 
 .PHONY : ardrone_teleop_generate_messages_cpp
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_gencpp"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_gencpp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
+ardrone_teleop_gencpp: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/rule
 
 .PHONY : ardrone_teleop_gencpp
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gencpp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_eus.dir/all
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_cpp.dir/all
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_generate_messages"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
 
 # Include target in all.
-all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
+all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_generate_messages: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
+ardrone_teleop_generate_messages: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/rule
 
 .PHONY : ardrone_teleop_generate_messages
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_generate_messages_lisp"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_generate_messages_lisp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
+ardrone_teleop_generate_messages_lisp: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/rule
 
 .PHONY : ardrone_teleop_generate_messages_lisp
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_generate_messages_nodejs"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_generate_messages_nodejs: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
+ardrone_teleop_generate_messages_nodejs: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/rule
 
 .PHONY : ardrone_teleop_generate_messages_nodejs
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_lisp.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_genlisp"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_genlisp: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
+ardrone_teleop_genlisp: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/rule
 
 .PHONY : ardrone_teleop_genlisp
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_genlisp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/all: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_nodejs.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_gennodejs"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_gennodejs: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
+ardrone_teleop_gennodejs: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/rule
 
 .PHONY : ardrone_teleop_gennodejs
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_gennodejs.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/coords_teleop.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/all:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/all:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num=7,8 "Built target coords_teleop"
-.PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
 
 # Include target in all.
-all: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
+all: drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
 
 # Convenience name for target.
-coords_teleop: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
+coords_teleop: drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/rule
 
 .PHONY : coords_teleop
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/coords_teleop.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir
+# Target rules for target drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir
 
 # All Build rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/depend
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all: camera/camera/CMakeFiles/std_msgs_generate_messages_py.dir/all
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/depend
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles --progress-num= "Built target ardrone_teleop_generate_messages_py"
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule: cmake_check_build_system
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
 
 # Convenience name for target.
-ardrone_teleop_generate_messages_py: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
+ardrone_teleop_generate_messages_py: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/rule
 
 .PHONY : ardrone_teleop_generate_messages_py
 
 # clean rule for target.
-drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean:
-	$(MAKE) -f drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
-.PHONY : drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
+drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean:
+	$(MAKE) -f drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/build.make drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
+.PHONY : drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
 
 # clean rule for target.
-clean: drone/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
+clean: drone/ardrone_additional/ardrone_teleop/CMakeFiles/ardrone_teleop_generate_messages_py.dir/clean
 
 .PHONY : clean
 
@@ -5191,6 +5191,7 @@ drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: simulation/car/car_gazeb
 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: additional/filter/CMakeFiles/filter.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: additional/pid/CMakeFiles/pid.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: additional/pose_rpy/CMakeFiles/pose_rpy.dir/all
+drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: camera/ar_tag_position/CMakeFiles/ar_tag_position.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: drone/ardrone_additional/ardrone_pid/CMakeFiles/ardrone_pid.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: additional/filtered_pose/CMakeFiles/filtered_pose.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all
@@ -5206,7 +5207,7 @@ all: drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all
 
 # Build rule for subdir invocation for target.
 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : drone/ardrone_ar_tag/CMakeFiles/ardrone_ar_tag.dir/rule
@@ -5278,6 +5279,7 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: simulation/car/car_gazeb
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: additional/filter/CMakeFiles/filter.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: additional/pid/CMakeFiles/pid.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: additional/pose_rpy/CMakeFiles/pose_rpy.dir/all
+drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: camera/ar_tag_position/CMakeFiles/ar_tag_position.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: drone/ardrone_additional/ardrone_pid/CMakeFiles/ardrone_pid.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: additional/filtered_pose/CMakeFiles/filtered_pose.dir/all
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all
@@ -5293,7 +5295,7 @@ all: drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all
 
 # Build rule for subdir invocation for target.
 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/rule
@@ -6363,6 +6365,7 @@ gui/preinstall:
 gui/CMakeFiles/gui.dir/all: additional/filter/CMakeFiles/filter.dir/all
 gui/CMakeFiles/gui.dir/all: additional/pid/CMakeFiles/pid.dir/all
 gui/CMakeFiles/gui.dir/all: additional/pose_rpy/CMakeFiles/pose_rpy.dir/all
+gui/CMakeFiles/gui.dir/all: camera/ar_tag_position/CMakeFiles/ar_tag_position.dir/all
 gui/CMakeFiles/gui.dir/all: drone/ardrone_additional/ardrone_pid/CMakeFiles/ardrone_pid.dir/all
 gui/CMakeFiles/gui.dir/all: additional/filtered_pose/CMakeFiles/filtered_pose.dir/all
 gui/CMakeFiles/gui.dir/all: drone/ardrone_additional/ardrone_pose_handler/CMakeFiles/ardrone_pose_handler.dir/all
@@ -6379,7 +6382,7 @@ all: gui/CMakeFiles/gui.dir/all
 
 # Build rule for subdir invocation for target.
 gui/CMakeFiles/gui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 gui/CMakeFiles/gui.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/CMakeFiles 0
 .PHONY : gui/CMakeFiles/gui.dir/rule

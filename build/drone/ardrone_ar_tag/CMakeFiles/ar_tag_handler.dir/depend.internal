@@ -6,6 +6,7 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ar_tag_han
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/filtered_pose/include/filtered_pose/filtered_pose.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pid/include/pid/pid.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pose_rpy/include/pose_rpy/pose_rpy.h
+ /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position/include/ar_tag_position/ar_tag_position.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pid/include/ardrone_pid/ardrone_pid.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pose_handler/include/ardrone_pose_handler/ardrone_pose_handler.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include/ardrone_ar_tag/ardrone_ar_tag_control.h
@@ -96,6 +97,7 @@ drone/ardrone_ar_tag/CMakeFiles/ar_tag_handler.dir/src/ardrone_ar_tag/ardrone_ar
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/filtered_pose/include/filtered_pose/filtered_pose.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pid/include/pid/pid.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pose_rpy/include/pose_rpy/pose_rpy.h
+ /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/camera/ar_tag_position/include/ar_tag_position/ar_tag_position.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pid/include/ardrone_pid/ardrone_pid.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pose_handler/include/ardrone_pose_handler/ardrone_pose_handler.h
  /home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include/ardrone_ar_tag/ardrone_ar_tag_control.h

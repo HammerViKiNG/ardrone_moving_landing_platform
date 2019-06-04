@@ -18,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   pid
   filter
   ardrone_ar_tag
+  ar_tag_position
   rqt_gui
   rqt_gui_cpp
   sensor_msgs

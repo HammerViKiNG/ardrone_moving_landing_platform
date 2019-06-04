@@ -4,7 +4,7 @@
 	<arg name="max_track_error" default="0.2" />
 	<arg name="cam_image_topic" default="/ardrone/image_raw_stabilized" />
 	<arg name="cam_info_topic" default="/ardrone/camera_info" />
-	<arg name="output_frame" default="ardrone_base_link" />
+	<arg name="output_frame" default="ardrone_base_bottomcam" />
     	<arg name="output_topic" default="/ardrone/ar_tag_position" />
 
 	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">

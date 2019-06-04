@@ -145,7 +145,7 @@ ar_tag_handler_EXTERNAL_OBJECTS =
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libfiltered_pose.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libpid.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libfilter.so
-/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libpose_rpy.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libar_tag_position.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libimage_transport.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libclass_loader.so
@@ -163,6 +163,7 @@ ar_tag_handler_EXTERNAL_OBJECTS =
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libtf2.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libcamera_info_manager.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libcamera_calibration_parsers.so
+/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/libpose_rpy.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /opt/ros/kinetic/lib/libroscpp.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib/ardrone_ar_tag/ar_tag_handler: /usr/lib/x86_64-linux-gnu/libboost_signals.so

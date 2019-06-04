@@ -9,6 +9,20 @@ ArTagPose::ArTagPose(ros::NodeHandle nh, std::string bottom_camera_topic, std::s
 }
 
 
+void ArTagPose::select_bottom_camera(void) 
+{
+    system("ardrone/setcamchannel 1");
+    bottom_selected = true;
+}
+
+
+void ArTagPose::select_front_camera(void) 
+{
+    system("ardrone/setcamchannel 0");
+    bottom_selected = false;
+}
+
+
 void ArTagPose::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& msg)
 {
     if (!msg.markers.empty())
@@ -26,7 +40,6 @@ void ArTagPose::ar_tag_bottom_callback(const ar_track_alvar_msgs::AlvarMarkers& 
 	        pose.y /= 9.0;
 	        pose.z /= 9.0;
         }
-        camera_name = "bottom";
         last_time = (ros::Time::now()).toNSec() / 1000000000.0;
     }
 }
@@ -41,7 +54,6 @@ void ArTagPose::ar_tag_front_callback(const ar_track_alvar_msgs::AlvarMarkers& m
         if (msg.markers.size() == 2 && msg.markers[1].id == LARGE_AR_TAG_ID)
             index = 1;
 	    pose = PoseRPY::get_pose_rpy(msg.markers[index].pose.pose);
-        camera_name = "front";
         last_time = (ros::Time::now()).toNSec() / 1000000000.0;
     }
 }

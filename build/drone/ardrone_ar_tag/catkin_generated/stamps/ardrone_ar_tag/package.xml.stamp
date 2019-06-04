@@ -59,6 +59,7 @@
   <depend>ardrone_pid</depend>
   <depend>ardrone_pose_handler</depend>
   <depend>filtered_pose</depend>
+  <depend>ar_tag_position</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

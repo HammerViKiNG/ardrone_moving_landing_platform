@@ -11,16 +11,19 @@ class ArdronePoseHandler
 {
     public:
         ArdronePoseHandler(std::string navdata_topic);
-        PoseRPY get_pose_rpy(void);
-        int8_t get_state(void);
+        PoseRPY get_pose_rpy(void) const {return pose_rpy;}
+        int8_t get_state(void) const {return state;}
 
         PoseRPY local_to_global(const PoseRPY& pose);
         PoseRPY global_to_local(const PoseRPY& pose);
 
-	static PoseRPY local_to_global_shifted(PoseRPY pose, const double& rot_z);
-	static PoseRPY global_to_local_shifted(PoseRPY pose, const double& rot_z);
+        PoseRPY get_velocity(void) const {return velocity;}
+
+	    static PoseRPY local_to_global_shifted(PoseRPY pose, const double& rot_z);
+	    static PoseRPY global_to_local_shifted(PoseRPY pose, const double& rot_z);
 
         static std::pair<double, double> global_to_local(double x, double y, double rot_z);
+
     
     private:
         void navdata_callback(const ardrone_autonomy::Navdata& msg);
@@ -32,6 +35,8 @@ class ArdronePoseHandler
         double last_time;
         PoseRPY pose_rpy;
         int8_t state;
+
+	    PoseRPY velocity;
 };
 
 
