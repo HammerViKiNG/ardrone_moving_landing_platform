@@ -68,38 +68,47 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/setup.bash")
+   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/setup.bash;/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install" TYPE FILE FILES "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install" TYPE FILE FILES
+    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/setup.bash"
+    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/local_setup.bash"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/setup.sh")
+   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/setup.sh;/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install" TYPE FILE FILES "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install" TYPE FILE FILES
+    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/setup.sh"
+    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/local_setup.sh"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/setup.zsh")
+   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/setup.zsh;/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install" TYPE FILE FILES "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/install" TYPE FILE FILES
+    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/setup.zsh"
+    "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/catkin_generated/installspace/local_setup.zsh"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -117,26 +126,28 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/gtest/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/camera/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/camera/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_gazebo/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_real/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_connection/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/ar_track_alvar/ar_track_alvar_msgs/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_msgs/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/tum_simulator/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_additional/ardrone_teleop/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_teleop/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/filter/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/pid/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/pose_rpy/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/ar_tag_position/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_additional/ardrone_pid/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/additional/filtered_pose/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/camera/image_stabilizer/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/ar_tag_position/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_additional/ardrone_pid/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_additional/ardrone_pose_handler/cmake_install.cmake")
-  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/ardrone_landing/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_additional/ardrone_teleop/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_gazebo/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/cvg_sim_gazebo_plugins/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/gui/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/AR.Drone-ROS/message_to_tf/cmake_install.cmake")
+  include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/drone/ardrone_ar_tag/ar_track_alvar/ar_track_alvar/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/simulation/cmake_install.cmake")
   include("/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/simulation/car/car_description/cmake_install.cmake")
 

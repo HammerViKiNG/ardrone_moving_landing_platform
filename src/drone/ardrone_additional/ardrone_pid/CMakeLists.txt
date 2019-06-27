@@ -8,6 +8,7 @@ project(ardrone_pid)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  ardrone_autonomy
   geometry_msgs
   pose_rpy
   roscpp

@@ -5,6 +5,7 @@
 #include "ros/ros.h"
 #include "pose_rpy/pose_rpy.h"
 #include "ardrone_autonomy/Navdata.h"
+#include "sensor_msgs/Imu.h"
 
 
 class ArdronePoseHandler
@@ -19,24 +20,26 @@ class ArdronePoseHandler
 
         PoseRPY get_velocity(void) const {return velocity;}
 
-	    static PoseRPY local_to_global_shifted(PoseRPY pose, const double& rot_z);
-	    static PoseRPY global_to_local_shifted(PoseRPY pose, const double& rot_z);
+        static PoseRPY local_to_global_shifted(PoseRPY pose, const double& rot_z);
+        static PoseRPY global_to_local_shifted(PoseRPY pose, const double& rot_z);
 
         static std::pair<double, double> global_to_local(double x, double y, double rot_z);
 
     
     private:
         void navdata_callback(const ardrone_autonomy::Navdata& msg);
+        void imu_callback(const sensor_msgs::Imu& msg);
+
         void odometry(double vx, double vy, double dt);
-
+       
         ros::NodeHandle nh;
-        ros::Subscriber sub_navdata;
+        ros::Subscriber sub_navdata, sub_imu;
 
-        double last_time;
+        ros::Time last_time;
         PoseRPY pose_rpy;
         int8_t state;
 
-	    PoseRPY velocity;
+        PoseRPY velocity;
 };
 
 

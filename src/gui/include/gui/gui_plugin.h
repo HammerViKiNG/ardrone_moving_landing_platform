@@ -16,7 +16,7 @@
 #include <QString>
 #include <QWidget>
 
-#include "ardrone_ar_tag/ardrone_ar_tag_control.h"
+#include "ardrone_landing/ardrone_landing.h"
 
 namespace gui {
  

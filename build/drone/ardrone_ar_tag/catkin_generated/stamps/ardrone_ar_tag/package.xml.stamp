@@ -55,6 +55,8 @@
   <build_export_depend>rospy</build_export_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
+  <depend>ardrone_autonomy</depend>
+  <build_depend>ar_track_alvar_msgs</build_depend>
   <depend>pose_rpy</depend>
   <depend>ardrone_pid</depend>
   <depend>ardrone_pose_handler</depend>

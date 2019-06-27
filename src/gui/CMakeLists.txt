@@ -10,6 +10,7 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  ardrone_autonomy
   tf
   pose_rpy
   ardrone_pid
@@ -17,7 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   filtered_pose
   pid
   filter
-  ardrone_ar_tag
+  ardrone_landing
   ar_tag_position
   rqt_gui
   rqt_gui_cpp

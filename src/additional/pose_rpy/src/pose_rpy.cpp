@@ -1,6 +1,9 @@
 #include "pose_rpy/pose_rpy.h"
 
 
+tf::Quaternion PoseRPY::quat; 
+
+
 PoseRPY PoseRPY::operator-(const PoseRPY& other)
 {
     PoseRPY result = *this;
@@ -64,9 +67,8 @@ PoseRPY PoseRPY::zero_pose_rpy(void)
 PoseRPY PoseRPY::get_pose_rpy(const geometry_msgs::Pose& pose)
 {
     PoseRPY result;
-    tf::Quaternion quat; 
     tf::quaternionMsgToTF(pose.orientation, quat);
-    tf::Matrix3x3(quat).getRPY(result.rot_x, result.rot_y, result.rot_y);
+    tf::Matrix3x3(quat).getRPY(result.rot_x, result.rot_y, result.rot_z);
     result.x = pose.position.x;
     result.y = pose.position.y;
     result.z = pose.position.z;

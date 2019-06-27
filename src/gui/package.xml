@@ -58,12 +58,13 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rqt_gui</exec_depend>
   <exec_depend>rqt_gui_cpp</exec_depend>
+  <depend>ardrone_autonomy</depend>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
   <depend>cv_bridge</depend>
   <depend>image_transport</depend>
   <depend>rqt_image_view</depend>
-  <depend>ardrone_ar_tag</depend>
+  <build_depend>ardrone_landing</build_depend>
   <depend>pose_rpy</depend>
   <depend>ardrone_pid</depend>
   <depend>ardrone_pose_handler</depend>

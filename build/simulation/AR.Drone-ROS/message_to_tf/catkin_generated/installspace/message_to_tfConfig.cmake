@@ -121,6 +121,8 @@ foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
     list(APPEND message_to_tf_LIBRARIES ${library})
+  elseif(${library} MATCHES "^-l")
+    list(APPEND message_to_tf_LIBRARIES ${library})
   elseif(TARGET ${library})
     list(APPEND message_to_tf_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})

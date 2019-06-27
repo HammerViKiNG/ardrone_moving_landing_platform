@@ -1,0 +1,20 @@
+digraph G {
+"base_link" -> "bottom_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 110.040 sec old)\nBuffer length: 0.000 sec\n"];
+"base_stabilized" -> "base_link"[label="Broadcaster: /ground_truth_to_tf\nAverage rate: 100.207 Hz\nMost recent transform: 110.000 ( 0.040 sec old)\nBuffer length: 4.840 sec\n"];
+"bottom_link" -> "ardrone_base_bottomcam"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 110.040 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "dummy_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 110.040 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "front_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 110.040 sec old)\nBuffer length: 0.000 sec\n"];
+"front_link" -> "ardrone_base_frontcam"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 110.040 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "sonar_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 110.040 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "chassis"[label="Broadcaster: /gazebo\nAverage rate: 100.186 Hz\nMost recent transform: 110.032 ( 0.008 sec old)\nBuffer length: 4.851 sec\n"];
+"nav" -> "base_footprint"[label="Broadcaster: /ground_truth_to_tf\nAverage rate: 100.207 Hz\nMost recent transform: 110.000 ( 0.040 sec old)\nBuffer length: 4.840 sec\n"];
+"base_footprint" -> "base_stabilized"[label="Broadcaster: /ground_truth_to_tf\nAverage rate: 100.207 Hz\nMost recent transform: 110.000 ( 0.040 sec old)\nBuffer length: 4.840 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 110.040"[ shape=plaintext ] ;
+ }->"odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 110.040"[ shape=plaintext ] ;
+ }->"nav";
+}

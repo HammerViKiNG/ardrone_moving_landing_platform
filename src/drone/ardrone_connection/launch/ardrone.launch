@@ -1,0 +1,16 @@
+<launch>
+        <include file="$(find ardrone_connection)/launch/ardrone_connection.launch"/>
+
+	    <include file="$(find camera)/launch/ardrone_ar_tag_track.launch"/>
+
+        <node name="bottom_camera_output" type="image_view" pkg="image_view">
+            <remap from="image" to="/ardrone/bottom/image_raw"/>
+        </node>
+
+        <node name="front_camera_output" type="image_view" pkg="image_view">
+            <remap from="image" to="/ardrone/front/image_raw"/>
+        </node>
+
+       <!-- <node pkg="ardrone_teleop" name="ardrone_keyboard_teleop" type="keyboard_teleop.py" respawn="true"/> -->
+
+</launch>

@@ -4,6 +4,7 @@
 #include "tf/transform_datatypes.h"
 #include <cmath>
 
+
 struct PoseRPY 
 {
     double x, y, z;
@@ -13,6 +14,8 @@ struct PoseRPY
     PoseRPY operator+(const PoseRPY& other);
     PoseRPY operator*(const double& other);
     PoseRPY operator/(const double& other);
+
+    static tf::Quaternion quat;  
 
     static PoseRPY zero_pose_rpy(void);
 

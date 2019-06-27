@@ -19,6 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_ar_tag/include"
+  "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/additional/pose_rpy/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pid/include"
   "/home/hammerviking/robotic_software/ardrone_moving_landing_platform/src/drone/ardrone_additional/ardrone_pose_handler/include"

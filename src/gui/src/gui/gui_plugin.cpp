@@ -142,7 +142,7 @@ void GUIPlugin::startSequence()
     {
         this->ongoing = true;
         ardrone_thread = new std::thread([this]() {
-            this->controller = new ArdroneARTag("/ardrone/navdata", "/cmd_vel", "/ardrone/ar_tag_position", "/gui_control", 200);
+            this->controller = new ArdroneARTag("/ardrone/navdata", "/cmd_vel", "/ardrone/ar_tag_bottom", "ardrone/ar_tag_front", "/gui_control", 200);
             ros::NodeHandlePtr node = boost::make_shared<ros::NodeHandle>();
             ros::Rate rate(200);
             while (this->ongoing)
@@ -194,4 +194,5 @@ float GUIPlugin::round_digit(float number, uint8_t digit)
 
 } // namespace
 
-PLUGINLIB_DECLARE_CLASS(gui, GUIPlugin, gui::GUIPlugin, rqt_gui_cpp::Plugin);
+//PLUGINLIB_EXPORT_CLASS(gui, GUIPlugin, gui::GUIPlugin, rqt_gui_cpp::Plugin);
+PLUGINLIB_EXPORT_CLASS(gui::GUIPlugin, rqt_gui_cpp::Plugin);

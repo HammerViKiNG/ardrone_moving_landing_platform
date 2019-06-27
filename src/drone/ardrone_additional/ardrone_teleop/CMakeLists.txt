@@ -10,6 +10,7 @@ project(ardrone_teleop)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  ardrone_autonomy
   std_msgs
   geometry_msgs
   tf
