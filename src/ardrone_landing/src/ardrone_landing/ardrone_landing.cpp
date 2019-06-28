@@ -71,9 +71,9 @@ void ArdroneARTag::correct_necessary_pose_shift(void)
     current_pose = current_pose_filter->get_filtered_pose();
     PoseRPY delta_pose = current_pose - last_pose;
     PoseRPY necessary_shift_global = ArdronePoseHandler::local_to_global_shifted(necessary_pose_shift, current_pose.rot_z) - delta_pose;
-    if (!is_spotted_front && abs(velocity.x) <= 0.0 && abs(velocity.y) <= 0.0)
+    velocity = pose_handler->get_velocity();
+    if (!is_spotted_front && abs(velocity.x) <= 2.0 && abs(velocity.y) <= 2.0)
     {
-        //ROS_INFO("kek");
         necessary_shift_global.x += limit(1.0 * velocity.x * dt, -1, 1);
         necessary_shift_global.y += limit(1.0 * velocity.y * dt, -1, 1);
     }
@@ -122,7 +122,7 @@ void ArdroneARTag::ar_tag_search(void)
 {
     current_pose_filter->filter_pose(pose_handler->get_pose_rpy());
     current_pose = current_pose_filter->get_filtered_pose();
-    //necessary_pose_shift.x = necessary_pose_shift.y = 0;
+    necessary_pose_shift.x = necessary_pose_shift.y = 0;
     necessary_pose_shift.z = 1.5 - current_pose.z;
     necessary_pose_shift.rot_z = M_PI / 5;
 }
@@ -162,26 +162,21 @@ void ArdroneARTag::control(void)
     else if (is_spotted_bottom || is_spotted_front)
     {
         //ROS_INFO("necessary shift: x: %f, y: %f, z: %f, yaw: %f, state: %d", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z, necessary_pose_shift.rot_z, pose_handler->get_state());
-        //correct_necessary_pose_shift();
-        //ROS_INFO("x: %f, y: %f", current_pose.rot_x, current_pose.rot_y);
+        correct_necessary_pose_shift();
         controller = (is_spotted_bottom) ? controller_landing : controller_chasing;
         if (pose_handler->get_state()!= 8 && pose_handler->get_state()!= 2 && current_pose.z <= 0.2 && is_spotted_bottom)
         {
-            //system("rostopic pub -1 /ardrone/land std_msgs/Empty");
-            //is_spotted_bottom = is_spotted_front = 0;
+            system("rostopic pub -1 /ardrone/land std_msgs/Empty");
+            is_spotted_bottom = is_spotted_front = 0;
         }
-        //if (current_time - last_spotted_time >= 1.0)
-            //ar_tag_search();
-        //else if (current_time - last_spotted_time >= 0.25)
-            //ar_tag_lost();
+        if (current_time - last_spotted_time >= 1.0)
+            ar_tag_search();
+        else if (current_time - last_spotted_time >= 0.25)
+            ar_tag_lost();
         else
         {
             twist = controller->pid_twist(necessary_pose_shift);
-            //ROS_INFO("%f, %f, %f, %f", twist.linear.x, twist.linear.y, twist.linear.z, twist.angular.z);
-            //ROS_INFO("%f, %f, %f, %f, %d", necessary_pose_shift.x, necessary_pose_shift.y, necessary_pose_shift.z, necessary_pose_shift.rot_z, is_spotted_bottom);
-            ROS_INFO("%f, %f, %f, %f", pose_handler->get_pose_rpy().x, pose_handler->get_pose_rpy().y, pose_handler->get_pose_rpy().z, pose_handler->get_pose_rpy().rot_z);
-            //ROS_INFO("%d %f", pose_handler->get_state(), current_pose.z);
-            //pub_twist.publish(twist);
+            pub_twist.publish(twist);
         }
     }
     else 
