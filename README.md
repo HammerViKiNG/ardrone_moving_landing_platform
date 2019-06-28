@@ -75,18 +75,20 @@ For testing of system, after build of package run:
 roslaunch simulation testworld_ar.launch
 ```
 
-# Launch from the Docker container
+## Launch from the Docker container
 
-Install Docker CE: 
-[https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+Install Docker CE: [https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
 Pull the ROS Kinetic image:
 '''
 sudo docker pull osrf/ros:kinetic-desktop-full
 '''
+
 Build the container:
 '''
 sudo docker build . --tag=ardrone_image
 '''
+
 Run the container:
 '''
 sudo docker run -it --env=DISPLAY ardrone_tag
