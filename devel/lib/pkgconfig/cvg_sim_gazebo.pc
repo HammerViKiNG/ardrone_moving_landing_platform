@@ -1,8 +1,0 @@
-prefix=/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel
-
-Name: cvg_sim_gazebo
-Description: Description of cvg_sim_gazebo
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/devel/lib 
-Requires: 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC   -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/gtest/gtest/src -lpthread -Wl,-rpath,/home/hammerviking/robotic_software/ardrone_moving_landing_platform/build/gtest/gtest/src 
