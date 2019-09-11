@@ -3,6 +3,7 @@
 
 #include "tf/transform_datatypes.h"
 #include <cmath>
+#include <eigen3/Eigen/Geometry>
 
 
 struct PoseRPY 
@@ -22,7 +23,7 @@ struct PoseRPY
     static PoseRPY get_pose_rpy(const geometry_msgs::Pose& pose);
 
     static PoseRPY transform_pose(const PoseRPY& pose, const double& rot_z); 
-    static PoseRPY transform_pose_3d(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z);
+    static PoseRPY transform_pose_zyx(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z);
 
 };
 

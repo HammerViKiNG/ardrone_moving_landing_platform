@@ -79,18 +79,39 @@ PoseRPY PoseRPY::get_pose_rpy(const geometry_msgs::Pose& pose)
 PoseRPY PoseRPY::transform_pose(const PoseRPY& pose, const double& rot_z)
 {
     PoseRPY result = pose;
-    result.x = pose.x * cos(rot_z) + pose.y * sin(rot_z),
+    result.x = pose.x * cos(rot_z) + pose.y * sin(rot_z);
     result.y = -pose.x * sin(rot_z) + pose.y * cos(rot_z);
     return result;
 }
 
 
-PoseRPY PoseRPY::transform_pose_3d(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z)
+PoseRPY PoseRPY::transform_pose_zyx(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z)
 {
     PoseRPY result = transform_pose(pose, rot_z);
     double x = result.x, y = result.y, z = result.z;
     result.x = x * cos(rot_y) + sin(rot_y) * cos(rot_x) * z;
-    result.y = y * cos(rot_x) + sin(rot_x) * cos(rot_y) * z;
+    result.y = y * cos(rot_x) - sin(rot_x) * cos(rot_y) * z;
+    //result.x = x * cos(rot_y) + sin(rot_y) * z;
+    //result.y = y * cos(rot_x) - sin(rot_x) * z;
     result.z = -x * sin(rot_y) - y * sin(rot_x) + z * cos(rot_x) * cos(rot_y); 
     return result;
 }
+
+
+/*PoseRPY PoseRPY::transform_pose_zyx(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z)
+{
+    PoseRPY result = pose;
+    Eigen::Vector3f vec;
+    vec << result.x, result.y, result.z;
+    Eigen::Matrix3f mat;
+    mat = Eigen::AngleAxisf(result.rot_x, Eigen::Vector3f::UnitX())
+        * Eigen::AngleAxisf(result.rot_y, Eigen::Vector3f::UnitY())
+        * Eigen::AngleAxisf(result.rot_z, Eigen::Vector3f::UnitZ());
+    vec = mat * vec;
+    result.x = vec[0];
+    result.y = vec[1];
+    result.z = vec[2];
+    return result;
+}*/
+
+

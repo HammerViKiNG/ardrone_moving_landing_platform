@@ -17,11 +17,12 @@ class ArTagPose
 
         PoseRPY get_pose(void) const {return pose;}
         bool get_bottom_selected(void) const {return bottom_selected;}
-        bool get_is_spotted(void) const {return is_spotted;}
-        double get_last_time(void) const {return last_time;}
+        bool get_is_spotted_bottom(void) const {return is_spotted_bottom;}
+        bool get_is_spotted_front(void) const {return is_spotted_front;}
+        ros::Time get_last_time(void) const {return last_time;}
 
-        void select_bottom_camera(void) {system("rosservice call ardrone/setcamchannel 1");}
-        void select_front_camera(void) {system("rosservice call ardrone/setcamchannel 0");}
+        void select_bottom_camera(void);
+        void select_front_camera(void);
 
     private:
         ros::NodeHandle nh;
@@ -36,11 +37,11 @@ class ArTagPose
         const int LARGE_AR_TAG_ID = 4;
         const int SMALL_AR_TAG_ID = 8;
 
-        double last_time;
+        ros::Time last_time;
 
         PoseRPY pose;
         bool bottom_selected;
-        bool is_spotted;
+        bool is_spotted_bottom, is_spotted_front;
 };
 
 

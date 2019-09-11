@@ -93,6 +93,7 @@ class ImageStabilizer
     cv_bridge::CvImagePtr ros_to_cv(const sensor_msgs::ImageConstPtr& image);
     cv::Mat stabilize_image(const cv::Mat& curr);
 
+
     public:
         ImageStabilizer(std::string sub_topic, std::string pub_topic);
 };

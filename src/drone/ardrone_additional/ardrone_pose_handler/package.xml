@@ -58,6 +58,7 @@
   <exec_depend>ardrone_autonomy</exec_depend>
   <exec_depend>pose_rpy</exec_depend>
   <exec_depend>roscpp</exec_depend>
+  <depend>eigen3</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

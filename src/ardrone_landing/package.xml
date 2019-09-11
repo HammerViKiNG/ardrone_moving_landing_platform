@@ -62,6 +62,8 @@
   <depend>ardrone_pose_handler</depend>
   <depend>filtered_pose</depend>
   <depend>ar_tag_position</depend>
+  <depend>cv_bridge</depend>
+
 
 
   <!-- The export tag contains other, unspecified, tags -->
