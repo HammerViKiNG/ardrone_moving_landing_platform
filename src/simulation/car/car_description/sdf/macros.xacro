@@ -32,7 +32,7 @@
 </macro>
 <macro name="wheel" params="lr tY">
  <link name="${lr}_wheel">
-   <pose>${wheelPos} ${tY*wheelWidth/2+tY*chassisWidth/2} ${wheelRadius} 0 ${PI/2} ${PI/2}</pose>
+   <pose>${wheelPos} ${tY*wheelWidth/2+tY*chassisWidth/2} ${wheelRadius-chassisHeight/2} 0 ${PI/2} ${PI/2}</pose>
    <collision name="${lr}_wheel_collision">
     <geometry>
      <cylinder>

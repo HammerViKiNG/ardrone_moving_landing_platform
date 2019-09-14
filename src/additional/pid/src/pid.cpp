@@ -1,7 +1,7 @@
 #include "pid/pid.h"
 
 
-PID::PID(double hz, double k_p, double k_d, double k_i, double crit, double max_int_rel)
+PID::PID(double k_p, double k_d, double k_i, double crit, double max_int_rel)
 {
     reset_data();
     K_P = k_p;
@@ -9,7 +9,6 @@ PID::PID(double hz, double k_p, double k_d, double k_i, double crit, double max_
     K_I = k_i;
     this->crit = crit;
     this->max_int = (K_I != 0) ? crit / K_I * max_int_rel : -1;
-    dt = 1 / hz;
 }
 
 
@@ -20,7 +19,7 @@ void PID::reset_data(void)
 }
 
 
-double PID::pid(double e)
+double PID::pid(double e, double dt)
 {
     div_e = div(e, prev_e, dt);
     integr(int_e, e, dt);

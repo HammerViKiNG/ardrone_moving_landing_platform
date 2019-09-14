@@ -7,6 +7,8 @@
 #include "ardrone_autonomy/Navdata.h"
 #include "sensor_msgs/Imu.h"
 
+#include <eigen3/Eigen/Geometry>
+
 
 class ArdronePoseHandler
 {
@@ -36,7 +38,9 @@ class ArdronePoseHandler
         ros::Subscriber sub_navdata, sub_imu;
 
         ros::Time last_time;
+        double last_time_d;
         PoseRPY pose_rpy;
+        double altd;
         int8_t state;
 
         PoseRPY velocity;

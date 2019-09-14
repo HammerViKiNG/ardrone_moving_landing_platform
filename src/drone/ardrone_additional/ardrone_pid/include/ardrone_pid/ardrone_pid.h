@@ -12,18 +12,15 @@
 class ArdronePID
 {
     public:
-        ArdronePID(double hz, double* k_p, double* k_d, double* k_i, double* crit, double* max_int_rel);
+        ArdronePID(double* k_p, double* k_d, double* k_i, double* crit, double* max_int_rel);
         ~ArdronePID(void);
 
-        geometry_msgs::Twist pid_twist(PoseRPY e);
+        geometry_msgs::Twist pid_twist(PoseRPY e, double dt);
         void reset_data(void);
     
     private:  
-        double dt;
-
         PID* controller[4];
 
-        PoseRPY global_pose;
         geometry_msgs::Twist twist;
 };
 

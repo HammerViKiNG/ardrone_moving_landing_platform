@@ -4,9 +4,10 @@
 ArdronePoseHandler::ArdronePoseHandler(std::string navdata_topic)
 {
     sub_navdata = nh.subscribe(navdata_topic, 1, &ArdronePoseHandler::navdata_callback, this);
-    sub_navdata = nh.subscribe("/ardrone/imu", 1, &ArdronePoseHandler::imu_callback, this);
+    //sub_navdata = nh.subscribe("/ardrone/imu", 1, &ArdronePoseHandler::imu_callback, this);
     boost::shared_ptr<ardrone_autonomy::Navdata const> start_data = ros::topic::waitForMessage<ardrone_autonomy::Navdata>(navdata_topic, nh);
     last_time = ros::Time::now();
+    last_time_d = last_time.toNSec() / 1e+9;
     pose_rpy.x = 0; 
     pose_rpy.y = 0;
     pose_rpy.z = start_data->altd / 1000.0;
@@ -56,14 +57,14 @@ void ArdronePoseHandler::navdata_callback(const ardrone_autonomy::Navdata& msg)
     pose_rpy.rot_y = msg.rotY * M_PI / 180.0;
     pose_rpy.rot_z = msg.rotZ * M_PI / 180.0;
     pose_rpy.z = msg.altd / 1000.0;
-    /*double curr_time = msg.tm / 1000000.0;
-    odometry(msg.vx, msg.vy, curr_time - last_time);
-    std::pair<double, double> v_global = global_to_local(msg.vx, msg.vy, -pose_rpy.rot_z);
+    double curr_time_d = msg.tm / 1000000.0;
+    odometry(msg.vx, msg.vy, curr_time_d - last_time_d);
+    std::pair<double, double> v_global = global_to_local(msg.vx / 1000.0, msg.vy / 1000.0, -pose_rpy.rot_z);
     velocity.x = v_global.first;
-    velocity.y = v_global.second; */
+    velocity.y = v_global.second;
     velocity.z = msg.vz;
     state = msg.state;
-    //last_time = curr_time; 
+    last_time_d = curr_time_d;
 }
 
 

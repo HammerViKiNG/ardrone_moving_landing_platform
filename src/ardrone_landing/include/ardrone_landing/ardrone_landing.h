@@ -34,6 +34,7 @@ class ArdroneARTag
         void correct_necessary_pose_shift(void);
         void stabilize_necessary_pose_shift(void);
         void get_velocity(void);
+        void get_camera_object_velocity(void);
 
         void ar_tag_lost(void);
         void ar_tag_search(void);
@@ -51,9 +52,11 @@ class ArdroneARTag
         bool is_spotted_bottom, is_spotted_front; 
 
         PoseRPY necessary_pose_shift;
-        FilteredPose *necessary_pose_shift_global, *necessary_pose_filter, *velocity_filter;
+        FilteredPose *necessary_pose_shift_global, *necessary_pose_filter, *velocity_filter, *camera_velocity_filter;
 
-        PoseRPY last_spotted_pose, last_necessary_shift, velocity;
+        PoseRPY current_spotted_pose, last_spotted_pose, last_necessary_shift, velocity;
+        PoseRPY current_camera_object_distance, last_camera_object_distance;
+        PoseRPY camera_distance_velocity;
         
         //ros::NodeHandle nh;
         ros::Subscriber sub_tf, sub_navdata, sub_ar_tag, sub_gui_control;
@@ -62,7 +65,7 @@ class ArdroneARTag
         tf::Quaternion quat; 
         geometry_msgs::Twist twist;
     
-        double current_time, last_spotted_time;
+        ros::Time last_time, last_spotted_time, current_spotted_time;
 
         ArdronePID *controller, *controller_chasing, *controller_landing;
         ArdronePoseHandler* pose_handler;
