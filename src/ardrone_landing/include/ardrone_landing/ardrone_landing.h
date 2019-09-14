@@ -65,7 +65,11 @@ class ArdroneARTag
         tf::Quaternion quat; 
         geometry_msgs::Twist twist;
     
+<<<<<<< HEAD
         ros::Time last_time, last_spotted_time, current_spotted_time;
+=======
+        ros::Time last_time, last_spotted_time;
+>>>>>>> 5fc08fe4a1a040212463e765df79f00ca72d8f13
 
         ArdronePID *controller, *controller_chasing, *controller_landing;
         ArdronePoseHandler* pose_handler;

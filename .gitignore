@@ -2,4 +2,8 @@ devel/
 build/
 *.so
 *.pyc
+<<<<<<< HEAD
 bags/
+=======
+*.pdf
+>>>>>>> 5fc08fe4a1a040212463e765df79f00ca72d8f13

@@ -123,7 +123,11 @@ PoseRPY PoseRPY::transform_pose_zyx(const PoseRPY& pose, const double& rot_x, co
 }
 
 
+<<<<<<< HEAD
 /*PoseRPY PoseRPY::transform_pose_zyx(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z)
+=======
+PoseRPY PoseRPY::transform_pose_zyx(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z)
+>>>>>>> 5fc08fe4a1a040212463e765df79f00ca72d8f13
 {
     PoseRPY result = transform_pose(pose, rot_z);
     double x = result.x, y = result.y, z = result.z;
@@ -131,9 +135,15 @@ PoseRPY PoseRPY::transform_pose_zyx(const PoseRPY& pose, const double& rot_x, co
     result.y = y * cos(rot_x) - sin(rot_x) * cos(rot_y) * z;
     //result.x = x * cos(rot_y) + sin(rot_y) * z;
     //result.y = y * cos(rot_x) - sin(rot_x) * z;
+<<<<<<< HEAD
     result.z = -x * sin(rot_y) - y * sin(rot_x) + z * cos(rot_x) * cos(rot_y);
     return result;
 }*/
+=======
+    result.z = -x * sin(rot_y) - y * sin(rot_x) + z * cos(rot_x) * cos(rot_y); 
+    return result;
+}
+>>>>>>> 5fc08fe4a1a040212463e765df79f00ca72d8f13
 
 
 /*PoseRPY PoseRPY::transform_pose_zyx(const PoseRPY& pose, const double& rot_x, const double& rot_y, const double& rot_z)
