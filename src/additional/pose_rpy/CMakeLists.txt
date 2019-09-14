@@ -10,7 +10,6 @@ project(pose_rpy)
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
   roscpp
-  Eigen3 REQUIRED
 )
 
 ## System dependencies are found with CMake's conventions
@@ -117,7 +116,6 @@ catkin_package(
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-  ${Eigen3_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library

@@ -3,10 +3,7 @@
 
 #include "tf/transform_datatypes.h"
 #include <cmath>
-<<<<<<< HEAD
 #include <ros/ros.h>
-=======
->>>>>>> 5fc08fe4a1a040212463e765df79f00ca72d8f13
 #include <eigen3/Eigen/Geometry>
 
 
